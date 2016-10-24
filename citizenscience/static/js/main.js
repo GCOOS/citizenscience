@@ -3,7 +3,7 @@ function hide_flask_message_container() {
 }
 
 var app = {};
-var map, chart, featureList;
+var map;
 
 // ================================================================
 /* For Social Apps */

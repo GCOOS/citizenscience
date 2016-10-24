@@ -11,15 +11,8 @@
 <ul class="nav navbar-nav navbar-right">
     <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="panel-btn"><i class="fa fa-th-list white"></i>&nbsp;&nbsp;Panel</a>
     </li>
-    <li class="dropdown" id="toolList">
-        <a id="toolsDrop" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-wrench white"></i>&nbsp;&nbsp;Tools <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <!--<li><a href="#" id="print-btn"><i class="fa fa-print"></i> Print</a>
-                      </li>-->
-            <li>
-                <a href="#" id="tools-btn"><i class="fa fa-edit"></i> Map Tools</a>
-            </li>
-        </ul>
+    <li class="hidden-xs" id="toolList">
+        <a id="tools-btn" href="#" role="button"><i class="fa fa-wrench white"></i>&nbsp;&nbsp;Tools</a>
     </li>
 </ul>
 {% endblock %}
@@ -244,19 +237,19 @@
             <div class="modal-body" id="weather-info">
                 <ul class="nav nav-tabs" id="weatherTabs">
                     <!-- 07 Rename it if needed -->
-                    <li class="active"><a href="#latlngTab" data-toggle="tab"><i class="fa fa-map-marker"></i>&nbsp;Coordinates</a>
-                    </li>
+                    <!-- <li class="active"><a href="#latlngTab" data-toggle="tab"><i class="fa fa-map-marker"></i>&nbsp;Coordinates</a>
+                    </li> -->
                     <li><a href="#weatherTab" data-toggle="tab"><i class="fa fa-sun-o"></i>&nbsp;Weather</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="locationTab">
-                    <div class="tab-pane fade active in" id="latlngTab">
+                    <!--<div class="tab-pane fade active in" id="latlngTab">
                         <div id="latlng_div"></div>
                         <br />
                         <br />
                         <div class="clip_button">Copy to Clipboard (address)</div>
-                    </div>
-                    <div class="tab-pane fade in" id="weatherTab">
+                    </div> -->
+                    <div class="tab-pane fade in active" id="weatherTab">
                         <div id="weather_div"></div>
                     </div>
                 </div>
@@ -287,5 +280,8 @@
 <script src="{{ url_for('static', filename='bower_components/zeroclipboard/dist/ZeroClipboard.min.js') }}"></script>
 
 <!-- custom js -->
-<script src="{{ url_for('static', filename='js/proj/bootmap.js') }}"></script>
+<script src="{{ url_for('static', filename='js/proj/boot_gbf.js') }}"></script>
+<script src="{{ url_for('static', filename='js/proj/boot_nacd.js') }}"></script>
+<script src="{{ url_for('static', filename='js/proj/boot_map.js') }}"></script>
+<script src="{{ url_for('static', filename='js/proj/boot_index.js') }}"></script>
 {% endblock %}

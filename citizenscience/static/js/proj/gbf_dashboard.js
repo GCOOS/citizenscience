@@ -1562,3 +1562,4 @@ function createGBFChart(siteid) {
 
 //Modal
 $("#siteInfoModal").on('shown.bs.modal');
+$('modal-body').scrollspy({ target: '.help_container' });
