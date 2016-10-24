@@ -1,0 +1,230 @@
+<!-- Help Modal -->
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <img class="gcooslogo_center" src="static/images/logo/GCOOS272.jpg" /><br />
+        <p style="text-align: center; font: bold;"><b>Here are a few things you should know to get the most out of this page. <br />
+        Just select a topic or scroll down to start</p>
+      </div>
+      <div class="modal-body" style="max-height: 420px; overflow-y: auto;">
+          <a name="help_top"> </a>
+          <div class="help_container">
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-default btn-lg  btn-block"><a href="#help_basics">Basics</a></button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-default btn-lg  btn-block"><a href="#help_timeline">Timeline</a></button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-default btn-lg  btn-block"><a href="#help_datatable">Data Table</a></button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-default btn-lg  btn-block"><a href="#help_map">Map</a></button>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-sm-12">
+           <br />
+           <br />
+          </div>
+
+          <div>
+            <div class="col-md-12 col-sm-12">
+              <div class="help_header1" id="help_basics">Basics</div><hr>
+
+              <div class="col-sm-3">
+                  <img src='{{ url_for('static', filename='images/help/year.png') }}' style='height:200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                  <p>
+                  When you click a bar from a bar chart, you will see only data in that year in a table.
+                  </p>
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                  <img src='{{ url_for('static', filename='images/help/year2.png') }}' style='height:200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                  Put mouse on a bar (not click), it will show the number of data entry. <br />
+                  To reset a filter (e.g. back to all years from 2012), click "reset" <br />
+                  If you want to filter 2012-2013, click 2013. This will add up 2013's data.<br />
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <p style="text-align: right;">
+                <a href="#help_top">back to top</a>
+                <br /><br />
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-12 col-sm-12">
+              <div class="help_header1" id="help_timeline">Time line</div><hr>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/timeline.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                Mouse icon will be changed to "+" sign on Timeline filter. Click and drag to select the time range. You can slide the blue-colored area to change time range.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <p style="text-align: right;">
+                <a href="#help_top">back to top</a>
+                <br /><br />
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-12 col-sm-12">
+              <div class="help_header1" id="help_datatable">Data Table</div><hr>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/datatable200w.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                Data Table will be dynamically changed by filters.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/entries2.png') }}' style='width: 150px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                With this option, you can change row numbers. Default number is 10. When you change, you can see more entries without changing a page at the bottom of the table.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/paging.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                Pages are creted based on the number of entries in a table. When you change the number of entries, the pagination automatically run and divided tables.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/asc_desc.png') }}' style='width: 180px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                Arrange rows in ascending/decending order.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/save_print.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                With these buttons, you can copy all entries to clipboard, save as CSV file, and print them out.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/printview.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                Please use browser's print function to print out. If you want to add more fields, turn on a specific field you desire to show/print out.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/showhide.png') }}' style='width: 175px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                The default settings hide many fields which will not be shown when you print the table out. However, when you copy to clipboard or save in a CSV file, all filelds will be exported regardless of show/hide condition.
+              </div>
+              <div class="col-sm-12">
+                  <br />
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <p style="text-align: right;">
+                <a href="#help_top">back to top</a>
+                <br /><br />
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-12 col-sm-12">
+              <div class="help_header1" id="help_map">Map</div><hr>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/entries.png') }}' style='width: 170px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                Initially it shows the number of all entries. After filtering out, the number will change dynamically as well as map. To reset ALL filters, click the button. <br />
+                Table will not be changed when you zoom in/out a map: Only filters (bar chart and time line) will change data table and points in a map.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/mapbasic.png') }}' style='width: 45px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                To go back to default map extent, click a house icon.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/mapoption.png') }}' style='width: 150px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                There are three base layers. Default setting is Light theme.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <p style="text-align: right;">
+                <a href="#help_top">back to top</a>
+                <br /><br />
+              </p>
+            </div>
+          </div>
+
+      </div> <!-- end of modal body -->
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

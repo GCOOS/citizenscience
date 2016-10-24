@@ -1,0 +1,4935 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "169",
+        "Site": "Coquina Bayside",
+        "Date": "2013-12-06",
+        "Time": "10:30",
+        "Monitor_ID": "103",
+        "Monitor": "Samoset Elementary School",
+        "Participants": "20",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.7",
+        "WaterTemp_C": "23.9",
+        "DissolvedOxygen_ppm": "10.9",
+        "pH": "8.4",
+        "AirTemp_C": "23",
+        "Salinity_ppt": "35",
+        "Nitrates_ppm": "39.5",
+        "Litter_lbs": "5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "170",
+        "Site": "Coquina Bayside",
+        "Date": "2013-12-06",
+        "Time": "12:30",
+        "Monitor_ID": "103",
+        "Monitor": "Samoset Elementary School",
+        "Participants": "21",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "15",
+        "WaterTemp_C": "24.9",
+        "DissolvedOxygen_ppm": "9.7",
+        "pH": "8.4",
+        "AirTemp_C": "25.8",
+        "Salinity_ppt": "34.3",
+        "Nitrates_ppm": "43.2",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "167",
+        "Site": "Coquina Bayside",
+        "Date": "2013-12-05",
+        "Time": "10:30",
+        "Monitor_ID": "103",
+        "Monitor": "Samoset Elementary School",
+        "Participants": "20",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "23.3",
+        "WaterTemp_C": "23.7",
+        "DissolvedOxygen_ppm": "10.7",
+        "pH": "8.7",
+        "AirTemp_C": "24.2",
+        "Salinity_ppt": "37",
+        "Nitrates_ppm": "41.5",
+        "Litter_lbs": "12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "168",
+        "Site": "Coquina Bayside",
+        "Date": "2013-12-05",
+        "Time": "12:00",
+        "Monitor_ID": "103",
+        "Monitor": "Samoset Elementary School",
+        "Participants": "19",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "16.2",
+        "WaterTemp_C": "23.5",
+        "DissolvedOxygen_ppm": "9",
+        "pH": "8.7",
+        "AirTemp_C": "25.2",
+        "Salinity_ppt": "36",
+        "Nitrates_ppm": "50",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "165",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-11-15",
+        "Time": "10:30",
+        "Monitor_ID": "8",
+        "Monitor": "Passadena Fundamental School",
+        "Participants": "58",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "50.6",
+        "WaterTemp_C": "20.1",
+        "DissolvedOxygen_ppm": "8.8",
+        "pH": "",
+        "AirTemp_C": "20.8",
+        "Salinity_ppt": "37.3",
+        "Nitrates_ppm": "41.6",
+        "Litter_lbs": "5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "166",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-11-15",
+        "Time": "12:00",
+        "Monitor_ID": "8",
+        "Monitor": "Passadena Fundamental School",
+        "Participants": "58",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "51.9",
+        "WaterTemp_C": "20",
+        "DissolvedOxygen_ppm": "7.1",
+        "pH": "",
+        "AirTemp_C": "21.5",
+        "Salinity_ppt": "37.7",
+        "Nitrates_ppm": "34.3",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "163",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-11-05",
+        "Time": "11:20",
+        "Monitor_ID": "5003",
+        "Monitor": "Lakeview Fundamental School",
+        "Participants": "78",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "23.1",
+        "DissolvedOxygen_ppm": "9.2",
+        "pH": "",
+        "AirTemp_C": "28.3",
+        "Salinity_ppt": "32.3",
+        "Nitrates_ppm": "47.1",
+        "Litter_lbs": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "164",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-11-05",
+        "Time": "12:10",
+        "Monitor_ID": "5003",
+        "Monitor": "Lakeview Fundamental School",
+        "Participants": "77",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "24",
+        "DissolvedOxygen_ppm": "7.9",
+        "pH": "",
+        "AirTemp_C": "25",
+        "Salinity_ppt": "31",
+        "Nitrates_ppm": "45",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "162",
+        "Site": "Coquina Bayside",
+        "Date": "2013-10-30",
+        "Time": "12:45",
+        "Monitor_ID": "110",
+        "Monitor": "Prine Elementary School",
+        "Participants": "24",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "20.8",
+        "WaterTemp_C": "24.2",
+        "DissolvedOxygen_ppm": "6",
+        "pH": "",
+        "AirTemp_C": "25.4",
+        "Salinity_ppt": "24.4",
+        "Nitrates_ppm": "32.5",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "161",
+        "Site": "Coquina Bayside",
+        "Date": "2013-10-30",
+        "Time": "9:30",
+        "Monitor_ID": "110",
+        "Monitor": "Prine Elementary School",
+        "Participants": "24",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "22.3",
+        "WaterTemp_C": "22.7",
+        "DissolvedOxygen_ppm": "5.7",
+        "pH": "8.03",
+        "AirTemp_C": "22.5",
+        "Salinity_ppt": "24.4",
+        "Nitrates_ppm": "42",
+        "Litter_lbs": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "159",
+        "Site": "Coquina Bayside",
+        "Date": "2013-10-29",
+        "Time": "10:00",
+        "Monitor_ID": "110",
+        "Monitor": "Prine Elementary School",
+        "Participants": "22",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "18.1",
+        "WaterTemp_C": "23.2",
+        "DissolvedOxygen_ppm": "6.8",
+        "pH": "8.2",
+        "AirTemp_C": "22.9",
+        "Salinity_ppt": "24",
+        "Nitrates_ppm": "42.2",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "160",
+        "Site": "Coquina Bayside",
+        "Date": "2013-10-29",
+        "Time": "12:50",
+        "Monitor_ID": "110",
+        "Monitor": "Prine Elementary School",
+        "Participants": "21",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "19.5",
+        "WaterTemp_C": "23.5",
+        "DissolvedOxygen_ppm": "8.8",
+        "pH": "8.3",
+        "AirTemp_C": "",
+        "Salinity_ppt": "24.3",
+        "Nitrates_ppm": "30.8",
+        "Litter_lbs": "8.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "157",
+        "Site": "Coquina Bayside",
+        "Date": "2013-10-28",
+        "Time": "10:00",
+        "Monitor_ID": "110",
+        "Monitor": "Prine Elementary School",
+        "Participants": "22",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "23.9",
+        "WaterTemp_C": "20.9",
+        "DissolvedOxygen_ppm": "6.5",
+        "pH": "",
+        "AirTemp_C": "22.2",
+        "Salinity_ppt": "25.9",
+        "Nitrates_ppm": "42",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "158",
+        "Site": "Coquina Bayside",
+        "Date": "2013-10-28",
+        "Time": "12:19",
+        "Monitor_ID": "110",
+        "Monitor": "Prine Elementary School",
+        "Participants": "22",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "28.8",
+        "WaterTemp_C": "22.5",
+        "DissolvedOxygen_ppm": "8.9",
+        "pH": "",
+        "AirTemp_C": "24.4",
+        "Salinity_ppt": "25.2",
+        "Nitrates_ppm": "41.1",
+        "Litter_lbs": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "155",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-10-22",
+        "Time": "10:15",
+        "Monitor_ID": "5008",
+        "Monitor": "Madeira Beach Fundamental School",
+        "Participants": "25",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "7.3",
+        "WaterTemp_C": "27.1",
+        "DissolvedOxygen_ppm": "5.3",
+        "pH": "",
+        "AirTemp_C": "27.7",
+        "Salinity_ppt": "29",
+        "Nitrates_ppm": "65.2",
+        "Litter_lbs": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "156",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-10-22",
+        "Time": "11:30",
+        "Monitor_ID": "5008",
+        "Monitor": "Madeira Beach Fundamental School",
+        "Participants": "25",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "4.9",
+        "WaterTemp_C": "27.2",
+        "DissolvedOxygen_ppm": "5.9",
+        "pH": "8.27",
+        "AirTemp_C": "28.9",
+        "Salinity_ppt": "28.6",
+        "Nitrates_ppm": "68.6",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "153",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-10-21",
+        "Time": "10:15",
+        "Monitor_ID": "5008",
+        "Monitor": "Madeira Beach Fundamental School",
+        "Participants": "26",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "19.5",
+        "WaterTemp_C": "27.2",
+        "DissolvedOxygen_ppm": "4.6",
+        "pH": "8.14",
+        "AirTemp_C": "27.5",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "154",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-10-21",
+        "Time": "11:15",
+        "Monitor_ID": "5008",
+        "Monitor": "Madeira Beach Fundamental School",
+        "Participants": "26",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "2.5",
+        "WaterTemp_C": "27",
+        "DissolvedOxygen_ppm": "5.9",
+        "pH": "8.14",
+        "AirTemp_C": "27.4",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "151",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-10-17",
+        "Time": "9:00",
+        "Monitor_ID": "7",
+        "Monitor": "St. Stephen's Episcopal School",
+        "Participants": "33",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "5.7",
+        "WaterTemp_C": "27.3",
+        "DissolvedOxygen_ppm": "7.6",
+        "pH": "8.52",
+        "AirTemp_C": "28.5",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "58.8",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "152",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-10-17",
+        "Time": "11:20",
+        "Monitor_ID": "7",
+        "Monitor": "St. Stephen's Episcopal School",
+        "Participants": "33",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.8",
+        "WaterTemp_C": "27.8",
+        "DissolvedOxygen_ppm": "7.4",
+        "pH": "8.4",
+        "AirTemp_C": "27.5",
+        "Salinity_ppt": "28.2",
+        "Nitrates_ppm": "47.7",
+        "Litter_lbs": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "149",
+        "Site": "Crystal River",
+        "Date": "2013-10-16",
+        "Time": "10:00",
+        "Monitor_ID": "7",
+        "Monitor": "St. Stephen's Episcopal School",
+        "Participants": "66",
+        "Weather": "CLOUDY",
+        "Land_Use": "RESIDENTIAL",
+        "Turbidity_NTU": "14.7",
+        "WaterTemp_C": "23.6",
+        "DissolvedOxygen_ppm": "6.6",
+        "pH": "8.2",
+        "AirTemp_C": "23.6",
+        "Salinity_ppt": "0.2",
+        "Nitrates_ppm": "7.6",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.61,
+          28.897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "150",
+        "Site": "Rainbow River State Park",
+        "Date": "2013-10-16",
+        "Time": "14:30",
+        "Monitor_ID": "7",
+        "Monitor": "St. Stephen's Episcopal School",
+        "Participants": "66",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "24.3",
+        "DissolvedOxygen_ppm": "8.1",
+        "pH": "8.23",
+        "AirTemp_C": "31.3",
+        "Salinity_ppt": "0.2",
+        "Nitrates_ppm": "7.2",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.441,
+          29.114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "147",
+        "Site": "Sweet Water Organic Farm",
+        "Date": "2013-10-14",
+        "Time": "10:15",
+        "Monitor_ID": "7",
+        "Monitor": "St. Stephen's Episcopal School",
+        "Participants": "33",
+        "Weather": "CLEAR",
+        "Land_Use": "AGRICULTURAL",
+        "Turbidity_NTU": "19",
+        "WaterTemp_C": "28.2",
+        "DissolvedOxygen_ppm": "3.1",
+        "pH": "6.69",
+        "AirTemp_C": "24.4",
+        "Salinity_ppt": "0.2",
+        "Nitrates_ppm": "1.9",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.561,
+          27.999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "148",
+        "Site": "Sweet Water Organic Farm",
+        "Date": "2013-10-14",
+        "Time": "13:30",
+        "Monitor_ID": "7",
+        "Monitor": "St. Stephen's Episcopal School",
+        "Participants": "33",
+        "Weather": "CLEAR",
+        "Land_Use": "AGRICULTURAL",
+        "Turbidity_NTU": "32",
+        "WaterTemp_C": "22.8",
+        "DissolvedOxygen_ppm": "1.9",
+        "pH": "6.6",
+        "AirTemp_C": "24.4",
+        "Salinity_ppt": "0.2",
+        "Nitrates_ppm": "1.3",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.561,
+          27.999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "145",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-10-10",
+        "Time": "11:30",
+        "Monitor_ID": "5006",
+        "Monitor": "Skyview Elementary School",
+        "Participants": "25",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "4.7",
+        "WaterTemp_C": "24.7",
+        "DissolvedOxygen_ppm": "7.2",
+        "pH": "8.57",
+        "AirTemp_C": "25.5",
+        "Salinity_ppt": "28.9",
+        "Nitrates_ppm": "42.2",
+        "Litter_lbs": "3.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "146",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-10-10",
+        "Time": "12:45",
+        "Monitor_ID": "5006",
+        "Monitor": "Skyview Elementary School",
+        "Participants": "25",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "24.9",
+        "DissolvedOxygen_ppm": "7.9",
+        "pH": "",
+        "AirTemp_C": "26",
+        "Salinity_ppt": "29.7",
+        "Nitrates_ppm": "53.4",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "144",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-10-09",
+        "Time": "12:30",
+        "Monitor_ID": "9999",
+        "Monitor": "Lighthouse",
+        "Participants": "61",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "27.3",
+        "WaterTemp_C": "27.7",
+        "DissolvedOxygen_ppm": "6.3",
+        "pH": "8.4",
+        "AirTemp_C": "27.3",
+        "Salinity_ppt": "28.6",
+        "Nitrates_ppm": "42.2",
+        "Litter_lbs": "7.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "142",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-10-08",
+        "Time": "11:30",
+        "Monitor_ID": "5006",
+        "Monitor": "Skyview Elementary School",
+        "Participants": "24",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "23.7",
+        "WaterTemp_C": "29.5",
+        "DissolvedOxygen_ppm": "8.8",
+        "pH": "8.67",
+        "AirTemp_C": "28.7",
+        "Salinity_ppt": "28.1",
+        "Nitrates_ppm": "43",
+        "Litter_lbs": "10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "143",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-10-08",
+        "Time": "12:40",
+        "Monitor_ID": "5006",
+        "Monitor": "Skyview Elementary School",
+        "Participants": "23",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "13.5",
+        "WaterTemp_C": "28.3",
+        "DissolvedOxygen_ppm": "7.8",
+        "pH": "8.42",
+        "AirTemp_C": "29.5",
+        "Salinity_ppt": "27.5",
+        "Nitrates_ppm": "47.1",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "141",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-09-20",
+        "Time": "13:15",
+        "Monitor_ID": "5",
+        "Monitor": "Real Life Christian Academy",
+        "Participants": "36",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "29.5",
+        "DissolvedOxygen_ppm": "7.3",
+        "pH": "8.32",
+        "AirTemp_C": "31.4",
+        "Salinity_ppt": "28",
+        "Nitrates_ppm": "55.7",
+        "Litter_lbs": "14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "139",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-19",
+        "Time": "10:20",
+        "Monitor_ID": "101",
+        "Monitor": "Orange Ridge  Elementary School",
+        "Participants": "22",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "5.5",
+        "WaterTemp_C": "26.2",
+        "DissolvedOxygen_ppm": "7.8",
+        "pH": "8.34",
+        "AirTemp_C": "27.1",
+        "Salinity_ppt": "30.6",
+        "Nitrates_ppm": "41",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "140",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-19",
+        "Time": "12:30",
+        "Monitor_ID": "101",
+        "Monitor": "Orange Ridge  Elementary School",
+        "Participants": "22",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "27.8",
+        "DissolvedOxygen_ppm": "8.38",
+        "pH": "8.5",
+        "AirTemp_C": "29.5",
+        "Salinity_ppt": "30.7",
+        "Nitrates_ppm": "47.4",
+        "Litter_lbs": "17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "137",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-18",
+        "Time": "10:00",
+        "Monitor_ID": "101",
+        "Monitor": "Orange Ridge  Elementary School",
+        "Participants": "28",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "28.2",
+        "DissolvedOxygen_ppm": "6.8",
+        "pH": "8.13",
+        "AirTemp_C": "27.2",
+        "Salinity_ppt": "31.7",
+        "Nitrates_ppm": "46.7",
+        "Litter_lbs": "13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "138",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-18",
+        "Time": "12:40",
+        "Monitor_ID": "101",
+        "Monitor": "Orange Ridge  Elementary School",
+        "Participants": "55",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "28",
+        "DissolvedOxygen_ppm": "8",
+        "pH": "7.38",
+        "AirTemp_C": "28.9",
+        "Salinity_ppt": "31.5",
+        "Nitrates_ppm": "59",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "135",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-17",
+        "Time": "10:15",
+        "Monitor_ID": "102",
+        "Monitor": "Bashaw  Elementary School",
+        "Participants": "29",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "6.5",
+        "WaterTemp_C": "27",
+        "DissolvedOxygen_ppm": "6.9",
+        "pH": "8.17",
+        "AirTemp_C": "28.5",
+        "Salinity_ppt": "31.8",
+        "Nitrates_ppm": "47.1",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "136",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-17",
+        "Time": "12:40",
+        "Monitor_ID": "102",
+        "Monitor": "Bashaw  Elementary School",
+        "Participants": "30",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "27.5",
+        "DissolvedOxygen_ppm": "6.7",
+        "pH": "8.1",
+        "AirTemp_C": "28.6",
+        "Salinity_ppt": "31.4",
+        "Nitrates_ppm": "31.1",
+        "Litter_lbs": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "133",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-16",
+        "Time": "10:15",
+        "Monitor_ID": "102",
+        "Monitor": "Bashaw  Elementary School",
+        "Participants": "28",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "27.2",
+        "WaterTemp_C": "28.3",
+        "DissolvedOxygen_ppm": "5.9",
+        "pH": "8.8",
+        "AirTemp_C": "29.4",
+        "Salinity_ppt": "32",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "134",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-16",
+        "Time": "12:50",
+        "Monitor_ID": "102",
+        "Monitor": "Bashaw  Elementary School",
+        "Participants": "30",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "6.6",
+        "WaterTemp_C": "28.3",
+        "DissolvedOxygen_ppm": "5.5",
+        "pH": "8.17",
+        "AirTemp_C": "30",
+        "Salinity_ppt": "32.2",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "131",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-13",
+        "Time": "10:00",
+        "Monitor_ID": "104",
+        "Monitor": "McNeal  Elementary School",
+        "Participants": "25",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "29.5",
+        "DissolvedOxygen_ppm": "7.6",
+        "pH": "8.57",
+        "AirTemp_C": "28.6",
+        "Salinity_ppt": "32.3",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "132",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-13",
+        "Time": "12:30",
+        "Monitor_ID": "104",
+        "Monitor": "McNeal  Elementary School",
+        "Participants": "26",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "28.9",
+        "DissolvedOxygen_ppm": "7.2",
+        "pH": "8.58",
+        "AirTemp_C": "29.8",
+        "Salinity_ppt": "32.6",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "129",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-12",
+        "Time": "10:30",
+        "Monitor_ID": "104",
+        "Monitor": "McNeal  Elementary School",
+        "Participants": "25",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "1.4",
+        "WaterTemp_C": "30.7",
+        "DissolvedOxygen_ppm": "8",
+        "pH": "8.58",
+        "AirTemp_C": "29.5",
+        "Salinity_ppt": "31.6",
+        "Nitrates_ppm": "74.2",
+        "Litter_lbs": "7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "130",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-12",
+        "Time": "12:40",
+        "Monitor_ID": "104",
+        "Monitor": "McNeal  Elementary School",
+        "Participants": "26",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "18",
+        "WaterTemp_C": "34.4",
+        "DissolvedOxygen_ppm": "14.7",
+        "pH": "9.18",
+        "AirTemp_C": "31.1",
+        "Salinity_ppt": "30",
+        "Nitrates_ppm": "74.1",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "127",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-11",
+        "Time": "10:28",
+        "Monitor_ID": "108",
+        "Monitor": "Palmetto Elementary School",
+        "Participants": "21",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "28",
+        "WaterTemp_C": "28.6",
+        "DissolvedOxygen_ppm": "11.9",
+        "pH": "8.83",
+        "AirTemp_C": "28",
+        "Salinity_ppt": "31.5",
+        "Nitrates_ppm": "10.3",
+        "Litter_lbs": "39"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "128",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-11",
+        "Time": "12:30",
+        "Monitor_ID": "108",
+        "Monitor": "Palmetto Elementary School",
+        "Participants": "22",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "10.7",
+        "WaterTemp_C": "28.1",
+        "DissolvedOxygen_ppm": "10.4",
+        "pH": "8.79",
+        "AirTemp_C": "31",
+        "Salinity_ppt": "31.4",
+        "Nitrates_ppm": "8",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "125",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-10",
+        "Time": "10:30",
+        "Monitor_ID": "108",
+        "Monitor": "Palmetto Elementary School",
+        "Participants": "20",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.8",
+        "WaterTemp_C": "23.3",
+        "DissolvedOxygen_ppm": "13.9",
+        "pH": "8.85",
+        "AirTemp_C": "28",
+        "Salinity_ppt": "28.6",
+        "Nitrates_ppm": "43.4",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "126",
+        "Site": "Coquina Bayside",
+        "Date": "2013-09-10",
+        "Time": "12:30",
+        "Monitor_ID": "108",
+        "Monitor": "Palmetto Elementary School",
+        "Participants": "20",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "16.5",
+        "WaterTemp_C": "14.6",
+        "DissolvedOxygen_ppm": "",
+        "pH": "9.46",
+        "AirTemp_C": "28",
+        "Salinity_ppt": "29.8",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "53"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "123",
+        "Site": "Coquina Bayside",
+        "Date": "2013-08-26",
+        "Time": "10:00",
+        "Monitor_ID": "6",
+        "Monitor": "CHEFF",
+        "Participants": "26",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "29.3",
+        "WaterTemp_C": "32.3",
+        "DissolvedOxygen_ppm": "10.2",
+        "pH": "9.42",
+        "AirTemp_C": "29.4",
+        "Salinity_ppt": "29.3",
+        "Nitrates_ppm": "55.2",
+        "Litter_lbs": "59"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "124",
+        "Site": "Coquina Bayside",
+        "Date": "2013-08-26",
+        "Time": "14:00",
+        "Monitor_ID": "6",
+        "Monitor": "CHEFF",
+        "Participants": "26",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "20.7",
+        "WaterTemp_C": "32.7",
+        "DissolvedOxygen_ppm": "15",
+        "pH": "9.2",
+        "AirTemp_C": "29.9",
+        "Salinity_ppt": "29.3",
+        "Nitrates_ppm": "53.5",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "122",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-06-26",
+        "Time": "11:20",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "43",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "50.3",
+        "WaterTemp_C": "30.2",
+        "DissolvedOxygen_ppm": "9.1",
+        "pH": "8.18",
+        "AirTemp_C": "31.6",
+        "Salinity_ppt": "28.3",
+        "Nitrates_ppm": "27.8",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "121",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-06-25",
+        "Time": "14:30",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "22",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "22",
+        "WaterTemp_C": "31.5",
+        "DissolvedOxygen_ppm": "15",
+        "pH": "8.6",
+        "AirTemp_C": "35.4",
+        "Salinity_ppt": "30.3",
+        "Nitrates_ppm": "14.1",
+        "Litter_lbs": "4.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "120",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-06-24",
+        "Time": "12:30",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "25",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "26.7",
+        "WaterTemp_C": "30.5",
+        "DissolvedOxygen_ppm": "12.1",
+        "pH": "8.54",
+        "AirTemp_C": "37.3",
+        "Salinity_ppt": "29",
+        "Nitrates_ppm": "54.3",
+        "Litter_lbs": "4.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "119",
+        "Site": "Coquina Bayside",
+        "Date": "2013-06-20",
+        "Time": "10:30",
+        "Monitor_ID": "2",
+        "Monitor": "Migrant Head Start",
+        "Participants": "20",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "30.3",
+        "WaterTemp_C": "31.3",
+        "DissolvedOxygen_ppm": "10.6",
+        "pH": "8.05",
+        "AirTemp_C": "29.8",
+        "Salinity_ppt": "32",
+        "Nitrates_ppm": "52.2",
+        "Litter_lbs": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "117",
+        "Site": "Coquina Bayside",
+        "Date": "2013-06-18",
+        "Time": "10:30",
+        "Monitor_ID": "2",
+        "Monitor": "Migrant Head Start",
+        "Participants": "32",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.4",
+        "WaterTemp_C": "30.6",
+        "DissolvedOxygen_ppm": "11.7",
+        "pH": "8.59",
+        "AirTemp_C": "30",
+        "Salinity_ppt": "32.5",
+        "Nitrates_ppm": "14.5",
+        "Litter_lbs": "17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "118",
+        "Site": "Coquina Bayside",
+        "Date": "2013-06-18",
+        "Time": "11:00",
+        "Monitor_ID": "2",
+        "Monitor": "Migrant Head Start",
+        "Participants": "32",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "14.3",
+        "WaterTemp_C": "30",
+        "DissolvedOxygen_ppm": "10.3",
+        "pH": "8.51",
+        "AirTemp_C": "30",
+        "Salinity_ppt": "32.6",
+        "Nitrates_ppm": "16.1",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "116",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-06-17",
+        "Time": "13:45",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "37",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "18.7",
+        "WaterTemp_C": "31.3",
+        "DissolvedOxygen_ppm": "6.2",
+        "pH": "8.64",
+        "AirTemp_C": "37.9",
+        "Salinity_ppt": "30.1",
+        "Nitrates_ppm": "21.3",
+        "Litter_lbs": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "115",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-06-12",
+        "Time": "11:00",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "47",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "26",
+        "WaterTemp_C": "29.7",
+        "DissolvedOxygen_ppm": "7.77",
+        "pH": "8.41",
+        "AirTemp_C": "31.3",
+        "Salinity_ppt": "31.2",
+        "Nitrates_ppm": "33.4",
+        "Litter_lbs": "6.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "114",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-06-11",
+        "Time": "11:00",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "46",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "9",
+        "WaterTemp_C": "29.8",
+        "DissolvedOxygen_ppm": "8.4",
+        "pH": "8.4",
+        "AirTemp_C": "33.9",
+        "Salinity_ppt": "31.1",
+        "Nitrates_ppm": "16",
+        "Litter_lbs": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "113",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-06-10",
+        "Time": "14:00",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "46",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "16",
+        "WaterTemp_C": "29.5",
+        "DissolvedOxygen_ppm": "8.7",
+        "pH": "8.6",
+        "AirTemp_C": "32",
+        "Salinity_ppt": "33.6",
+        "Nitrates_ppm": "15.6",
+        "Litter_lbs": "5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "112",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-06-08",
+        "Time": "12:30",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "25",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "32",
+        "WaterTemp_C": "30.6",
+        "DissolvedOxygen_ppm": "8.6",
+        "pH": "8.54",
+        "AirTemp_C": "30.1",
+        "Salinity_ppt": "31.1",
+        "Nitrates_ppm": "12.7",
+        "Litter_lbs": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "111",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-05-31",
+        "Time": "10:50",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "20",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "40",
+        "WaterTemp_C": "27.9",
+        "DissolvedOxygen_ppm": "9.1",
+        "pH": "8.56",
+        "AirTemp_C": "30.6",
+        "Salinity_ppt": "31.2",
+        "Nitrates_ppm": "22",
+        "Litter_lbs": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "110",
+        "Site": "Coquina Bayside",
+        "Date": "2013-05-29",
+        "Time": "11:05",
+        "Monitor_ID": "113",
+        "Monitor": "Anna Maria  Elementary School",
+        "Participants": "45",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.6",
+        "WaterTemp_C": "24",
+        "DissolvedOxygen_ppm": "8.8",
+        "pH": "8.54",
+        "AirTemp_C": "24.7",
+        "Salinity_ppt": "34.3",
+        "Nitrates_ppm": "18.1",
+        "Litter_lbs": "58.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "108",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-24",
+        "Time": "11:30",
+        "Monitor_ID": "22",
+        "Monitor": "Learning Gate Middle School",
+        "Participants": "45",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "29.3",
+        "DissolvedOxygen_ppm": "8",
+        "pH": "8.51",
+        "AirTemp_C": "30.1",
+        "Salinity_ppt": "33",
+        "Nitrates_ppm": "41",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "109",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-24",
+        "Time": "12:20",
+        "Monitor_ID": "22",
+        "Monitor": "Learning Gate Middle School",
+        "Participants": "46",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "42.5",
+        "WaterTemp_C": "29.6",
+        "DissolvedOxygen_ppm": "7.9",
+        "pH": "8.53",
+        "AirTemp_C": "31",
+        "Salinity_ppt": "33.1",
+        "Nitrates_ppm": "41",
+        "Litter_lbs": "8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "107",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-23",
+        "Time": "14:10",
+        "Monitor_ID": "22",
+        "Monitor": "Learning Gate Middle School",
+        "Participants": "46",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "8.8",
+        "WaterTemp_C": "30.1",
+        "DissolvedOxygen_ppm": "9.4",
+        "pH": "8.71",
+        "AirTemp_C": "31.2",
+        "Salinity_ppt": "32.9",
+        "Nitrates_ppm": "36.7",
+        "Litter_lbs": "10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "106",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-20",
+        "Time": "10:45",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "35",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "31.1",
+        "WaterTemp_C": "28.3",
+        "DissolvedOxygen_ppm": "7.1",
+        "pH": "8.4",
+        "AirTemp_C": "31",
+        "Salinity_ppt": "32.6",
+        "Nitrates_ppm": "63.5",
+        "Litter_lbs": "2.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "105",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-17",
+        "Time": "12:26",
+        "Monitor_ID": "19",
+        "Monitor": "Plato Academy Seminole",
+        "Participants": "41",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "29.2",
+        "WaterTemp_C": "27.1",
+        "DissolvedOxygen_ppm": "9.17",
+        "pH": "8.28",
+        "AirTemp_C": "27.7",
+        "Salinity_ppt": "32.6",
+        "Nitrates_ppm": "27.3",
+        "Litter_lbs": "2.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "104",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-16",
+        "Time": "11:00",
+        "Monitor_ID": "20",
+        "Monitor": "Plato Academy Tarpon Springs",
+        "Participants": "40",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "92",
+        "WaterTemp_C": "26.6",
+        "DissolvedOxygen_ppm": "7.7",
+        "pH": "8.5",
+        "AirTemp_C": "26.6",
+        "Salinity_ppt": "30.2",
+        "Nitrates_ppm": "36.1",
+        "Litter_lbs": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "102",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-14",
+        "Time": "11:00",
+        "Monitor_ID": "18",
+        "Monitor": "St. Cecelia Interparochial School",
+        "Participants": "22",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "9.6",
+        "WaterTemp_C": "23.1",
+        "DissolvedOxygen_ppm": "7.7",
+        "pH": "8.8",
+        "AirTemp_C": "25",
+        "Salinity_ppt": "32.5",
+        "Nitrates_ppm": "36.3",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "103",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-14",
+        "Time": "10:15",
+        "Monitor_ID": "18",
+        "Monitor": "St. Cecelia Interparochial School",
+        "Participants": "22",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "22",
+        "WaterTemp_C": "23.5",
+        "DissolvedOxygen_ppm": "7.8",
+        "pH": "8.49",
+        "AirTemp_C": "24",
+        "Salinity_ppt": "31.6",
+        "Nitrates_ppm": "35",
+        "Litter_lbs": "7.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "101",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-10",
+        "Time": "",
+        "Monitor_ID": "17",
+        "Monitor": "Plato Academy Clearwater",
+        "Participants": "54",
+        "Weather": "",
+        "Land_Use": "",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "",
+        "DissolvedOxygen_ppm": "",
+        "pH": "",
+        "AirTemp_C": "",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "100",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-09",
+        "Time": "",
+        "Monitor_ID": "48",
+        "Monitor": "Forest Lakes",
+        "Participants": "66",
+        "Weather": "",
+        "Land_Use": "",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "",
+        "DissolvedOxygen_ppm": "",
+        "pH": "",
+        "AirTemp_C": "",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "99",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-07",
+        "Time": "",
+        "Monitor_ID": "48",
+        "Monitor": "Forest Lakes",
+        "Participants": "54",
+        "Weather": "",
+        "Land_Use": "",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "",
+        "DissolvedOxygen_ppm": "",
+        "pH": "",
+        "AirTemp_C": "",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "98",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-03",
+        "Time": "",
+        "Monitor_ID": "15",
+        "Monitor": "Terrace Community Middle School",
+        "Participants": "64",
+        "Weather": "",
+        "Land_Use": "",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "",
+        "DissolvedOxygen_ppm": "",
+        "pH": "",
+        "AirTemp_C": "",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "97",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-05-02",
+        "Time": "14:00",
+        "Monitor_ID": "16",
+        "Monitor": "First Academy",
+        "Participants": "30",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "26.3",
+        "DissolvedOxygen_ppm": "8.4",
+        "pH": "8.2",
+        "AirTemp_C": "28.3",
+        "Salinity_ppt": "31.6",
+        "Nitrates_ppm": "52.6",
+        "Litter_lbs": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "96",
+        "Site": "Coquina Bayside",
+        "Date": "2013-04-30",
+        "Time": "12:50",
+        "Monitor_ID": "47",
+        "Monitor": "Haile Middle School",
+        "Participants": "32",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "8.5",
+        "WaterTemp_C": "27.5",
+        "DissolvedOxygen_ppm": "13.6",
+        "pH": "8.39",
+        "AirTemp_C": "28.4",
+        "Salinity_ppt": "33.1",
+        "Nitrates_ppm": "32.3",
+        "Litter_lbs": "34"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "94",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-04-25",
+        "Time": "12:05",
+        "Monitor_ID": "14",
+        "Monitor": "Montgomery Middle School ",
+        "Participants": "17",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.7",
+        "WaterTemp_C": "26.1",
+        "DissolvedOxygen_ppm": "7.7",
+        "pH": "8.3",
+        "AirTemp_C": "28.7",
+        "Salinity_ppt": "32.3",
+        "Nitrates_ppm": "32.4",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "95",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-04-25",
+        "Time": "12:05",
+        "Monitor_ID": "14",
+        "Monitor": "Montgomery Middle School ",
+        "Participants": "17",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "7.3",
+        "WaterTemp_C": "27.8",
+        "DissolvedOxygen_ppm": "7.8",
+        "pH": "8.54",
+        "AirTemp_C": "28.3",
+        "Salinity_ppt": "30.7",
+        "Nitrates_ppm": "55",
+        "Litter_lbs": "5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "92",
+        "Site": "Crystal River",
+        "Date": "2013-04-24",
+        "Time": "8:35",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "34",
+        "Weather": "CLOUDY",
+        "Land_Use": "RESIDENTIAL",
+        "Turbidity_NTU": "18.2",
+        "WaterTemp_C": "22.7",
+        "DissolvedOxygen_ppm": "6.6",
+        "pH": "8.1",
+        "AirTemp_C": "23.8",
+        "Salinity_ppt": "0.7",
+        "Nitrates_ppm": "2.7",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.61,
+          28.897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "93",
+        "Site": "Rainbow River State Park",
+        "Date": "2013-04-24",
+        "Time": "14:00",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "34",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "2.600 ",
+        "WaterTemp_C": "23.9",
+        "DissolvedOxygen_ppm": "9.3",
+        "pH": "8.2",
+        "AirTemp_C": "27.3",
+        "Salinity_ppt": "0.2",
+        "Nitrates_ppm": "2.3",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.441,
+          29.114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "91",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-04-20",
+        "Time": "",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "39",
+        "Weather": "",
+        "Land_Use": "",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "",
+        "DissolvedOxygen_ppm": "",
+        "pH": "",
+        "AirTemp_C": "",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "40"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "90",
+        "Site": "Rainbow River State Park",
+        "Date": "2013-04-18",
+        "Time": "14:05",
+        "Monitor_ID": "13",
+        "Monitor": "Tampa Day School",
+        "Participants": "17",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "0.800 ",
+        "WaterTemp_C": "24.1",
+        "DissolvedOxygen_ppm": "10.7",
+        "pH": "6.53",
+        "AirTemp_C": "28.8",
+        "Salinity_ppt": "0.2",
+        "Nitrates_ppm": "4.8",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.441,
+          29.114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "89",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-04-16",
+        "Time": "14:00",
+        "Monitor_ID": "13",
+        "Monitor": "Tampa Day School",
+        "Participants": "18",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "14.7",
+        "WaterTemp_C": "26.4",
+        "DissolvedOxygen_ppm": "9.2",
+        "pH": "8.3",
+        "AirTemp_C": "29.3",
+        "Salinity_ppt": "31.4",
+        "Nitrates_ppm": "55.3",
+        "Litter_lbs": "5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "88",
+        "Site": "Myakka River State Park",
+        "Date": "2013-04-16",
+        "Time": "14:00",
+        "Monitor_ID": "13",
+        "Monitor": "Tampa Day School ",
+        "Participants": "37",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.5",
+        "WaterTemp_C": "28.1",
+        "DissolvedOxygen_ppm": "4.2",
+        "pH": "6.86",
+        "AirTemp_C": "30.6",
+        "Salinity_ppt": "0.3",
+        "Nitrates_ppm": "1.8",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.291,
+          27.266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "87",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2013-04-11",
+        "Time": "15:40",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "52",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "38",
+        "WaterTemp_C": "29.2",
+        "DissolvedOxygen_ppm": "6.7",
+        "pH": "8.45",
+        "AirTemp_C": "29.3",
+        "Salinity_ppt": "32.8",
+        "Nitrates_ppm": "68.6",
+        "Litter_lbs": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "86",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-04-06",
+        "Time": "",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "30",
+        "Weather": "",
+        "Land_Use": "",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "",
+        "DissolvedOxygen_ppm": "",
+        "pH": "",
+        "AirTemp_C": "",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "84",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-04-05",
+        "Time": "11:30",
+        "Monitor_ID": "11",
+        "Monitor": "The Kings Academy",
+        "Participants": "57",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "20.6",
+        "DissolvedOxygen_ppm": "8.3",
+        "pH": "8.4",
+        "AirTemp_C": "22.3",
+        "Salinity_ppt": "32.1",
+        "Nitrates_ppm": "12.6",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "85",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-04-05",
+        "Time": "12:00",
+        "Monitor_ID": "11",
+        "Monitor": "The Kings Academy",
+        "Participants": "55",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "19.5",
+        "WaterTemp_C": "21.3",
+        "DissolvedOxygen_ppm": "8.1",
+        "pH": "8.3",
+        "AirTemp_C": "24.8",
+        "Salinity_ppt": "31.5",
+        "Nitrates_ppm": "9",
+        "Litter_lbs": "17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "83",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-04-03",
+        "Time": "11:45",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "29",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "22",
+        "WaterTemp_C": "23",
+        "DissolvedOxygen_ppm": "6.3",
+        "pH": "8.3",
+        "AirTemp_C": "24.6",
+        "Salinity_ppt": "32.3",
+        "Nitrates_ppm": "5.5",
+        "Litter_lbs": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "82",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-03-27",
+        "Time": "10:45",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "23",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "0.7",
+        "WaterTemp_C": "15.5",
+        "DissolvedOxygen_ppm": "8.2",
+        "pH": "8.52",
+        "AirTemp_C": "12.3",
+        "Salinity_ppt": "31.5",
+        "Nitrates_ppm": "34.6",
+        "Litter_lbs": "5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "81",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-03-22",
+        "Time": "13:50",
+        "Monitor_ID": "10",
+        "Monitor": "Discovery Academy of Lake Alfred",
+        "Participants": "28",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "8.5",
+        "WaterTemp_C": "18.6",
+        "DissolvedOxygen_ppm": "9.4",
+        "pH": "8.47",
+        "AirTemp_C": "20.9",
+        "Salinity_ppt": "32",
+        "Nitrates_ppm": "40.6",
+        "Litter_lbs": "5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "79",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-03-19",
+        "Time": "13:04",
+        "Monitor_ID": "9",
+        "Monitor": "New Heights Elementary School",
+        "Participants": "45",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "10.8",
+        "WaterTemp_C": "21.6",
+        "DissolvedOxygen_ppm": "7.3",
+        "pH": "8.11",
+        "AirTemp_C": "24.1",
+        "Salinity_ppt": "32.9",
+        "Nitrates_ppm": "39.2",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "80",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-03-19",
+        "Time": "12:10",
+        "Monitor_ID": "9",
+        "Monitor": "New Heights Elementary School",
+        "Participants": "45",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "10.8",
+        "WaterTemp_C": "20.6",
+        "DissolvedOxygen_ppm": "7",
+        "pH": "8.49",
+        "AirTemp_C": "20.6",
+        "Salinity_ppt": "32.2",
+        "Nitrates_ppm": "29.6",
+        "Litter_lbs": "20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "77",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-03-18",
+        "Time": "13:03",
+        "Monitor_ID": "9",
+        "Monitor": "New Heights Elementary School",
+        "Participants": "30",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "23",
+        "WaterTemp_C": "19.7",
+        "DissolvedOxygen_ppm": "8.02",
+        "pH": "8.11",
+        "AirTemp_C": "20.4",
+        "Salinity_ppt": "32.5",
+        "Nitrates_ppm": "36.2",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "78",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-03-18",
+        "Time": "12:10",
+        "Monitor_ID": "9",
+        "Monitor": "New Heights Elementary School",
+        "Participants": "39",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "22.5",
+        "WaterTemp_C": "19.1",
+        "DissolvedOxygen_ppm": "7.1",
+        "pH": "8.48",
+        "AirTemp_C": "21.1",
+        "Salinity_ppt": "32.1",
+        "Nitrates_ppm": "30.7",
+        "Litter_lbs": "14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "75",
+        "Site": "Coquina Bayside",
+        "Date": "2013-03-08",
+        "Time": "13:05",
+        "Monitor_ID": "46",
+        "Monitor": "Manatee School for the Arts",
+        "Participants": "37",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "29.1",
+        "WaterTemp_C": "19.1",
+        "DissolvedOxygen_ppm": "12.7",
+        "pH": "8.39",
+        "AirTemp_C": "18.1",
+        "Salinity_ppt": "33.6",
+        "Nitrates_ppm": "18.4",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "76",
+        "Site": "Coquina Bayside",
+        "Date": "2013-03-08",
+        "Time": "13:45",
+        "Monitor_ID": "46",
+        "Monitor": "Manatee School for the Arts",
+        "Participants": "16",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "18.8",
+        "WaterTemp_C": "20.9",
+        "DissolvedOxygen_ppm": "13.3",
+        "pH": "8.74",
+        "AirTemp_C": "18.6",
+        "Salinity_ppt": "33",
+        "Nitrates_ppm": "9.4",
+        "Litter_lbs": "51"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "72",
+        "Site": "Coquina Bayside",
+        "Date": "2013-03-07",
+        "Time": "12:50",
+        "Monitor_ID": "46",
+        "Monitor": "Manatee School for the Arts",
+        "Participants": "38",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "42",
+        "WaterTemp_C": "15.5",
+        "DissolvedOxygen_ppm": "7.6",
+        "pH": "7.13",
+        "AirTemp_C": "12.5",
+        "Salinity_ppt": "33.3",
+        "Nitrates_ppm": "45.5",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "73",
+        "Site": "Coquina Bayside",
+        "Date": "2013-03-07",
+        "Time": "13:18",
+        "Monitor_ID": "46",
+        "Monitor": "Manatee School for the Arts",
+        "Participants": "38",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "17",
+        "DissolvedOxygen_ppm": "7.2",
+        "pH": "8.49",
+        "AirTemp_C": "14.7",
+        "Salinity_ppt": "33.3",
+        "Nitrates_ppm": "29.4",
+        "Litter_lbs": "83"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "74",
+        "Site": "Coquina Bayside",
+        "Date": "2013-03-07",
+        "Time": "13:55",
+        "Monitor_ID": "46",
+        "Monitor": "Manatee School for the Arts",
+        "Participants": "38",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "14.9",
+        "WaterTemp_C": "18.3",
+        "DissolvedOxygen_ppm": "6.7",
+        "pH": "8.51",
+        "AirTemp_C": "13.4",
+        "Salinity_ppt": "33.6",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "70",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-03-05",
+        "Time": "13:30",
+        "Monitor_ID": "45",
+        "Monitor": "Ozona Elementary School",
+        "Participants": "53",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "5.3",
+        "WaterTemp_C": "18.3",
+        "DissolvedOxygen_ppm": "10.1",
+        "pH": "8.43",
+        "AirTemp_C": "20.3",
+        "Salinity_ppt": "31.6",
+        "Nitrates_ppm": "23.9",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "71",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-03-05",
+        "Time": "12:10",
+        "Monitor_ID": "45",
+        "Monitor": "Ozona Elementary School",
+        "Participants": "53",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.3",
+        "WaterTemp_C": "17.8",
+        "DissolvedOxygen_ppm": "10.04",
+        "pH": "8.46",
+        "AirTemp_C": "19.6",
+        "Salinity_ppt": "32",
+        "Nitrates_ppm": "22.05",
+        "Litter_lbs": "11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "69",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-03-03",
+        "Time": "13:40",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "83",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "86.4",
+        "WaterTemp_C": "16",
+        "DissolvedOxygen_ppm": "9.2",
+        "pH": "8.2",
+        "AirTemp_C": "14.2",
+        "Salinity_ppt": "32.3",
+        "Nitrates_ppm": "37.6",
+        "Litter_lbs": "14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "68",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2013-02-19",
+        "Time": "14:30",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "38",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "20.4",
+        "WaterTemp_C": "20.6",
+        "DissolvedOxygen_ppm": "11",
+        "pH": "8.45",
+        "AirTemp_C": "22.6",
+        "Salinity_ppt": "35.7",
+        "Nitrates_ppm": "73",
+        "Litter_lbs": "20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "67",
+        "Site": "Myakka River State Park",
+        "Date": "2012-12-11",
+        "Time": "10:20",
+        "Monitor_ID": "41",
+        "Monitor": "Suncoast Polytechnical High School",
+        "Participants": "30",
+        "Weather": "RAIN MEASURABLE",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "22.8",
+        "WaterTemp_C": "24.2",
+        "DissolvedOxygen_ppm": "4.5",
+        "pH": "6.5",
+        "AirTemp_C": "25",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.291,
+          27.266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "66",
+        "Site": "Myakka River State Park",
+        "Date": "2012-12-10",
+        "Time": "10:10",
+        "Monitor_ID": "41",
+        "Monitor": "Suncoast Polytechnical High School",
+        "Participants": "30",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "35.9",
+        "WaterTemp_C": "23.4",
+        "DissolvedOxygen_ppm": "2.8",
+        "pH": "6.87",
+        "AirTemp_C": "24.8",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.291,
+          27.266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "64",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-12-04",
+        "Time": "12:00",
+        "Monitor_ID": "51",
+        "Monitor": "Frontier Middle School",
+        "Participants": "22",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "14.5",
+        "WaterTemp_C": "21.9",
+        "DissolvedOxygen_ppm": "6.7",
+        "pH": "8.3",
+        "AirTemp_C": "23.8",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "65",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-12-04",
+        "Time": "12:30",
+        "Monitor_ID": "51",
+        "Monitor": "Frontier Middle School",
+        "Participants": "24",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "15.6",
+        "WaterTemp_C": "22.5",
+        "DissolvedOxygen_ppm": "5.9",
+        "pH": "8.35",
+        "AirTemp_C": "25.4",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "62",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-12-03",
+        "Time": "12:00",
+        "Monitor_ID": "51",
+        "Monitor": "Frontier Middle School",
+        "Participants": "24",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "29",
+        "WaterTemp_C": "22.8",
+        "DissolvedOxygen_ppm": "8",
+        "pH": "8.37",
+        "AirTemp_C": "24.7",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "63",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-12-03",
+        "Time": "12:30",
+        "Monitor_ID": "51",
+        "Monitor": "Frontier Middle School",
+        "Participants": "26",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "25.2",
+        "WaterTemp_C": "23.5",
+        "DissolvedOxygen_ppm": "7.7",
+        "pH": "8.36",
+        "AirTemp_C": "25.2",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "60",
+        "Site": "Coquina Bayside",
+        "Date": "2012-11-30",
+        "Time": "12:00",
+        "Monitor_ID": "9999",
+        "Monitor": "Daughtery  Elementary School",
+        "Participants": "34",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "22.4",
+        "DissolvedOxygen_ppm": "9.1",
+        "pH": "8.77",
+        "AirTemp_C": "23.3",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "61",
+        "Site": "Coquina Bayside",
+        "Date": "2012-11-30",
+        "Time": "12:30",
+        "Monitor_ID": "9999",
+        "Monitor": "Daughtery Elementary School",
+        "Participants": "34",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "22",
+        "DissolvedOxygen_ppm": "9.4",
+        "pH": "8.8",
+        "AirTemp_C": "23.9",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "34"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "58",
+        "Site": "Coquina Bayside",
+        "Date": "2012-11-29",
+        "Time": "11:45",
+        "Monitor_ID": "9999",
+        "Monitor": "Daughtery  Elementary School",
+        "Participants": "18",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "16.9",
+        "WaterTemp_C": "20.5",
+        "DissolvedOxygen_ppm": "11.6",
+        "pH": "8.68",
+        "AirTemp_C": "21.4",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "59",
+        "Site": "Coquina Bayside",
+        "Date": "2012-11-29",
+        "Time": "12:30",
+        "Monitor_ID": "9999",
+        "Monitor": "Daughtery Elementary School",
+        "Participants": "18",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "15.3",
+        "WaterTemp_C": "20.5",
+        "DissolvedOxygen_ppm": "10.1",
+        "pH": "8.65",
+        "AirTemp_C": "22.7",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "28"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "56",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-27",
+        "Time": "11:30",
+        "Monitor_ID": "5008",
+        "Monitor": "Madeira Beach Fundamental School",
+        "Participants": "44",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "34.2",
+        "WaterTemp_C": "19.6",
+        "DissolvedOxygen_ppm": "8.9",
+        "pH": "8.4",
+        "AirTemp_C": "21.9",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "57",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-27",
+        "Time": "12:00",
+        "Monitor_ID": "5008",
+        "Monitor": "Madeira Beach Fundamental School",
+        "Participants": "44",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "19.2",
+        "WaterTemp_C": "20.2",
+        "DissolvedOxygen_ppm": "8.5",
+        "pH": "8.39",
+        "AirTemp_C": "23.3",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "9.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "54",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-13",
+        "Time": "11:15",
+        "Monitor_ID": "39",
+        "Monitor": "Eisenhower Elementary School",
+        "Participants": "35",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "3.1",
+        "WaterTemp_C": "23.2",
+        "DissolvedOxygen_ppm": "7.8",
+        "pH": "8.38",
+        "AirTemp_C": "25.5",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "55",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-13",
+        "Time": "12:00",
+        "Monitor_ID": "39",
+        "Monitor": "Eisenhower Elementary School",
+        "Participants": "35",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "6.8",
+        "WaterTemp_C": "23.6",
+        "DissolvedOxygen_ppm": "8.2",
+        "pH": "8.36",
+        "AirTemp_C": "24.4",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "8.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "52",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-07",
+        "Time": "11:15",
+        "Monitor_ID": "8",
+        "Monitor": "Pasadena Fundamental School",
+        "Participants": "46",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "41.3",
+        "WaterTemp_C": "19.5",
+        "DissolvedOxygen_ppm": "6.2",
+        "pH": "8.36",
+        "AirTemp_C": "19.8",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "53",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-07",
+        "Time": "12:00",
+        "Monitor_ID": "8",
+        "Monitor": "Pasadena Fundamental School",
+        "Participants": "40",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "80",
+        "WaterTemp_C": "18.6",
+        "DissolvedOxygen_ppm": "7.1",
+        "pH": "8.34",
+        "AirTemp_C": "19.8",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "50",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-06",
+        "Time": "10:40",
+        "Monitor_ID": "9999",
+        "Monitor": "Cross Bayou Elementary School",
+        "Participants": "18",
+        "Weather": "RAIN MEASURABLE",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "35.5",
+        "WaterTemp_C": "19.6",
+        "DissolvedOxygen_ppm": "7.4",
+        "pH": "8.33",
+        "AirTemp_C": "26.7",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "51",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-06",
+        "Time": "12:15",
+        "Monitor_ID": "9999",
+        "Monitor": "Cross Bayou Elementary School",
+        "Participants": "19",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "28.5",
+        "WaterTemp_C": "20.7",
+        "DissolvedOxygen_ppm": "8",
+        "pH": "8.4",
+        "AirTemp_C": "22",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "48",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-05",
+        "Time": "10:15",
+        "Monitor_ID": "9999",
+        "Monitor": "Cross Bayou Elementary School",
+        "Participants": "25",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "7.8",
+        "WaterTemp_C": "22.3",
+        "DissolvedOxygen_ppm": "6.9",
+        "pH": "8.26",
+        "AirTemp_C": "24.7",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "49",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-05",
+        "Time": "11:45",
+        "Monitor_ID": "9999",
+        "Monitor": "Cross Bayou Elementary School",
+        "Participants": "20",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "2.3",
+        "WaterTemp_C": "22.7",
+        "DissolvedOxygen_ppm": "7.7",
+        "pH": "8.24",
+        "AirTemp_C": "24.7",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "32"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "46",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-02",
+        "Time": "11:40",
+        "Monitor_ID": "9999",
+        "Monitor": "Belcher Elementary School",
+        "Participants": "33",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.7",
+        "WaterTemp_C": "21.2",
+        "DissolvedOxygen_ppm": "",
+        "pH": "8.31",
+        "AirTemp_C": "22.7",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "47",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-11-02",
+        "Time": "13:00",
+        "Monitor_ID": "9999",
+        "Monitor": "Belcher Elementary School",
+        "Participants": "34",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "16.7",
+        "WaterTemp_C": "22.1",
+        "DissolvedOxygen_ppm": "8.9",
+        "pH": "8.35",
+        "AirTemp_C": "23.7",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "45",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-10-25",
+        "Time": "10:00",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "22",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "33.2",
+        "WaterTemp_C": "24.7",
+        "DissolvedOxygen_ppm": "7.4",
+        "pH": "8.47",
+        "AirTemp_C": "25.5",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "24"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "43",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-10-23",
+        "Time": "11:15",
+        "Monitor_ID": "5014",
+        "Monitor": "Westgate Elementary School",
+        "Participants": "20",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "14.9",
+        "WaterTemp_C": "24.2",
+        "DissolvedOxygen_ppm": "7.5",
+        "pH": "8.52",
+        "AirTemp_C": "27.8",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "44",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-10-23",
+        "Time": "13:00",
+        "Monitor_ID": "5014",
+        "Monitor": "Westgate Elementary School",
+        "Participants": "21",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "9.2",
+        "WaterTemp_C": "25.6",
+        "DissolvedOxygen_ppm": "7.2",
+        "pH": "8.53",
+        "AirTemp_C": "27.8",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "5.5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "41",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-10-22",
+        "Time": "11:00",
+        "Monitor_ID": "5014",
+        "Monitor": "Westgate Elementary School",
+        "Participants": "23",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "22",
+        "WaterTemp_C": "23.2",
+        "DissolvedOxygen_ppm": "7",
+        "pH": "8.48",
+        "AirTemp_C": "25",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "42",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-10-22",
+        "Time": "12:45",
+        "Monitor_ID": "5014",
+        "Monitor": "Westgate Elementary School",
+        "Participants": "22",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "10.1",
+        "WaterTemp_C": "25",
+        "DissolvedOxygen_ppm": "6.9",
+        "pH": "8.4",
+        "AirTemp_C": "27.2",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "39",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-11",
+        "Time": "12:15",
+        "Monitor_ID": "102",
+        "Monitor": "Bashaw  Elementary School",
+        "Participants": "28",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "23.2",
+        "WaterTemp_C": "27.2",
+        "DissolvedOxygen_ppm": "10.9",
+        "pH": "8.55",
+        "AirTemp_C": "26.1",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "41"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "40",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-11",
+        "Time": "13:40",
+        "Monitor_ID": "102",
+        "Monitor": "Bashaw  Elementary School",
+        "Participants": "15",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "62",
+        "WaterTemp_C": "25",
+        "DissolvedOxygen_ppm": "10.1",
+        "pH": "8.42",
+        "AirTemp_C": "25",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "37",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-10",
+        "Time": "12:40",
+        "Monitor_ID": "102",
+        "Monitor": "Bashaw  Elementary School",
+        "Participants": "28",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "5",
+        "WaterTemp_C": "29.1",
+        "DissolvedOxygen_ppm": "11.7",
+        "pH": "8.49",
+        "AirTemp_C": "29",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "38",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-10",
+        "Time": "13:45",
+        "Monitor_ID": "102",
+        "Monitor": "Bashaw  Elementary School",
+        "Participants": "25",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "12.5",
+        "WaterTemp_C": "28.6",
+        "DissolvedOxygen_ppm": "10.8",
+        "pH": "8.53",
+        "AirTemp_C": "29",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "32"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "35",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-10-09",
+        "Time": "11:15",
+        "Monitor_ID": "5006",
+        "Monitor": "Skyview Elementary School",
+        "Participants": "24",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "8.3",
+        "WaterTemp_C": "23.4",
+        "DissolvedOxygen_ppm": "7.2",
+        "pH": "8.26",
+        "AirTemp_C": "28.1",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "36",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-10-09",
+        "Time": "12:00",
+        "Monitor_ID": "5006",
+        "Monitor": "Skyview Elementary School",
+        "Participants": "25",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "12",
+        "WaterTemp_C": "28.8",
+        "DissolvedOxygen_ppm": "8",
+        "pH": "8.33",
+        "AirTemp_C": "28.6",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "28"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "33",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-10-08",
+        "Time": "11:20",
+        "Monitor_ID": "5006",
+        "Monitor": "Skyview Elementary School",
+        "Participants": "25",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "1.1",
+        "WaterTemp_C": "27.8",
+        "DissolvedOxygen_ppm": "6.4",
+        "pH": "8.11",
+        "AirTemp_C": "27.6",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "34",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-10-08",
+        "Time": "12:00",
+        "Monitor_ID": "5006",
+        "Monitor": "Skyview Elementary School",
+        "Participants": "24",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "5.4",
+        "WaterTemp_C": "27.1",
+        "DissolvedOxygen_ppm": "7.3",
+        "pH": "8.26",
+        "AirTemp_C": "28.6",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "31",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-05",
+        "Time": "10:00",
+        "Monitor_ID": "110",
+        "Monitor": "Prine Elementary School",
+        "Participants": "28",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "9.7",
+        "WaterTemp_C": "27.9",
+        "DissolvedOxygen_ppm": "10.7",
+        "pH": "8.54",
+        "AirTemp_C": "28.5",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "32",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-05",
+        "Time": "11:30",
+        "Monitor_ID": "110",
+        "Monitor": "Prine Elementary School",
+        "Participants": "29",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "20",
+        "WaterTemp_C": "28",
+        "DissolvedOxygen_ppm": "11",
+        "pH": "8.2",
+        "AirTemp_C": "",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "50"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "29",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-04",
+        "Time": "9:40",
+        "Monitor_ID": "110",
+        "Monitor": "Prine Elementary School",
+        "Participants": "18",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "7",
+        "WaterTemp_C": "27.7",
+        "DissolvedOxygen_ppm": "9.2",
+        "pH": "8.43",
+        "AirTemp_C": "27.4",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "30",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-04",
+        "Time": "11:00",
+        "Monitor_ID": "110",
+        "Monitor": "Prine Elementary School",
+        "Participants": "20",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "30",
+        "WaterTemp_C": "29.5",
+        "DissolvedOxygen_ppm": "",
+        "pH": "8.6",
+        "AirTemp_C": "27.4",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "35"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "27",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-03",
+        "Time": "10:15",
+        "Monitor_ID": "108",
+        "Monitor": "Palmetto Elementary School",
+        "Participants": "25",
+        "Weather": "RAIN MEASURABLE",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "70.5",
+        "WaterTemp_C": "27.1",
+        "DissolvedOxygen_ppm": "6.9",
+        "pH": "8.3",
+        "AirTemp_C": "26.3",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "28",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-03",
+        "Time": "11:00",
+        "Monitor_ID": "108",
+        "Monitor": "Palmetto Elementary School",
+        "Participants": "26",
+        "Weather": "RAIN MEASURABLE",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "66",
+        "WaterTemp_C": "28",
+        "DissolvedOxygen_ppm": "6.7",
+        "pH": "8.33",
+        "AirTemp_C": "26.5",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "49"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "26",
+        "Site": "Coquina Bayside",
+        "Date": "2012-10-02",
+        "Time": "12:45",
+        "Monitor_ID": "108",
+        "Monitor": "Palmetto Elementary School",
+        "Participants": "25",
+        "Weather": "CLOUDY",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "8",
+        "WaterTemp_C": "29.1",
+        "DissolvedOxygen_ppm": "9",
+        "pH": "8.5",
+        "AirTemp_C": "31.5",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "68"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "24",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2012-10-01",
+        "Time": "12:30",
+        "Monitor_ID": "5003",
+        "Monitor": "Lakeview Fundamental School",
+        "Participants": "33",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "13.2",
+        "WaterTemp_C": "29.2",
+        "DissolvedOxygen_ppm": "7.3",
+        "pH": "8.23",
+        "AirTemp_C": "29.3",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "25",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2012-10-01",
+        "Time": "13:10",
+        "Monitor_ID": "5003",
+        "Monitor": "Lakeview Fundamental School",
+        "Participants": "32",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "22.7",
+        "WaterTemp_C": "30.5",
+        "DissolvedOxygen_ppm": "7",
+        "pH": "8.31",
+        "AirTemp_C": "30.7",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "22",
+        "Site": "Coquina Bayside",
+        "Date": "2012-09-28",
+        "Time": "11:20",
+        "Monitor_ID": "104",
+        "Monitor": "McNeal Elementary School",
+        "Participants": "42",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "28.7",
+        "WaterTemp_C": "29.2",
+        "DissolvedOxygen_ppm": "8.3",
+        "pH": "8.39",
+        "AirTemp_C": "32.7",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "23",
+        "Site": "Coquina Bayside",
+        "Date": "2012-09-28",
+        "Time": "13:00",
+        "Monitor_ID": "104",
+        "Monitor": "McNeal Elementary School",
+        "Participants": "40",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "17",
+        "WaterTemp_C": "29.5",
+        "DissolvedOxygen_ppm": "8.5",
+        "pH": "8.3",
+        "AirTemp_C": "33.5",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "20",
+        "Site": "Coquina Bayside",
+        "Date": "2012-09-27",
+        "Time": "11:15",
+        "Monitor_ID": "104",
+        "Monitor": "McNeal Elementary School",
+        "Participants": "18",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "26.6",
+        "WaterTemp_C": "35.3",
+        "DissolvedOxygen_ppm": "6.7",
+        "pH": "8.34",
+        "AirTemp_C": "36",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "21",
+        "Site": "Coquina Bayside",
+        "Date": "2012-09-27",
+        "Time": "13:00",
+        "Monitor_ID": "104",
+        "Monitor": "McNeal Elementary School",
+        "Participants": "18",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "15",
+        "WaterTemp_C": "29.7",
+        "DissolvedOxygen_ppm": "9",
+        "pH": "8.4",
+        "AirTemp_C": "36",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "41"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "19",
+        "Site": "Coquina Bayside",
+        "Date": "2012-09-21",
+        "Time": "11:20",
+        "Monitor_ID": "129",
+        "Monitor": "Rowlett Elementary School",
+        "Participants": "55",
+        "Weather": "TRACE",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "10",
+        "WaterTemp_C": "31.3",
+        "DissolvedOxygen_ppm": "",
+        "pH": "8.2",
+        "AirTemp_C": "36.3",
+        "Salinity_ppt": "23.3",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "86"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "18",
+        "Site": "Coquina Bayside",
+        "Date": "2012-09-20",
+        "Time": "",
+        "Monitor_ID": "129",
+        "Monitor": "Rowlett Elementary School",
+        "Participants": "105",
+        "Weather": "",
+        "Land_Use": "",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "",
+        "DissolvedOxygen_ppm": "",
+        "pH": "",
+        "AirTemp_C": "",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "81"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "17",
+        "Site": "Coquina Bayside",
+        "Date": "2012-09-18",
+        "Time": "",
+        "Monitor_ID": "6",
+        "Monitor": "CHEFF",
+        "Participants": "54",
+        "Weather": "",
+        "Land_Use": "",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "",
+        "DissolvedOxygen_ppm": "",
+        "pH": "",
+        "AirTemp_C": "",
+        "Salinity_ppt": "",
+        "Nitrates_ppm": "",
+        "Litter_lbs": "38"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.689,
+          27.453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "16",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-06-28",
+        "Time": "14:15",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "30",
+        "Weather": "",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.2",
+        "WaterTemp_C": "31.8",
+        "DissolvedOxygen_ppm": "9.8",
+        "pH": "8.34",
+        "AirTemp_C": "32.6",
+        "Salinity_ppt": "17.7",
+        "Nitrates_ppm": "68",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "15",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-06-27",
+        "Time": "11:50",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "28",
+        "Weather": "",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "8.1",
+        "WaterTemp_C": "28.5",
+        "DissolvedOxygen_ppm": "",
+        "pH": "8.38",
+        "AirTemp_C": "33.7",
+        "Salinity_ppt": "30.7",
+        "Nitrates_ppm": "189",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "14",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2012-06-20",
+        "Time": "12:10",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "28",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "4.4",
+        "WaterTemp_C": "30",
+        "DissolvedOxygen_ppm": "6.8",
+        "pH": "8.43",
+        "AirTemp_C": "34.7",
+        "Salinity_ppt": "25.7",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "13",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-06-13",
+        "Time": "12:00",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "47",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "33",
+        "WaterTemp_C": "30.5",
+        "DissolvedOxygen_ppm": "7.1",
+        "pH": "8.28",
+        "AirTemp_C": "37",
+        "Salinity_ppt": "27.5",
+        "Nitrates_ppm": "33.4",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "12",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-06-12",
+        "Time": "12:10",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "42",
+        "Weather": "",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "25",
+        "WaterTemp_C": "31.3",
+        "DissolvedOxygen_ppm": "8.1",
+        "pH": "8.33",
+        "AirTemp_C": "36.9",
+        "Salinity_ppt": "27.6",
+        "Nitrates_ppm": "29.4",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "11",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-06-11",
+        "Time": "14:10",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "15",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "7",
+        "WaterTemp_C": "32.8",
+        "DissolvedOxygen_ppm": "",
+        "pH": "8.57",
+        "AirTemp_C": "36.3",
+        "Salinity_ppt": "31.5",
+        "Nitrates_ppm": "48.6",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "10",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2012-06-01",
+        "Time": "11:25",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "30",
+        "Weather": "",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "18.4",
+        "WaterTemp_C": "25.1",
+        "DissolvedOxygen_ppm": "7.2",
+        "pH": "8.48",
+        "AirTemp_C": "25.8",
+        "Salinity_ppt": "35",
+        "Nitrates_ppm": "50.2",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "9",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-05-11",
+        "Time": "9:19",
+        "Monitor_ID": "15",
+        "Monitor": "Terrace Community Middle School",
+        "Participants": "62",
+        "Weather": "",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "22.7",
+        "WaterTemp_C": "27.9",
+        "DissolvedOxygen_ppm": "6.6",
+        "pH": "8.36",
+        "AirTemp_C": "30.8",
+        "Salinity_ppt": "35",
+        "Nitrates_ppm": "26.5",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "8",
+        "Site": "Myakka River State Park",
+        "Date": "2012-04-26",
+        "Time": "12:10",
+        "Monitor_ID": "14",
+        "Monitor": "Montgomery Middle School",
+        "Participants": "34",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "52.5",
+        "WaterTemp_C": "33.3",
+        "DissolvedOxygen_ppm": "7.5",
+        "pH": "7.62",
+        "AirTemp_C": "33.6",
+        "Salinity_ppt": "0.3",
+        "Nitrates_ppm": "3.3",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.291,
+          27.266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "7",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-04-25",
+        "Time": "16:48",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "34",
+        "Weather": "",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "11.3",
+        "WaterTemp_C": "29.5",
+        "DissolvedOxygen_ppm": "9.6",
+        "pH": "8.55",
+        "AirTemp_C": "",
+        "Salinity_ppt": "34.2",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "6",
+        "Site": "Fort De Soto North Beach",
+        "Date": "2012-04-18",
+        "Time": "11:40",
+        "Monitor_ID": "999",
+        "Monitor": "Nature's Academy",
+        "Participants": "20",
+        "Weather": "",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "1.5",
+        "WaterTemp_C": "27",
+        "DissolvedOxygen_ppm": "7.1",
+        "pH": "8.45",
+        "AirTemp_C": "27.4",
+        "Salinity_ppt": "33.2",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.739,
+          27.636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "5",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-04-13",
+        "Time": "11:06",
+        "Monitor_ID": "11",
+        "Monitor": "The Kings Academy",
+        "Participants": "103",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "23.5",
+        "DissolvedOxygen_ppm": "5.5",
+        "pH": "8.4",
+        "AirTemp_C": "26.2",
+        "Salinity_ppt": "32.6",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "3",
+        "Site": "Myakka River State Park",
+        "Date": "2012-04-12",
+        "Time": "12:20",
+        "Monitor_ID": "11",
+        "Monitor": "The Kings Academy",
+        "Participants": "52",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "29",
+        "DissolvedOxygen_ppm": "7.5",
+        "pH": "8",
+        "AirTemp_C": "30",
+        "Salinity_ppt": "0.4",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.291,
+          27.266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "4",
+        "Site": "Myakka River State Park",
+        "Date": "2012-04-12",
+        "Time": "12:40",
+        "Monitor_ID": "11",
+        "Monitor": "The Kings Academy",
+        "Participants": "52",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "31",
+        "DissolvedOxygen_ppm": "4.2",
+        "pH": "8.8",
+        "AirTemp_C": "29.7",
+        "Salinity_ppt": "0.4",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.291,
+          27.266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "2",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-04-05",
+        "Time": "14:46",
+        "Monitor_ID": "10",
+        "Monitor": "Discovery Academy of Lake Alfred-8th",
+        "Participants": "27",
+        "Weather": "CLEAR",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "28.3",
+        "DissolvedOxygen_ppm": "6.6",
+        "pH": "8.54",
+        "AirTemp_C": "30.1",
+        "Salinity_ppt": "31.2",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "No": "1",
+        "Site": "Fort De Soto East Beach",
+        "Date": "2012-04-04",
+        "Time": "15:00",
+        "Monitor_ID": "9999",
+        "Monitor": "Mayfair Middle School",
+        "Participants": "16",
+        "Weather": "",
+        "Land_Use": "PARK",
+        "Turbidity_NTU": "",
+        "WaterTemp_C": "27.1",
+        "DissolvedOxygen_ppm": "5.8",
+        "pH": "8.41",
+        "AirTemp_C": "27.3",
+        "Salinity_ppt": "31.2",
+        "Nitrates_ppm": "",
+        "Litter_lbs": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.709,
+          27.624
+        ]
+      }
+    }
+  ]
+}

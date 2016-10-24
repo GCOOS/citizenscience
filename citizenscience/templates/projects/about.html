@@ -1,0 +1,100 @@
+<!-- About button -->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Citizen Science Projects</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="aboutTabs">
+          <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-info-circle"></i>&nbsp;About the project</a>
+          </li>
+          <li><a href="#about_gbf" data-toggle="tab"><i class="fa fa-envelope"></i>&nbsp;Galveston Bay Foundation</a>
+          </li>
+          <li><a href="#about_na" data-toggle="tab"><i class="fa fa-envelope"></i>&nbsp;Nature's Academy</a>
+          </li>
+          <li><a href="#disclaimer" data-toggle="tab"><i class="fa fa-exclamation-circle"></i>&nbsp;Disclaimer</a>
+          </li>
+          <li><a href="#plugins" data-toggle="tab"><i class="fa fa-globe"></i>&nbsp;Plugins</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="aboutTabsContent">
+          <div class="tab-pane fade active in" id="about">
+            <p>The project is being developed as the outreach and education portion of the developing GCOOS Integrated Water Quality Network and is being structured to accommodate data and information acquired by volunteer monitoring networks throughout
+              the Gulf of Mexico region. GCOOS has a cross-regional water quality collaboration with Nature’s Academy and the Galveston Bay Foundation (Texas).</p>
+            <p>These will be the first two organizations participating in this pilot project, allowing students in Florida and Texas to see and compare each other’s data on water quality, biodiversity and coastal cleanup efforts.</p>
+          </div>
+          <div id="about_gbf" class="tab-pane fade">
+            <img src="static/images/logo/GBF%20Logo.jpg" />
+            <br />The Galveston Bay Foundation offices; where we work to preserve, protect, and enhance the great Galveston Bay.
+            <br />
+            <br />Galveston Bay Foundation (GBF) is a 501(c)(3) non-profit organization that was established in 1987 under the laws of the State of Texas. The mission of the Foundation is to preserve, protect, and enhance the natural resources of the Galveston
+            Bay estuarine system and its tributaries for present users and for posterity.
+            <br />
+            <br />The strength of the Foundation is that it involves a true cross-section of bay interests to address issues and concerns related to Galveston Bay. Its programs in advocacy, conservation, education, and research strive to ensure that Galveston
+            Bay remains a beautiful and productive place for generations to come.
+            <br />
+            <br />
+            <a href="http://www.galvbay.org/" target="_blank">More information</a>
+            <br />
+            <br />
+            <div>
+              <a href="{{ url_for('static', filename='story/gbf/index.html') }}" target="_blank" class="link">
+                <i class="fa fa-caret-square-o-right fa-2x"></i>
+                <span style="vertical-align:top">Storytelling Map</span>
+              </a>
+            </div>
+          </div>
+          <div id="about_na" class="tab-pane fade">
+            <img src="static/images/logo/NaturesAcademy_logo_220x115.jpg" />
+            <p>
+              Nature’s Academy is a 501(c)(3) non-profit environmental education company focusing on educational field trips in Florida. Their mission is to enhance science literacy and foster environmental stewardship through inquiry-driven education programs.
+            </p>
+            <p>
+              Nature's Academy staff are experienced in teaching environmental conservation across a variety of disciplines, including ecology, marine science, botany, chemistry and physics. Education programs focus on science conservation and cater to school, family and group organizations. Participants are immersed in a variety of exciting activities, such as snorkeling, kayaking, canoeing, guided nature walks and hands-on discovery at parks and science facilities throughout the state. Nature’s Academy gives back to the local community through initiatives, such as the Tools of Change Project, which reduces plastic use by replacing disposable bottled water with a reusable alternative.
+            </p>
+            <p>
+              Citizen Science data is collected by students participating in Nature's academy field trips as part of the educational programming and curricula. To learn more about Nature's Academy and the programs that involved data-collection, visit: <a href="http://www.naturesacademy.org/" target="_blank">http://www.naturesacademy.org/</a>
+            </p>
+          </div>
+          <div id="disclaimer" class="tab-pane fade text-danger">
+            <p>
+              <img src='static/images/logo/GCOOS272.jpg' style='left:50%' />
+            </p>
+            <p>All products published on this website are prototype products and are not intended to be used for navigational or operational purposes. With respect to information available from this website, neither GCOOS nor any of its members, employees
+              or agents makes any warranty, expressed or implied, including merchantability and fitness for a particular purpose, or assumes any legal liability or responsibility for the accuracy, completeness or usefulness of any information, apparatus,
+              product or process disclosed, or represents that its use does not infringe privately owned rights. The user of these data and products assumes the entire risk related to use of these date and this web site. In no event will GCOOS, its agents,
+              employees or members be liable to a user or any third party for any direct, indirect, incidental, consequential, special or exemplary damages, loss of life or lost profits resulting from any use, misuse or reliance on any of the data or
+              information appearing on this website.</p>
+            <p> Note that no QA/QC has been done for Citizen Science Data.
+            </p>
+	    </div>
+          <div class="tab-pane fade" id="plugins">
+            <p>This application was developed using <a href="https://github.com/imwilsonxu/fbone" target="_blank">Fbone</a>, <a href="http://flask.pocoo.org/" target="_blank">Flask</a> template/bootstrap/boilerplate application. Inspired by <a href="https://github.com/bmcbride/bootleaf" target="_blank">BootLeaf</a>.</p>
+            <div class="panel panel-primary">
+              <div class="panel-heading">Features</div>
+              <ul class="list-group">
+                <li class="list-group-item">Lightweight map application with <a href="http://leafletjs.com/" target="_blank">Leaflet</a></li>
+                <li class="list-group-item">Fullscreen mobile-friendly map with responsive navbar and modal placeholders using <a href="http://getbootstrap.com" target="_blank">Bootstrap</li>
+                <li class="list-group-item"><a href="http://dsjs.org" target="_blank">D3</a> loading of external GeoJSON/CSV files</li>
+                <li class="list-group-item">Elegant client-side multi-layer feature search with autocomplete using <a href="http://twitter.github.io/typeahead.js/" target="_blank">typeahead.js</a>
+                </li>
+                <li class="list-group-item">Responsive sidebar feature list synced with map bounds, which includes sorting and filtering via <a href="http://listjs.com/" target="_blank">list.js</a>
+                </li>
+                <li class="list-group-item">Interactive dashboard using <a href="http://square.github.com/crossfilter/" target="_blank">Crossfilter</a> and <a href="http://dc-js.github.io/dc.js" target="_blank">dc.js</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

@@ -1,0 +1,416 @@
+{% extends 'layouts/base.html' %}
+
+{% set page_title = 'NACD' %}
+
+{% block css_additional %}
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/jquery-ui/themes/base/jquery-ui.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='node_modules/dc/dc.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/keen-dashboards/dist/keen-dashboards.css') }}">
+<!-- datatables -->
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-colreorder-bs/css/colReorder.bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-fixedcolumns-bs/css/fixedColumns.bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-rowreorder-bs/css/rowReorder.bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-select-bs/css/select.bootstrap.min.css') }}">
+<!-- custom css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/proj/nacd_dashboard.css') }}">
+{% endblock %}
+
+{% block additional_nav %}
+{% endblock %}
+
+{% block bodycontents %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-sm-3 col-xs-12">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Year
+            </div>
+            <div class="chart-stage">
+              <div id="yearly-chart" class="chartWide">
+                <h6>
+                    <a class="reset" href="javascript:yearlyChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                </h6>
+              </div>
+            </div>
+            <!--<div class="chart-notes">
+              <small>Click to select (single/multiple) Year</small>
+            </div>-->
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Month
+            </div>
+            <div class="chart-stage">
+              <div id="monthly-chart" class="chartWide">
+                <h6>
+                    <a class="reset" href="javascript:monthlyChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                </h6>
+              </div>
+            </div>
+            <!--<div class="chart-notes">
+              <small>Click to select (single/multiple) Month</small>
+            </div>-->
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Sampling Day
+            </div>
+            <div class="chart-stage">
+              <div id="day-entered-chart" class="chartWide">
+                <h6>
+                  <a class="reset" href="javascript:dayEnteredChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                </h6>
+              </div>
+            </div>
+            <!--<div class="chart-notes">
+              Notes about this chart
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div> <!-- end of col-md-2 -->
+
+    <div class="col-md-10 col-sm-9 col-xs-12">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              <b>Nature's Academy Monitoring Points</b>
+            </div>
+            <div class="chart-stage">
+              <div id='map'></div>
+              <div id="data_points" class="ui-data_points">
+                <div id="active_entry"></div>
+                &nbsp;entries out of <span id="total_entry"></span>
+                <a href="javascript:reset(0)">
+                  <button type="button" class="btn btn-small btn-primary">Reset All Filters</button>
+                </a>
+              </div>
+            </div>
+         </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Site
+            </div>
+            <div class="chart-stage">
+              <div id="siteID-chart" class="chartWide">
+                <h6>
+                    <a class="reset" href="javascript:siteIDChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                </h6>
+              </div>
+            </div>
+            <!--<div class="chart-notes">
+              Click to select Site(s)
+            </div>-->
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="bs-accordion">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Timeline Filter</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <div class="col-md-12">
+                          <div class="chart-wrapper">
+                            <div class="chart-stage">
+                              <div id="timeline-chart" class="chartWide">
+                                <h6>
+                                  <a class="reset" href="javascript:timelineChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                                </h6>
+                              </div>
+                            </div>
+                            <div class="chart-notes">
+                              Click to select time range
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Additional Filter</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <div class="col-sm-2">
+                            <div class="chart-wrapper">
+                              <div class="chart-title">
+                                Air Temp.
+                              </div>
+                              <div class="chart-stage">
+                                  <div id="airtemp-chart" class="chartWide">
+                                    <h6>
+                                      <a class="reset" href="javascript:airtempChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                                    </h6>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                           <div class="col-sm-2">
+                            <div class="chart-wrapper">
+                              <div class="chart-title">
+                                Water Temp.
+                              </div>
+                              <div class="chart-stage">
+                                  <div id="watertemp-chart" class="chartWide">
+                                    <h6>
+                                      <a class="reset" href="javascript:watertempChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                                    </h6>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                           <div class="col-sm-2">
+                            <div class="chart-wrapper">
+                              <div class="chart-title">
+                                Dissolved Oxygen
+                              </div>
+                              <div class="chart-stage">
+                                  <div id="do-chart" class="chartWide">
+                                    <h6>
+                                      <a class="reset" href="javascript:doChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                                    </h6>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-2">
+                            <div class="chart-wrapper">
+                              <div class="chart-title">
+                                pH
+                              </div>
+                              <div class="chart-stage">
+                                  <div id="ph-chart" class="chartWide">
+                                    <h6>
+                                      <a class="reset" href="javascript:phChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                                    </h6>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-2">
+                            <div class="chart-wrapper">
+                              <div class="chart-title">
+                                Salinity
+                              </div>
+                              <div class="chart-stage">
+                                  <div id="salinity-chart" class="chartWide">
+                                    <h6>
+                                      <a class="reset" href="javascript:salinityChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                                    </h6>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-2">
+                            <div class="chart-wrapper">
+                              <div class="chart-title">
+                                Nitrates
+                              </div>
+                              <div class="chart-stage">
+                                  <div id="nitrates-chart" class="chartWide">
+                                    <h6>
+                                      <a class="reset" href="javascript:nitratesChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                                    </h6>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Data Table (Show different entries based on filters)
+            </div>
+            <div class="chart-stage">
+                <div id="nacd_tableContent">
+                  <table class='list table table-condensed table-striped table-hover' id='dc-data-table'>
+                    <thead>
+                      <tr class='header'>
+                        <th>No</th>
+                        <th>Date</th>
+                        <th>Site ID</th>
+                        <th>Site</th>
+                        <th>Monitor ID</th>
+                        <!--<th>Monitor</th>-->
+                        <th>Participants</th>
+                        <th>Weather</th>
+                        <th>Land Use</th>
+                        <th>Turbidity (NTU)</th>
+                        <th>Air Temp (&deg;C)</th>
+                        <th>Water Temp (&deg;C)</th>
+                        <th>Dissolved Oxygen (ppm)</th>
+                        <th>pH</th>
+                        <th>Salinity (ppt)</th>
+                        <th>Nitrates (ppm)</th>
+                        <th>Litter (kg)</th>
+                        <th>Most Abundant Litter</th>
+                        <th>Most Abundant Species</th>
+                        <th>Species Found</th>
+                        <th>Wind Speed</th>
+                        <th>Wind Direction</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                  </table>
+                </div>
+            </div>
+            <!--<div class="chart-notes">
+              Notes about this chart
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block about_modal %}
+  {% include "projects/about.html" %}
+{% endblock %}
+
+{% block help_modal %}
+  {% include "projects/help_dashboard.html" %}
+{% endblock %}
+
+{% block extra %}
+<!-- Attribution -->
+<div class="modal fade" id="attributionModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">
+          Developed by <a href='http://gcoos.org/?page_id=2580'>Shin Kobara - GCOOS</a>
+        </h4>
+      </div>
+      <div class="modal-body modalp">
+        <div id="attribution"></div>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!-- Popup Window Feature -->
+<div class="modal fade" id="featureModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title text-primary" id="feature-title"></h4>
+      </div>
+      <div class="modal-body" id="feature-info"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!-- Chart Window -->
+<div class="modal fade" id="siteInfoModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title text-primary" id="siteinfo-title"></h4>
+      </div>
+      <div class="modal-body" id="siteinfo-info">
+        <div id="data_Charts"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+{% endblock %}
+
+{% block js_addition %}
+<!-- Dashboard: crossfilter and dc -->
+<script src="{{ url_for('static', filename='bower_components/jquery-ui/jquery-ui.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/crossfilter/crossfilter.min.js') }}"></script>
+<script src="{{ url_for('static', filename='node_modules/dc/dc.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/holderjs/holder.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/keen-js/dist/keen.min.js') }}"></script>
+<!-- datatable library -->
+<script src="{{ url_for('static', filename='bower_components/jszip/dist/jszip.min.js')}}"></script>
+<script src="{{ url_for('static', filename='bower_components/pdfmake/build/pdfmake.js')}}"></script>
+<script src="{{ url_for('static', filename='bower_components/pdfmake/build/vfs_fonts.js')}}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-buttons/js/dataTables.buttons.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-buttons/js/buttons.colVis.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-buttons/js/buttons.html5.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-buttons/js/buttons.print.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-buttons-bs/js/buttons.bootstrap.min.js')}}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-colreorder/js/dataTables.colReorder.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-fixedcolumns/js/dataTables.fixedColumns.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-responsive-bs/js/responsive.bootstrap.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-rowreorder/js/dataTables.rowReorder.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-scroller/js/dataTables.scroller.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/datatables.net-select/js/dataTables.select.min.js') }}"></script>
+<!-- chart -->
+<script src="{{ url_for('static', filename='bower_components/highcharts/highstock.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/highcharts/themes/sand-signika.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/highcharts/modules/exporting.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/jQuery.print/jQuery.print.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/zeroclipboard/dist/ZeroClipboard.min.js') }}"></script>
+<!-- custom js -->
+<script src="{{ url_for('static', filename='js/proj/nacd_dashboard.js') }}"></script>
+{% endblock %}

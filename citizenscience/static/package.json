@@ -1,0 +1,16 @@
+{
+  "name": "cs_add_package",
+  "version": "1.0.0",
+  "description": "additional package for citizen science site. main libraries can be installed via bower.",
+  "main": "index.js",
+  "dependencies": {
+    "dc": "^2.0.0-beta.32",
+    "leaflet-filelayer": "^0.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "author": "shinichi.kobara@gcoos.org",
+  "license": "ISC"
+}

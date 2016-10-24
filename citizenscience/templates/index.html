@@ -1,0 +1,291 @@
+{% extends 'layouts/base.html' %}
+
+{% set page_title = 'Home' %}
+
+{% block css_additional %}
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/leaflet-draw/dist/leaflet.draw.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/leaflet-measure/dist/leaflet-measure.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/leaflet.extra-markers/dist/css/leaflet.extra-markers.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/proj/bootmap.css') }}"> {% endblock %} {% block top %} {% endblock %} {% block sidepanel %}
+<a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-columns fa-lg white"></i></a> {% endblock %} {% block additional_nav %}
+<ul class="nav navbar-nav navbar-right">
+    <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="panel-btn"><i class="fa fa-th-list white"></i>&nbsp;&nbsp;Panel</a>
+    </li>
+    <li class="dropdown" id="toolList">
+        <a id="toolsDrop" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-wrench white"></i>&nbsp;&nbsp;Tools <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <!--<li><a href="#" id="print-btn"><i class="fa fa-print"></i> Print</a>
+                      </li>-->
+            <li>
+                <a href="#" id="tools-btn"><i class="fa fa-edit"></i> Map Tools</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+{% endblock %}
+
+{% block bodycontents %}
+<!--<div class="jumbotron">
+    <p><a role="button" href="{{ url_for('frontend.signup')}}" class="btn btn-lg btn-primary"><strong>Sign up »</strong></a></p>
+</div>-->
+<div id="mapcontainer">
+    <div id="sidebar">
+        <div class="sidebar-wrapper">
+            <div class="panel panel-default" id="features">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;
+                      <button type="button" class="btn btn-xs btn-default pull-right" id="sidebar-hide-btn"><i class="fa fa-chevron-left"></i>
+                      </button>
+                    </h3>
+                </div>
+
+                <div id="side-panel">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#tabOne" aria-controls="tabOne" role="tab" data-toggle="tab">Home</a></li>
+                        <li role="presentation"><a href="#tabTwo" aria-controls="tabTwo" role="tab" data-toggle="tab">Observation Points</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="tabOne">
+                            <div id="bs-accordion">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. What is it?</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <p>
+                                                    The project is being developed as the outreach and education portion of the developing <b>GCOOS Integrated Water Quality Network </b>and is being structured to accommodate data and information acquired
+                                                    by volunteer monitoring networks throughout the Gulf of Mexico region.
+                                                </p>
+                                                <p>
+                                                    GCOOS currently has a cross-regional water quality collaboration with <b>Florida Aquarium</b>, <b>Nature’s Academy (FL)</b> and <b>the Galveston Bay Foundation (TX)</b>.
+                                                </p>
+                                                <a href="http://www.galvbay.org/" target="_blank"><img src="static/images/logo/GBF Logo.jpg" class="img-thumbnail" style="height:100px; width:100px;"></a>
+                                                <a href="http://www.naturesacademy.org/" target="_blank"><img src="static/images/logo/na_logo_square.jpg" class="img-thumbnail" style="height:100px; width:100px;"></a>
+                                                <br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. What can you find?</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                This is a tool to explore water quality data collected by citizens.
+                                                <p>
+                                                    <div class="alert alert-success" role="alert">Home - this map contains all observation entries and detailed info.</div>
+                                                    <!--<div class="alert alert-danger" role="alert">Compare - this page provides site-by-site comparison</div>-->
+                                                    <div class="alert alert-info" role="alert">Get data - Interactive filtering tool to allow users to select a certain data set based on Date and Site.</div>
+                                                </p>
+                                                <p>Each organization collects water data based on their priorities and objectives. Common parameters are Temperature, Dissolved Oxygen, pH and Salinity<br />
+                                                    <img src="static/images/projects/commondata.png" class="img-rounded" style="width:250px; height:150px;" />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. How to use?</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p>
+                                                    <img src="static/images/projects/cluster.png" class="img-rounded" style="width:50px; height:40px;" /><br /> The number shows the number of monitoring entries. When you click the number, it will zoom-in
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <img src="static/images/projects/redmarker.png" class="img-rounded" style="width:50px; height:40px;" /><br /> Drag a red-colored marker and Drop on a land. Popup window will show Latitude/Longitude and
+                                                    geocoded address, and 1 week weather information.
+                                                </p>
+                                                <p>More details: Check "Help" <br />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">4. How to join?</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p>
+                                                    If you are interested in contributing data to this project, please <a href="http://gcoos.org/?page_id=53">contact us</a>. We do not currently offer a data entry system here. Data are organized by each
+                                                    contributing institution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="oos_logo">
+                                <a href="http://gcoos.org/" target="_blank"><img src="static/images/logo/GCOOS_webheader127x50.png" style="height:50px; width:127px;"></a>&nbsp;&nbsp;
+                                <a href="http://www.ioos.noaa.gov/" target="_blank"><img src="static/images/logo/IOOS_Emblem_Primary_B_RGB_113x50.png" style="height:50px; width:113px;"></a>&nbsp;
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tabTwo">
+                            <div class="sidebar-table">
+                                <table class="table table-hover" id="feature-list">
+                                    <thead class="hidden">
+                                        <tr>
+                                            <th>Icon</th>
+                                            <tr>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <tr>
+                                                        <tr>
+                                                            <th>Chevron</th>
+                                                            <tr>
+                                    </thead>
+                                    <tbody class="list"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of tab-content -->
+                </div>
+            </div>
+            <!-- end of panel -->
+        </div>
+        <!-- end of sidebar-wrapper -->
+    </div>
+    <!-- end of sidebar -->
+
+    <div id="map"></div>
+
+    <form id="search" class="ui-search" role="search">
+        <div class="form-group has-feedback">
+            <input id="searchbox" type="text" placeholder="Search by Site Name" class="form-control">
+            <span id="searchicon" class="fa fa-search form-control-feedback"></span>
+        </div>
+    </form>
+    <div id='coordinates' class='ui-coordinates'>
+        <code id='mousemove'></code><br/>
+    </div>
+</div>
+{% endblock %} {% block about_modal %} {% include "projects/about.html" %} {% endblock %} {% block help_modal %} {% include "projects/help_map.html" %} {% endblock %} {% block extra %}
+<!-- Attribution -->
+<div class="modal fade" id="attributionModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">
+          Developed by <a href='http://gcoos.org/?page_id=2580'>Shin Kobara - GCOOS</a>
+        </h4>
+            </div>
+            <div class="modal-body modalp">
+                <div id="attribution"></div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!-- Popup Window Feature -->
+<div class="modal fade" id="featureModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title text-primary" id="feature-title"></h4>
+            </div>
+            <div class="modal-body" id="feature-info"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!-- Chart Window -->
+<div class="modal fade" id="siteInfoModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title text-primary" id="siteinfo-title"></h4>
+            </div>
+            <div class="modal-body" id="siteinfo-info">
+                <div id="data_Charts"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!-- Weather Window View -->
+<div class="modal fade" id="weatherModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title text-primary" id="weather-title">Location Info</h4>
+            </div>
+            <div class="modal-body" id="weather-info">
+                <ul class="nav nav-tabs" id="weatherTabs">
+                    <!-- 07 Rename it if needed -->
+                    <li class="active"><a href="#latlngTab" data-toggle="tab"><i class="fa fa-map-marker"></i>&nbsp;Coordinates</a>
+                    </li>
+                    <li><a href="#weatherTab" data-toggle="tab"><i class="fa fa-sun-o"></i>&nbsp;Weather</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="locationTab">
+                    <div class="tab-pane fade active in" id="latlngTab">
+                        <div id="latlng_div"></div>
+                        <br />
+                        <br />
+                        <div class="clip_button">Copy to Clipboard (address)</div>
+                    </div>
+                    <div class="tab-pane fade in" id="weatherTab">
+                        <div id="weather_div"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+{% endblock %} {% block js_addition %}
+<script src="{{ url_for('static', filename='bower_components/leaflet-draw/dist/leaflet.draw.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/leaflet-filelayer/leaflet.filelayer.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/leaflet-measure/dist/leaflet-measure.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/leaflet.extra-markers/dist/js/leaflet.extra-markers.min.js')}}"></script>
+<!-- query and list library -->
+<script src="{{ url_for('static', filename='bower_components/typeahead.js/dist/typeahead.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/handlebars/handlebars.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/list.js/dist/list.min.js') }}"></script>
+<!-- chart -->
+<script src="{{ url_for('static', filename='bower_components/highcharts/highstock.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/highcharts/themes/sand-signika.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/highcharts/modules/exporting.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/jQuery.print/jQuery.print.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/zeroclipboard/dist/ZeroClipboard.min.js') }}"></script>
+
+<!-- custom js -->
+<script src="{{ url_for('static', filename='js/proj/bootmap.js') }}"></script>
+{% endblock %}

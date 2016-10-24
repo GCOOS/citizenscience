@@ -1,0 +1,257 @@
+<!-- Help Modal -->
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <img class="gcooslogo_center" src="static/images/logo/GCOOS272.jpg" />
+        <br />
+        <p style="text-align: center;"><b>Here are a few things you should know to get the most out of this page. <br />
+        Just select a topic or scroll down to start</p>
+      </div>
+      <div class="modal-body" style="max-height: 420px; overflow-y: auto;">
+          <a name="help_map_top">
+          <div class="help_container">
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-default btn-lg  btn-block"><a href="#help_basics">Basics</a></button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-default btn-lg  btn-block"><a href="#help_layers">Layers</a></button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-default btn-lg  btn-block"><a href="#help_search">Search</a></button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-default btn-lg  btn-block"><a href="#help_chart">Chart</a></button>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-sm-12">
+           <br />
+           <br />
+          </div>
+
+          <div>
+            <div class="col-md-12 col-sm-12">
+              <div class="help_header1" id="help_basics">Basics</div><hr>
+
+              <div class="col-sm-3">
+                  <img src='{{ url_for('static', filename='images/help/entries_map.png') }}' style='width:64px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                  <p>
+                    This clustering marker represents the number of observations. Click on the marke to zoom in.
+                  </p>
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                  <img src='{{ url_for('static', filename='images/help/weather.png') }}' style='width:54px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                  <p>
+                    Drag and drop this marker. It will geocode address based on latitude and longitude, and also show 7-day weather forecast at that point.
+                  </p>
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                  <img src='{{ url_for('static', filename='images/help/bar_right.png') }}' style='width:200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                  <p>
+                  Four buttons: Panel, Tool, About and Help <br />
+                  Click to "Panel" to open/close left side panel. <br />
+                  "About" contains disclaimer, collaborators brief introduction, plugin used in this site <br />
+                  </p>
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                  <img src='{{ url_for('static', filename='images/help/tools.png') }}' style='width:190px; border-style: solid; border-width: 1px; border-radius: 10px;' /><br />
+                  <img src='{{ url_for('static', filename='images/help/tools2.png') }}' style='width:40px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                  You can draw a line, rectangle, and circle. Also put a marker on a map. <br />
+                  To edit/delete drawn lines/polygons, use two button in the middle <br />
+                  Measurement function allows user to measure a distance from point to point (kilometers) <br />
+                  File icon allows users to upload a kml file (Points)
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <p style="text-align: right;">
+                <a href="#help_map_top">back to top</a>
+                <br /><br />
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-12 col-sm-12">
+              <div class="help_header1" id="help_layers">Layers</div><hr>
+
+              <div class="col-md-3 col-sm-4">
+                <img src='{{ url_for('static', filename='images/help/layers.png') }}' style='max-width: 200px; width: 100%; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-md-9 col-sm-8">
+                You can select 7 different base maps. Default setting is ESRI World Imagery with labels.<br />
+                There are several public layers for the Gulf of Mexico. Nautical chart will provide a detail of information when zoom in. <br />
+                Turn on/off the points of Interest. <br />
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-md-3 col-sm-4">
+                <img src='{{ url_for('static', filename='images/help/list.png') }}' style='max-width: 200px; width: 100%; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-md-9 col-sm-8">
+                Observation points (Point layer) is listed on the left panel. Mouse over on a name, the point on a map will be highlighted. <br />
+                When you click the name, it will zoom in the specific site <br />
+                Currently listed on descending order by date (Latest date on top). <br />
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-md-3 col-sm-4">
+                <img src='{{ url_for('static', filename='images/help/list2.png') }}' style='max-width: 200px; width: 100%; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-md-9 col-sm-8">
+                When zoom in, the list will be dynamically changed based on available points. If you want ot list a specific site, zoom in until only one marker is shown. The list on the left panel is historical observations for the point.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <p style="text-align: right;">
+                <a href="#help_map_top">back to top</a>
+                <br /><br />
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-12 col-sm-12">
+              <div class="help_header1" id="help_search">Search</div><hr>
+
+              <div class="col-sm-3">
+                  <img src='{{ url_for('static', filename='images/help/map_search.png') }}' style='width:200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                  <p>
+                  Click a magnifying glass icon and type an address you are looking for.<br />
+                  </p>
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/site_search.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                This offers an incremental search for "site" name. Type site name to quickly find and zoom in the site.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <p style="text-align: right;">
+                <a href="#help_map_top">back to top</a>
+                <br /><br />
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-12 col-sm-12">
+              <div class="help_header1" id="help_chart">Chart</div><hr>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/chart.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                When you click on a marker, information window will pop up. Then click "Site Summary" to see a chart <br />
+                A chart has air temperature, water temperature, dissolved oxygen, pH, Salinity and each organization's special parameter with a time range slider.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/chart_sharedinfo.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                Mouse over on a point in a chart. It will show a detailed information. <br />
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/chart_range.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                You can change the time range of a chart.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/chart_zoom.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                To change a time range for specific period, use top left corners button: <br />
+                1m = 1 month. <br />
+                YTD = January 1st to the latest date. <br />
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+
+              <div class="col-sm-3">
+                <img src='{{ url_for('static', filename='images/help/chart_print.png') }}' style='width: 200px; border-style: solid; border-width: 1px; border-radius: 10px;' />
+              </div>
+              <div class="col-sm-9">
+                Chart can be exported as image.
+              </div>
+              <div class="col-sm-12">
+                <br />
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <p style="text-align: right;">
+                <a href="#help_map_top">back to top</a>
+                <br /><br />
+              </p>
+            </div>
+          </div>
+
+      </div> <!-- end of modal body -->
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

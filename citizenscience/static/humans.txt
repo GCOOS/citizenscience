@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Shin Kobara - GCOOS -- @diveintoventure
+
+# THANKS
+
+    Fbone by @imwilsonxu
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
+    Python, Flask

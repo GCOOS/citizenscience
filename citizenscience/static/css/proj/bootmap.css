@@ -1,0 +1,304 @@
+html, body, #mapcontainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+body {
+  padding-top: 50px;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+/* navigation bar */
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+.navbar-collapse.in {
+  overflow-y: hidden;
+}
+.navbar-header .navbar-icon-container {
+  margin-right: 15px;
+}
+.navbar-header .navbar-icon {
+  line-height: 50px;
+  height: 50px;
+}
+.navbar-header a.navbar-icon {
+  margin-left: 25px;
+}
+
+/* Color setting for this project navigation bar */
+.navbar-inverse {
+  background-color: #8fbe5c;
+}
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-text {
+  color: #101010;
+}
+
+
+/* bootstrap hack: fix content width inside hidden tabs */
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+    display: block;     /* undo display:none          */
+    height: 0;          /* height:0 is also invisible */
+    overflow-y: hidden; /* no-overflow                */
+}
+.tab-content > .active,
+.pill-content > .active {
+    height: auto;       /* let the content decide it  */
+} /* bootstrap hack end */
+
+.panel-body {
+  height: 400px;
+  overflow-y: scroll;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin: 0;
+}
+
+#map {
+  width: auto;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* leaflet control */
+.leaflet-control-layers {
+  overflow: auto;
+}
+.leaflet-control-layers label {
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+.leaflet-control-layers-list input[type="radio"], input[type="checkbox"] {
+  margin: 2px;
+}
+
+#gcoos_logo{
+  height:25px;
+  margin-top:-5px;
+  margin-bottom:-5px;
+}
+#oos_logo{
+  position: absolute;
+  bottom: 0;
+  padding-left: 10px;
+  padding-bottom: 3px;
+}
+
+#features {
+  margin: 0px;
+  border: none;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.feature-row {
+  cursor: pointer;
+}
+
+#sidebar {
+  width: 300px;
+  height: 100%;
+  max-width: 100%;
+  float: left;
+  -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+#sidebar-hide-btn {
+  margin-top: -2px;
+}
+.sidebar-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sidebar-table {
+  /*position: relative; must be absolute for overflow*/
+  position: absolute;
+  width: 100%;
+  /*top: 103px;*/
+  top: 83px;
+  bottom: 0px;
+  overflow: auto;
+}
+
+/* Side panel contents */
+.sidebar-content {
+  padding: 10px;
+}
+.checkbox {
+  cursor: pointer;
+  -webkit-transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  -ms-transition: background-color .5s;
+  transition: background-color .5s;
+}
+.checkbox input {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.checkbox .outer {
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin: 0px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transition: background-color .8s;
+  -moz-transition: background-color .8s;
+  -ms-transition: background-color .8s;
+  transition: background-color .8s;
+  box-shadow: inset 0px 0px 0px 3px #43A8EB;
+}
+.checkbox input:checked + .outer {
+  background-color: #43A8EB;
+  background-image: url(../images/checked21.svg);
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: none;
+}
+
+.table {
+  margin-bottom: 0px;
+}
+
+/* typeahead search */
+.ui-search {
+  position: absolute;
+  top: 60px;
+  right: 100px;
+  z-index:500;
+}
+.typeahead {
+  background-color: #FFFFFF;
+}
+.tt-dropdown-menu {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 4px;
+  padding: 4px 0;
+  width: 100%;
+  max-height: 300px;
+  overflow: auto;
+}
+.tt-suggestion {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 3px 10px;
+}
+.tt-suggestion.tt-cursor {
+  background-color: #0097CF;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.tt-suggestion p {
+  margin: 0;
+}
+.tt-suggestion + .tt-suggestion {
+  border-top: 1px solid #ccc;
+}
+.typeahead-header {
+  margin: 0 5px 5px 5px;
+  padding: 3px 0;
+  border-bottom: 2px solid #333;
+}
+.has-feedback .form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+}
+
+/* lat/lng coordinates */
+.ui-coordinates {
+  position: absolute;
+  bottom:2px;
+  left:50%;
+  padding:5px 5px;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  font-size:11px;
+  line-height:18px;
+  border-radius:2px;
+}
+
+/* Modal */
+#aboutTabsContent {
+  padding-top: 10px;
+}
+
+/* kml_dl image size */
+a.link img{vertical-align:middle;height:35px;width:35px}
+
+@media screen and (max-height: 770px) {
+  #oos_logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  body {
+    /* webkit browsers */
+    zoom: 120%;
+    /* moz browsers , since there is no support to "zoom" */
+    -moz-transform: scale(1.2);
+    -moz-transform-origin: 0 0
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .navbar .navbar-brand {
+    font-size: 18px;
+  }
+  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-left: -12px;
+    margin-right:-12px;
+  }
+  .modal-dialog {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px){
+  #sidebar {
+    display: none;
+  }
+  .ui-coordinates{
+    display: none;
+  }
+  .url-break {
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+      hyphens: auto;
+  }
+  .dropdown-menu a i{
+    color: #FFFFFF;
+  }
+}
+
+/* Print Handling */
+@media print {
+  .navbar {
+    display: none !important;
+  }
+  .leaflet-control-container {
+    display: none !important;
+  }
+}

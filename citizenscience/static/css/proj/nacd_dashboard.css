@@ -1,0 +1,113 @@
+.main {
+  padding: 20px;
+}
+.main .page-header {
+  margin-top: 0;
+}
+.white {
+  color: #FFFFFF;
+}
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+.navbar-collapse.in {
+  overflow-y: hidden;
+}
+.navbar-header .navbar-icon-container {
+  margin-right: 15px;
+}
+.navbar-header .navbar-icon {
+  line-height: 50px;
+  height: 50px;
+}
+.navbar-header a.navbar-icon {
+  margin-left: 25px;
+}
+
+/* Color setting for this project navigation bar */
+.navbar-inverse {
+  /*background-color: #c74e7d;*/
+  background-color: #cc0066;
+  border-color: #ffffff;
+}
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-text {
+  color: #101010;
+}
+
+body.application {
+  padding: 40px 20px 0
+}
+
+/*
+ * Map
+ */
+#map {
+  height:400px;
+  width:100%;
+  padding:0px;
+  margin:0px;
+}
+
+.ui-data_points {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 5px;
+  width: 150px;
+  height: 135px;
+  background-color: white;
+  z-index: 100;
+  text-align: center;
+}
+
+.dc-chart g.row text {
+  fill: black;
+  font-size: 12px;
+}
+
+.panel-body {
+  padding: 5px 0px 0px 0px;
+}
+
+.chartWide {
+  width: 100%;
+}
+table, th, tr, td {
+  border: 1px solid black;
+}
+
+#data_points {
+  z-index: 1000;
+}
+
+#active_entry {
+  font-size:48px;
+  font-weight: bold;
+  text-shadow: 1px 1px #ff0000;
+}
+#total_entry {
+  font-size:16px;
+}
+
+@media screen and (min-width: 1600px) {
+  body {
+    /* webkit browsers */
+    zoom: 120%;
+    /* moz browsers , since there is no support to "zoom" */
+    -moz-transform: scale(1.2);
+    -moz-transform-origin: 0 0
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .modal-dialog {
+    width: 100%;
+  }
+
+}
