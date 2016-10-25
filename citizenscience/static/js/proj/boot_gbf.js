@@ -1,3 +1,5 @@
+var gbfSearch = [], gbfChart = [];
+
 // ================================================================
 // geojson layer - GBF
 // ================================================================
@@ -268,6 +270,7 @@ var GBF = L.geoJson(null, {
         lat: feature.geometry.coordinates[1],
         lng: feature.geometry.coordinates[0]
       });
+      //console.log(gbfSearch);
       //if (feature.properties.Site_ID === 999999 || feature.properties.Site_ID === "999999") {
         gbfChart.push({
           datetime: moment(new Date(sampleDateTime).toISOString()).valueOf(),

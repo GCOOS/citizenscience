@@ -1,4 +1,6 @@
-{% extends 'layouts/base.html' %} {% set page_title = 'GBF' %} {% block css_additional %}
+{% extends 'layouts/base.html' %} {% set page_title = 'GBF' %}
+
+{% block css_additional %}
 <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/jquery-ui/themes/base/jquery-ui.min.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/dc/dc.min.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/keen-dashboards/dist/keen-dashboards.css') }}">
@@ -13,7 +15,12 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/datatables.net-select-bs/css/select.bootstrap.min.css') }}">
 <!-- custom css -->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/proj/gbf_dashboard.css') }}"> {% endblock %} {% block additional_nav %} {% endblock %} {% block bodycontents %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/proj/gbf_dashboard.css') }}">
+{% endblock %}
+
+{% block additional_nav %} {% endblock %}
+
+{% block bodycontents %}
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2 col-sm-3 col-xs-12">
@@ -304,7 +311,12 @@
 
     </div>
 </div>
-{% endblock %} {% block about_modal %} {% include "projects/about.html" %} {% endblock %} {% block help_modal %} {% include "projects/help_dashboard.html" %} {% endblock %} {% block extra %}
+{% endblock %}
+
+{% block about_modal %} {% include "projects/about.html" %} {% endblock %}
+{% block help_modal %} {% include "projects/help_dashboard.html" %} {% endblock %}
+
+{% block extra %}
 <!-- Attribution -->
 <div class="modal fade" id="attributionModal" tabindex="-1" role="dialog">
     <div class="modal-dialog">
@@ -364,7 +376,9 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-{% endblock %} {% block js_addition %}
+{% endblock %}
+
+{% block js_addition %}
 <!-- Dashboard: crossfilter and dc -->
 <script src="{{ url_for('static', filename='bower_components/jquery-ui/jquery-ui.min.js') }}"></script>
 <script src="{{ url_for('static', filename='bower_components/crossfilter/crossfilter.min.js') }}"></script>

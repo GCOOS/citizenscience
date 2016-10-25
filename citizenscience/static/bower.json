@@ -88,7 +88,9 @@
     "Leaflet.awesome-markers": "leaflet.awesome-markers#^2.0.2",
     "jQuery.print": "^1.5.0",
     "leaflet-filelayer": "git://github.com/makinacorpus/Leaflet.FileLayer.git#^0.6.0",
-    "Leaflet.extra-markers": "git://github.com/coryasilva/Leaflet.ExtraMarkers.git#^1.0.6"
+    "Leaflet.extra-markers": "git://github.com/coryasilva/Leaflet.ExtraMarkers.git#^1.0.6",
+    "list.js": "^1.3.0",
+    "list.pagination.js": "^0.1.1"
   },
   "resolutions": {
     "d3": "3.x",

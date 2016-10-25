@@ -1,10 +1,9 @@
-/* global L:false */
-var chart, featureList;
-var gbfSearch = [], gbfChart = [];
-var nacdSearch = [], nacdChart = [];
-var flaqSearch = [], flaqChart = [];
-// popup window content variables
-var flow, algae, wcolor, clarity, surface, conditions, odor, weather, tide;
+//TODO
+//Data location
+dataOne = 'gbf_db/data';
+dataTwo = 'nacd_db/data';
+
+var featureList;
 
 // ================================================================
 /* Navigator and Side bar */
@@ -24,15 +23,29 @@ $("#panel-btn").click(function() {
   return false;
 });
 
-$('modal-body').scrollspy({ target: '.help_container' });
+// ================================================================
+$(document).on("click", ".feature-row", function(e) {
+  $(document).off("mouseout", ".feature-row", clearHighlight);
+  sidebarClick(parseInt($(this).attr("id"), 10));
+});
+$(document).on("mouseover", ".feature-row", function(e) {
+  highlight.clearLayers().addLayer(L.circleMarker([$(this).attr("lat"), $(this).attr("lng")], highlightStyle));
+});
+$(document).on("mouseout", ".feature-row", clearHighlight);
+
+// ================================================================
+// Modal - Feature
+// ================================================================
+$("#featureModal").on("hidden.bs.modal", function (e) {
+  $(document).on("mouseout", ".feature-row", clearHighlight);
+});
 
 // ====================================================
 // Main loader
 // ====================================================
 d3.queue()
-  //.defer(d3.json, 'static/data/GBF_20150723.geojson')
-  .defer(d3.json, 'gbf_db/data')
-  .defer(d3.json, 'nacd_db/data')
+  .defer(d3.json, dataOne)
+  .defer(d3.json, dataTwo)
   .await(function (error, gbfData, nacdData) {
       //console.log(gbfData);
       //console.log(nacdData);
@@ -48,9 +61,12 @@ d3.queue()
       sizeLayerControl();
 
       /* Fit map to boroughs bounds */
-      featureList = new List("features", {valueNames: ["feature-sitedesc","feature-siteid","feature-date"]});
+      featureList = new List("features", {
+        valueNames: ["feature-sitedesc","feature-siteid","feature-date"]
+      });
       featureList.sort("feature-date", {order:"desc"});
 
+      //console.log(gbfSearch);
       // Search Form
       //------------------------------
       var gbfBH = new Bloodhound({
@@ -58,8 +74,13 @@ d3.queue()
         datumTokenizer: function (d) {
           return Bloodhound.tokenizers.whitespace(d.sitedesc);
         },
-        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: function (d) {
+          Bloodhound.tokenizers.whitespace(d.sitedesc);
+        },
         local: gbfSearch,
+        identify: function (obj) {
+          return obj.sitedesc
+        },
         limit: 10
       });
       gbfBH.initialize();
@@ -93,11 +114,11 @@ d3.queue()
         hint: false
       }, {
         name: "GBF",
-        displayKey: "site",
-        source: gbfBH.ttAdapter(),
+        displayKey: "sitedesc",
+        source: gbfBH,
         templates: {
           header: "<h4 class='typeahead-header'><img src='static/images/map_green.png' width='22' height='22'>&nbsp;Galveston B. F.</h4>",
-          suggestion: Handlebars.compile(["{{sitedesc}}<br>&nbsp;<small>{{date}}</small>"].join(""))
+          suggestion: Handlebars.compile("{{sitedesc}}" + "<br/>&nbsp;<small>" + "{{date}}" + "</small>")
         }
       }, {
         name: "NACD",

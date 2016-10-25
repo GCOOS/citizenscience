@@ -2,7 +2,10 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -22,16 +25,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/Ionicons/css/ionicons.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/jquery-ui/themes/base/jquery-ui.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    {% endblock %}
-
-    {% block css_style %}
     <!-- Base Map CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/leaflet/dist/leaflet.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/Leaflet.defaultextent/dist/leaflet.defaultextent.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/leaflet.locatecontrol/dist/L.Control.Locate.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css') }}">
     {% endblock %}
 
     {% block css_additional %}{% endblock %}
@@ -39,44 +38,42 @@
 </head>
 
 <body class="application">
-    {% include "macros/_ask_user_to_update_ie.html" %}
-
-    {% block topbar %}
+    {% include "macros/_ask_user_to_update_ie.html" %} {% block topbar %}
     <div class='container'>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                  <div class="navbar-icon-container">
-                    <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
-                    {% block sidepanel %} {% endblock %}
-                  </div>
-                  <a class="navbar-brand" href="{{ url_for('frontend.index') }}">Citizen Science</a>
+                    <div class="navbar-icon-container">
+                        <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a> {% block sidepanel %} {% endblock %}
+                    </div>
+                    <a class="navbar-brand" href="{{ url_for('frontend.index') }}">Citizen Science</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                      <li><a href='{{ url_for('frontend.index') }}'><i class="fa fa-map-marker white"></i>&nbsp;&nbsp;Home</a>
-                      </li>
-                      <!--<li><a href='{{ url_for('frontend.compare')}}'><i class="fa fa-columns white"></i>&nbsp;&nbsp;Compare</a>-->
-                      </li>
-                      <li class="dropdown">
-                        <a class="dropdown-toggle" id="downloadDrop" href="#" role="button" data-toggle="dropdown"><i class="fa fa-cloud-download white"></i>&nbsp;&nbsp;Get Data<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href='{{ url_for('frontend.gbf_db') }}'><i class="fa fa-download"></i>&nbsp;&nbsp;Galveston Bay Foundation</a>
-                          </li>
-                          <li><a href='{{ url_for('frontend.nacd_db') }}'><i class="fa fa-download"></i>&nbsp;&nbsp;Nature's Academy</a>
-                          </li>
-                        </ul>
-                      </li>
+                        <li><a href='{{ url_for("frontend.index") }}'><i class="fa fa-map-marker white"></i>&nbsp;&nbsp;Home</a>
+                        </li>
+                        <!--<li><a href='{{ url_for('frontend.compare')}}'><i class="fa fa-columns white"></i>&nbsp;&nbsp;Compare</a>-->
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" id="downloadDrop" href="#" role="button" data-toggle="dropdown"><i class="fa fa-cloud-download white"></i>&nbsp;&nbsp;Get Data<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href='{{ url_for("frontend.gbf_db") }}'><i class="fa fa-download"></i>&nbsp;&nbsp;Galveston Bay Foundation</a>
+                                </li>
+                                <li><a href='{{ url_for("frontend.nacd_db") }}'><i class="fa fa-download"></i>&nbsp;&nbsp;Nature's Academy</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-info-circle white"></i>&nbsp;&nbsp;About</a>
-                      </li>
-                      <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="help-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;Help</a>
-                      </li>
+                        <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-info-circle white"></i>&nbsp;&nbsp;About</a>
+                        </li>
+                        <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="help-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;Help</a>
+                        </li>
 
-                      <li><a href="http://gcoos.org/products"><img src='{{ url_for('static', filename='images/logo/gcoos_50.png') }}' style='height:30px; margin-top:-10px;' /></a>
-                      </li>
+                        <li>
+                            <a href="http://gcoos.org/products"><img src='{{ url_for("static", filename="images/logo/gcoos_50.png") }}' style='height:30px; margin-top:-10px;' /></a>
+                        </li>
                     </ul>
                     {% block additional_nav %} {% endblock %}
                 </div>
@@ -85,67 +82,56 @@
     </div>
     {% endblock %}
 
-
     {% block flash_message %}
+    <div class="container-fluid">
+        {% with messages = get_flashed_messages(with_categories=True) %} {% if messages %}
         <div class="container-fluid">
-        {% with messages = get_flashed_messages(with_categories=True) %}
-            {% if messages %}
-            <div class="container-fluid">
-                <div id='flash_message_container'>
-                    {% for category, msg in messages %}
-                        <div class="alert alert-{{ category }}">
-                            <button type="button" class="close" data-dismiss="alert">×</button>
-                            {{ msg }}
-                        </div>
-                    {% endfor %}
+            <div id='flash_message_container'>
+                {% for category, msg in messages %}
+                <div class="alert alert-{{ category }}">
+                    <button type="button" class="close" data-dismiss="alert">×</button> {{ msg }}
                 </div>
+                {% endfor %}
             </div>
-            {% endif %}
-        {% endwith %}
         </div>
+        {% endif %} {% endwith %}
+    </div>
     {% endblock %}
 
     {% block container %}
-
       {% block bodycontents %}{% endblock %}
-
       {% block about_modal %}{% endblock %}
-
       {% block help_modal %}{% endblock %}
-
     {% endblock %}
 
     <footer>
     </footer>
 
-{% block extra %}
-{% endblock %}
+    {% block extra %} {% endblock %}
 
-{% block js_btm %}
-<script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/jquery-ui/jquery-ui.min.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/d3/d3.min.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/d3-queue/d3-queue.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/moment/min/moment.min.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/togeojson/togeojson.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/leaflet/dist/leaflet.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/esri-leaflet/dist/esri-leaflet.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.min.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/Leaflet.defaultextent/dist/leaflet.defaultextent.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/leaflet.locatecontrol/dist/L.Control.Locate.min.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/leaflet.markercluster/dist/leaflet.markercluster.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/leaflet-spin/leaflet.spin.min.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/spin.js/spin.min.js')}}"></script>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
-{% endblock %}
+    {% block js_btm %}
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/d3/d3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/d3-queue/d3-queue.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/moment/min/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/togeojson/togeojson.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/leaflet/dist/leaflet.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/esri-leaflet/dist/esri-leaflet.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/Leaflet.defaultextent/dist/leaflet.defaultextent.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/leaflet.locatecontrol/dist/L.Control.Locate.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/leaflet.markercluster/dist/leaflet.markercluster.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/leaflet-spin/leaflet.spin.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/spin.js/spin.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% endblock %}
 
-{% block js_addition %} {% endblock %}
+    {% block js_addition %} {% endblock %}
 
-{% block ga %}
-{% include "macros/_analytics.html" %}
-{% endblock %}
+    {% block ga %} {% include "macros/_analytics.html" %} {% endblock %}
 </body>
+
 </html>

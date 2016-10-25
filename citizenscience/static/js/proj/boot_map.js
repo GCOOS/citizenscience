@@ -50,7 +50,7 @@ map = L.map("map", {
   scrollWheelZoom: true,
   zoom: 6,
   center: [27.0, -88.5],
-  attributionControl: false
+  attributionControl: true //should be true for goecoding
 });
 L.esri.basemapLayer('Imagery').addTo(map);
 L.esri.basemapLayer('ImageryLabels').addTo(map);
@@ -75,13 +75,13 @@ function changeBasemap(basemaps){
 var zoomControl = L.control.zoom({
   position: "bottomright"
 }).addTo(map);
+// ================================================================
 /* Home button - back to default extent (bottom right)*/
 // ================================================================
 L.control.defaultExtent({
   position: "bottomright"
 }).addTo(map);
-
-
+// ================================================================
 /* GPS enabled geolocation control set to follow the user's location (bottom right)*/
 // ================================================================
 var locateControl = L.control.locate({
@@ -112,7 +112,23 @@ var locateControl = L.control.locate({
   }
 }).addTo(map);
 map.on('dragstart', locateControl._stopFollowing, locateControl);
+// ================================================================
+/* Geocoding button (bottom right)*/
+// ================================================================
+// create the geocoding control and add it to the map
+// esri geocode
+var geosearchControl = L.esri.Geocoding.geosearch({
+  position: "bottomright"
+}).addTo(map);
+var georesults = L.layerGroup().addTo(map);
+geosearchControl.on('georesults', function(data){
+  georesults.clearLayers();
+  for (var i = data.results.length - 1; i >= 0; i--) {
+    georesults.addLayer(L.marker(data.results[i].latlng));
+  }
+});
 
+// ================================================================
 /* leaflet draw (top left corner) */
 // ================================================================
 var drawnItems = new L.FeatureGroup();
@@ -126,7 +142,7 @@ map.on('draw:created', function(event) {
   drawnItems.addLayer(layer);
 });
 
-
+// ================================================================
 /* leaflet filelayer (load local files suc as GeoJSON, GPX, KML) */
 // ================================================================
 L.Control.FileLayerLoad.LABEL = '<i class="fa fa-folder-open"></i>';
@@ -150,13 +166,16 @@ L.Control.fileLayerLoad({
   ]
 }).addTo(map);
 
+// ================================================================
 /* leaflet Measurement */
 // ================================================================
 var measureControl = L.control.measure({
   position: 'topleft'
 }).addTo(map);
 
+// ================================================================
 // Hiding topleft tools
+// ================================================================
 $('.leaflet-top.leaflet-left').hide();
 
 
@@ -182,7 +201,6 @@ attributionControl.onAdd = function(map) {
 };
 map.addControl(attributionControl);
 
-
 // ================================================================
 // Ancillary Data Layers - Top Corner Layers Group
 // ================================================================
@@ -204,7 +222,6 @@ var riverstreamLyr = L.esri.dynamicMapLayer({
   url: "http://earthobs1.arcgis.com/arcgis/rest/services/Live_Stream_Gauges/MapServer/",
   layers: [0]
 });
-
 
 //=================================================================
 // Weather Info from Forecast.io
@@ -232,6 +249,9 @@ weatherMarker.on('dragend', onDragEnd);
 // Set the initial marker coordinate on load.
 onDragEnd();
 
+// ================================================================
+// Weather update
+// ================================================================
 function onDragEnd() {
   //$("#latlng_div").html('');
   $("#weather_div").html('');
@@ -295,7 +315,9 @@ var highlightStyle = {
 function clearHighlight() {
   highlight.clearLayers();
 }
+// ================================================================
 // Clear feature highlight when map is clicked
+// ================================================================
 map.on("click", function(e) {
   highlight.clearLayers();
 });
@@ -311,16 +333,6 @@ var markerClusters = new L.MarkerClusterGroup({
 });
 map.addLayer(markerClusters);
 map.addLayer(highlight);
-
-// ================================================================
-$(document).on("click", ".feature-row", function(e) {
-  $(document).off("mouseout", ".feature-row", clearHighlight);
-  sidebarClick(parseInt($(this).attr("id"), 10));
-});
-$(document).on("mouseover", ".feature-row", function(e) {
-  highlight.clearLayers().addLayer(L.circleMarker([$(this).attr("lat"), $(this).attr("lng")], highlightStyle));
-});
-$(document).on("mouseout", ".feature-row", clearHighlight);
 
 // ================================================================
 // Map Tools Settings
@@ -362,11 +374,4 @@ var mousemove = document.getElementById('mousemove');
 map.on('mousemove', function(e){
   //console.log('checking');
   window[e.type].innerHTML = e.latlng.toString();
-});
-
-// ================================================================
-// Modal - Feature
-// ================================================================
-$("#featureModal").on("hidden.bs.modal", function (e) {
-  $(document).on("mouseout", ".feature-row", clearHighlight);
 });

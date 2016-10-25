@@ -1,3 +1,10 @@
+//TODO
+//data location
+//mongodb
+nacdData = 'nacd_db/data';
+//local
+//nacdData = 'static/data/nacd_2015_09_03.geojson';
+
 //--------------------------------------------------
 // Initialize our dc.js charts, passing the DOM Id in which we want the chart rendered as an argument
 //--------------------------------------------------
@@ -28,7 +35,7 @@ var xdata = null,
 //monitorNumDim = null;
 d3.queue()
     //  .defer(d3.json, 'static/data/nacd_2015_09_03.geojson')
-    .defer(d3.json, 'nacd_db/data')
+    .defer(d3.json, nacdData)
     .await(makeDashboard);
 
 function makeDashboard(error, data) {

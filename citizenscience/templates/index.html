@@ -6,8 +6,17 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/leaflet-draw/dist/leaflet.draw.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/leaflet-measure/dist/leaflet-measure.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/leaflet.extra-markers/dist/css/leaflet.extra-markers.min.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/proj/bootmap.css') }}"> {% endblock %} {% block top %} {% endblock %} {% block sidepanel %}
-<a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-columns fa-lg white"></i></a> {% endblock %} {% block additional_nav %}
+<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/proj/bootmap.css') }}">
+{% endblock %}
+
+{% block top %} {% endblock %}
+
+{% block sidepanel %}
+<a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-columns fa-lg white"></i></a>
+{% endblock %}
+
+{% block additional_nav %}
 <ul class="nav navbar-nav navbar-right">
     <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="panel-btn"><i class="fa fa-th-list white"></i>&nbsp;&nbsp;Panel</a>
     </li>
@@ -34,12 +43,16 @@
 
                 <div id="side-panel">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#tabOne" aria-controls="tabOne" role="tab" data-toggle="tab">Home</a></li>
-                        <li role="presentation"><a href="#tabTwo" aria-controls="tabTwo" role="tab" data-toggle="tab">Observation Points</a></li>
+                        <li role="presentation" class="active">
+                          <a href="#tabOne" aria-controls="tabOne" role="tab" data-toggle="tab">Home</a>
+                        </li>
+                        <li role="presentation">
+                          <a href="#tabTwo" aria-controls="tabTwo" role="tab" data-toggle="tab">Observation Points</a>
+                        </li>
                     </ul>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="tabOne">
-                            <div id="bs-accordion">
+                            <div id="bsaccordion">
                                 <div class="panel-group" id="accordion">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -127,6 +140,10 @@
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="tabTwo">
                             <div class="sidebar-table">
+                                <input class="search" placeholder="Search" />
+                                <button class="sort" data-sort="feature-sitedesc">
+                                  Sort by Name
+                                </button>
                                 <table class="table table-hover" id="feature-list">
                                     <thead class="hidden">
                                         <tr>
@@ -165,7 +182,12 @@
         <code id='mousemove'></code><br/>
     </div>
 </div>
-{% endblock %} {% block about_modal %} {% include "projects/about.html" %} {% endblock %} {% block help_modal %} {% include "projects/help_map.html" %} {% endblock %} {% block extra %}
+{% endblock %}
+
+{% block about_modal %} {% include "projects/about.html" %} {% endblock %}
+{% block help_modal %} {% include "projects/help_map.html" %} {% endblock %}
+
+{% block extra %}
 <!-- Attribution -->
 <div class="modal fade" id="attributionModal" tabindex="-1" role="dialog">
     <div class="modal-dialog">
@@ -263,15 +285,19 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-{% endblock %} {% block js_addition %}
+{% endblock %}
+
+{% block js_addition %}
 <script src="{{ url_for('static', filename='bower_components/leaflet-draw/dist/leaflet.draw.js') }}"></script>
 <script src="{{ url_for('static', filename='bower_components/leaflet-filelayer/leaflet.filelayer.js') }}"></script>
 <script src="{{ url_for('static', filename='bower_components/leaflet-measure/dist/leaflet-measure.min.js') }}"></script>
 <script src="{{ url_for('static', filename='bower_components/leaflet.extra-markers/dist/js/leaflet.extra-markers.min.js')}}"></script>
+<script src="{{ url_for('static', filename='bower_components/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.js') }}"></script>
 <!-- query and list library -->
 <script src="{{ url_for('static', filename='bower_components/typeahead.js/dist/typeahead.bundle.min.js') }}"></script>
 <script src="{{ url_for('static', filename='bower_components/handlebars/handlebars.min.js') }}"></script>
 <script src="{{ url_for('static', filename='bower_components/list.js/dist/list.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/list.pagination.js/dist/list.pagination.min.js') }}"></script>
 <!-- chart -->
 <script src="{{ url_for('static', filename='bower_components/highcharts/highstock.js') }}"></script>
 <script src="{{ url_for('static', filename='bower_components/highcharts/themes/sand-signika.js') }}"></script>

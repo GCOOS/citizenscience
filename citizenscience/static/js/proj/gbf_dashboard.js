@@ -1,3 +1,10 @@
+//TODO
+//data location
+//mongodb
+gbfData = 'gbf_db/data';
+//local
+//gbfData = 'static/data/GBF_20150723.geojson';
+
 //--------------------------------------------------
 // Initialize our dc.js charts, passing the DOM Id in which we want the chart rendered as an argument
 //--------------------------------------------------
@@ -29,7 +36,7 @@ var xdata = null,
     siteDescDim = null;
 
 d3.queue()
-    .defer(d3.json, 'gbf_db/data')
+    .defer(d3.json, gbfData)
     .await(function(error, data) {
         console.log("loading search list");
         //console.log(data.features);
