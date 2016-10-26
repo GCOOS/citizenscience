@@ -42,6 +42,13 @@ def index():
     return render_template('index.html')
 
 
+@frontend.route('/citizenscience2')
+def index_alt():
+    if current_user.is_authenticated:
+        return redirect(url_for('user.profile'))
+    return render_template('index.html')
+
+
 @frontend.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -171,11 +178,6 @@ def handle_404(err):
 @frontend.errorhandler(500)
 def handle_500(err):
     return render_template('errors/500.html'), 500
-
-
-@frontend.route('/compare')
-def compare():
-    return render_template('projects/compare.html')
 
 
 @frontend.route('/gbf_db')
