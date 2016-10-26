@@ -55,8 +55,9 @@ map = L.map("map", {
   zoomControl: false,
   scrollWheelZoom: true,
   zoom: 6,
-  center: [27.0, -88.5],
   dragging: true,
+  tap: false,
+  center: [27.0, -88.5],
   attributionControl: true //should be true for goecoding
 });
 L.esri.basemapLayer('Imagery').addTo(map);

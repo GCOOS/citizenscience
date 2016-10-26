@@ -7,8 +7,6 @@
 dataOne = 'gbf_db/data';
 dataTwo = 'nacd_db/data';
 
-var featureList;
-
 // ================================================================
 /* Navigator and Side bar */
 // ================================================================
@@ -163,7 +161,8 @@ L.control.layers(baseLayers, groupedOverlays).addTo(map);
 // ================================================================
 function syncSidebar() {
   /* Empty sidebar features */
-  $("#feature-list-sidebar tbody").empty();
+  //$("#feature-list-sidebar").val("");
+
   // Loop through gbf layer and add only features which are in the map bounds
   GBF.eachLayer(function (layer) {
     if (map.hasLayer(gbfLayer)) {
@@ -175,12 +174,12 @@ function syncSidebar() {
   NACD.eachLayer(function (layer) {
     if (map.hasLayer(nacdLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list-sidebar tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_pink.png"></td><td><span class="feature-sitedesc"><small>' + layer.feature.properties.Site + '</small></span><br /><small><span class="feature-date">' + moment(new Date(layer.feature.properties.Date_Time).toISOString()).format("M/D/YYYY h:mm a") + '</small></span></td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list-sidebar tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_pink.png"></td><td><span class="feature-sitedesc"><small>' + layer.feature.properties.Site + '</small></span><br /><small><span class="feature-date">' + moment(new Date(layer.feature.properties.Date_Time).toISOString()).format("M/D/YYYY h:mm a") + "</small></span></td><td style='vertical-align: middle;'><i class='fa fa-chevron-right pull-right'></i></td></tr>");
       }
     }
   });
   /* Update list.js featureList */
-  featureList = new List("featuresPanel", {
+  var featureList = new List("features-list", {
     valueNames: ["feature-sitedesc","feature-date"]
   });
   featureList.sort("feature-date", {
@@ -255,6 +254,7 @@ $("#searchbox").keypress(function (e) {
 // ================================================================
 // Leaflet patch to make layer control scrollable on touch browsers
 // ================================================================
+/*
 var container = $(".leaflet-control-layers")[0];
 if (!L.Browser.touch) {
   L.DomEvent
@@ -263,3 +263,4 @@ if (!L.Browser.touch) {
 } else {
   L.DomEvent.disableClickPropagation(container);
 }
+*/

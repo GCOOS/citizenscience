@@ -20,10 +20,10 @@
     <link rel="Shortcut Icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
 
     {% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/jquery-ui/themes/base/jquery-ui.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/Ionicons/css/ionicons.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/jquery-ui/themes/base/jquery-ui.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <!-- Base Map CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/leaflet/dist/leaflet.css') }}">

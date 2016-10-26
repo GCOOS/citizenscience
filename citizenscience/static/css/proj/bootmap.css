@@ -39,14 +39,7 @@ body {
   color: #101010;
 }
 
-
 /* bootstrap hack: fix content width inside hidden tabs */
-.tab-content > .tab-pane,
-.pill-content > .pill-pane {
-    display: block;     /* undo display:none          */
-    height: 0;          /* height:0 is also invisible */
-    overflow-y: hidden; /* no-overflow                */
-}
 .tab-content > .active,
 .pill-content > .active {
     height: auto;       /* let the content decide it  */
@@ -85,8 +78,7 @@ input[type="radio"], input[type="checkbox"] {
   margin-bottom:-5px;
 }
 #oos_logo{
-  position: absolute;
-  bottom: 0;
+  bottom: 2px;
   padding-left: 10px;
   padding-bottom: 3px;
 }

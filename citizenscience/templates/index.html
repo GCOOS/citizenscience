@@ -42,17 +42,15 @@
                 </div>
 
                 <div id="side-panel">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active">
-                          <a href="#tabOne" aria-controls="tabOne" role="tab" data-toggle="tab">Home</a>
+                    <ul class="nav nav-tabs" role="tablist" id="homeTab">
+                        <li role="presentation" class="active"><a href="#tabOne" id="tab-1" data-toggle="tab">Home</a>
                         </li>
-                        <li role="presentation">
-                          <a href="#tabTwo" aria-controls="tabTwo" role="tab" data-toggle="tab">Observation Points</a>
+                        <li role="presentation"><a href="#tabTwo" id="tab-2" data-toggle="tab">Observation Points</a>
                         </li>
                     </ul>
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="tabOne">
-                            <div id="bsaccordion">
+                        <div role="tabpanel" class="tab-pane active" id="tabOne">
+                            <div class="bs-accordion">
                                 <div class="panel-group" id="accordion">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -138,8 +136,8 @@
                                 <a href="http://www.ioos.noaa.gov/" target="_blank"><img src="static/images/logo/IOOS_Emblem_Primary_B_RGB_113x50.png" style="height:50px; width:113px;"></a>&nbsp;
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="tabTwo">
-                            <div class="sidebar-table">
+                        <div role="tabpanel" class="tab-pane" id="tabTwo">
+                            <div id="features-list" class="sidebar-table">
                                 <input class="search" placeholder="Search" />
                                 <button class="sort" data-sort="feature-sitedesc">
                                   Sort by Name
