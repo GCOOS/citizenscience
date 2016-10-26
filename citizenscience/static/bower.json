@@ -90,7 +90,10 @@
     "leaflet-filelayer": "git://github.com/makinacorpus/Leaflet.FileLayer.git#^0.6.0",
     "Leaflet.extra-markers": "git://github.com/coryasilva/Leaflet.ExtraMarkers.git#^1.0.6",
     "list.js": "^1.3.0",
-    "list.pagination.js": "^0.1.1"
+    "list.pagination.js": "^0.1.1",
+    "Ionicons": "ionicons#^2.0.1",
+    "Leaflet.defaultextent": "git://github.com/nguyenning/Leaflet.defaultextent.git#^0.0.2",
+    "zeroclipboard": "^2.2.0"
   },
   "resolutions": {
     "d3": "3.x",
