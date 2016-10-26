@@ -1,6 +1,6 @@
 {
   "name": "gcoos-citizenscience",
-  "version": "10182016",
+  "version": "10282016",
   "homepage": "http://gulfcitizenscience.org",
   "authors": [
     "Shin Kobara"
@@ -45,7 +45,7 @@
     "keen-js": "^3.4.1",
     "keen-dashboards": "^0.1.1",
     "holderjs": "~2.9.4",
-    "highcharts": "^5.0.0",
+    "highcharts": "^5.0.2",
     "highstock": "^3.0.1",
     "autosize": "^3.0.17",
     "select2": "^4.0.3",

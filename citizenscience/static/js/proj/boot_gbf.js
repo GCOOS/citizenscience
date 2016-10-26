@@ -1,14 +1,15 @@
-var gbfSearch = [], gbfChart = [];
+var gbfSearch = [], gbfChart = [], gbfLayer, GBF;
 
 // ================================================================
 // geojson layer - GBF
 // ================================================================
-var gbfLayer = L.geoJson(null);
+gbfLayer = L.geoJson(null);
+
 var tintGreenMarker = L.AwesomeMarkers.icon({
    icon: 'tint',
    markerColor: 'green'
  });
-var GBF = L.geoJson(null, {
+GBF = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: tintGreenMarker,
@@ -92,7 +93,7 @@ var GBF = L.geoJson(null, {
             break;
         }
 
-        switch (isNaN(feature.properties.Clarity) || parseInt(feature.properties.Clarity)) {
+      switch (isNaN(feature.properties.Clarity) || parseInt(feature.properties.Clarity)) {
           case true:
             clarity = "Not measured";
             break;
@@ -107,7 +108,7 @@ var GBF = L.geoJson(null, {
             break;
         }
 
-        switch (isNaN(feature.properties.Surface) || parseInt(feature.properties.Surface)) {
+      switch (isNaN(feature.properties.Surface) || parseInt(feature.properties.Surface)) {
           case true:
             surface = "Not measured";
             break;
@@ -128,7 +129,7 @@ var GBF = L.geoJson(null, {
             break;
         }
 
-        switch (isNaN(feature.properties.Conditions) || parseInt(feature.properties.Conditions)) {
+      switch (isNaN(feature.properties.Conditions) || parseInt(feature.properties.Conditions)) {
           case true:
             conditions = "Not measured";
             break;
@@ -146,7 +147,7 @@ var GBF = L.geoJson(null, {
             break;
         }
 
-        switch (isNaN(feature.properties.Odor) || parseInt(feature.properties.Odor)) {
+      switch (isNaN(feature.properties.Odor) || parseInt(feature.properties.Odor)) {
           case true:
             odor = "Not measured";
             break;
@@ -173,7 +174,7 @@ var GBF = L.geoJson(null, {
             break;
         }
 
-        switch (isNaN(feature.properties.Weather) || parseInt(feature.properties.Weather)) {
+      switch (isNaN(feature.properties.Weather) || parseInt(feature.properties.Weather)) {
           case true:
             weather = "Not measured";
             break;
@@ -191,7 +192,7 @@ var GBF = L.geoJson(null, {
             break;
         }
 
-        switch (isNaN(feature.properties.Tide) || parseInt(feature.properties.Tide)) {
+      switch (isNaN(feature.properties.Tide) || parseInt(feature.properties.Tide)) {
           case true:
             tide = "Not measured";
             break;
@@ -271,23 +272,22 @@ var GBF = L.geoJson(null, {
         lng: feature.geometry.coordinates[0]
       });
       //console.log(gbfSearch);
-      //if (feature.properties.Site_ID === 999999 || feature.properties.Site_ID === "999999") {
-        gbfChart.push({
-          datetime: moment(new Date(sampleDateTime).toISOString()).valueOf(),
-          siteid: parseInt(feature.properties.Site_ID),
-          airtemp: parseFloat(feature.properties.Air_Temp_degC),
-          wtemp: parseFloat(feature.properties.Water_Temp_degC),
-          avgdo: parseFloat(feature.properties.Avg_DO),
-          avgph: parseFloat(feature.properties.pH),
-          salinity: parseFloat(feature.properties.Salinity),
-          enteroc: parseFloat(feature.properties.Enterococcus),
-          sitedesc: feature.properties.Site_Description,
-          source: "GBF"
-        });
-      //}
+      gbfChart.push({
+        datetime: moment(new Date(sampleDateTime).toISOString()).valueOf(),
+        siteid: parseInt(feature.properties.Site_ID),
+        airtemp: parseFloat(feature.properties.Air_Temp_degC),
+        wtemp: parseFloat(feature.properties.Water_Temp_degC),
+        avgdo: parseFloat(feature.properties.Avg_DO),
+        avgph: parseFloat(feature.properties.pH),
+        salinity: parseFloat(feature.properties.Salinity),
+        enteroc: parseFloat(feature.properties.Enterococcus),
+        sitedesc: feature.properties.Site_Description,
+        source: "GBF"
+      });
     }
   }
 });
+
 // ================================================================
 // GBF Summary Chart function
 // ================================================================

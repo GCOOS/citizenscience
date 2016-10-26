@@ -1,3 +1,9 @@
+/*
+ Initial map and basemap Settings
+ Home button, default extent button, geocoding button, measurement button,
+ file uploading button, latlng info, highlight settings.
+*/
+
 /* Layer Size */
 // ================================================================
 $(window).resize(function() {
@@ -50,6 +56,7 @@ map = L.map("map", {
   scrollWheelZoom: true,
   zoom: 6,
   center: [27.0, -88.5],
+  dragging: true,
   attributionControl: true //should be true for goecoding
 });
 L.esri.basemapLayer('Imagery').addTo(map);
@@ -201,27 +208,6 @@ attributionControl.onAdd = function(map) {
 };
 map.addControl(attributionControl);
 
-// ================================================================
-// Ancillary Data Layers - Top Corner Layers Group
-// ================================================================
-var nauticalChart = L.esri.dynamicMapLayer({
-  url:"http://seamlessrnc.nauticalcharts.noaa.gov/arcgis/rest/services/RNC/NOAA_RNC/MapServer/",
-  opacity: 0.5
-});
-var platformLyr = L.esri.dynamicMapLayer({
-  url: "http://gcoos3.tamu.edu/arcgis/rest/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/",
-  layers: [0],
-  opacity: 0.8
-});
-var pipelineLyr = L.esri.dynamicMapLayer({
-  url: "http://gcoos3.tamu.edu/arcgis/rest/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/",
-  layers: [1],
-  opacity: 0.8
-});
-var riverstreamLyr = L.esri.dynamicMapLayer({
-  url: "http://earthobs1.arcgis.com/arcgis/rest/services/Live_Stream_Gauges/MapServer/",
-  layers: [0]
-});
 
 //=================================================================
 // Weather Info from Forecast.io
@@ -303,26 +289,6 @@ function onDragEnd() {
 }
 
 // ================================================================
-// Layer Controls - Highlight for geoJson data
-// ================================================================
-var highlight = L.geoJson(null);
-var highlightStyle = {
-  stroke: false,
-  fillColor: "#00FFFF",
-  fillOpacity: 0.7,
-  radius: 10
-};
-function clearHighlight() {
-  highlight.clearLayers();
-}
-// ================================================================
-// Clear feature highlight when map is clicked
-// ================================================================
-map.on("click", function(e) {
-  highlight.clearLayers();
-});
-
-// ================================================================
 // Single marker cluster layer to hold all clusters
 // ================================================================
 var markerClusters = new L.MarkerClusterGroup({
@@ -332,7 +298,6 @@ var markerClusters = new L.MarkerClusterGroup({
   disableClusteringAtZoom: 13
 });
 map.addLayer(markerClusters);
-map.addLayer(highlight);
 
 // ================================================================
 // Map Tools Settings
@@ -364,14 +329,57 @@ $("#distance-btn").click(function() {
   $('.leaflet-control-draw-measure').toggle();
   return false;
 });
+// ================================================================
 /* Upload tool */
+// ================================================================
 $("#upload-btn").click(function() {
   $('.leaflet-control-filelayer').toggle();
   return false;
 });
+// ================================================================
 // Lat Long
+// ================================================================
 var mousemove = document.getElementById('mousemove');
 map.on('mousemove', function(e){
   //console.log('checking');
   window[e.type].innerHTML = e.latlng.toString();
+});
+
+// ================================================================
+// Layer Controls - Highlight for geoJson data
+// ================================================================
+var highlight = L.geoJson(null);
+var highlightStyle = {
+  stroke: false,
+  fillColor: "#00FFFF",
+  fillOpacity: 0.7,
+  radius: 10
+};
+function clearHighlight() {
+  highlight.clearLayers();
+}
+map.addLayer(highlight);
+
+// ================================================================
+// Clear feature highlight when map is clicked
+// ================================================================
+map.on("click", function(e) {
+  highlight.clearLayers();
+});
+
+// ================================================================
+$(document).on("click", ".feature-row", function(e) {
+  $(document).off("mouseout", ".feature-row", clearHighlight);
+  sidebarClick(parseInt($(this).attr("id"), 10));
+});
+$(document).on("mouseover", ".feature-row", function(e) {
+  highlight.clearLayers().addLayer(L.circleMarker([$(this).attr("lat"), $(this).attr("lng")], highlightStyle));
+});
+$(document).on("mouseout", ".feature-row", clearHighlight);
+
+// ================================================================
+// Modal - Feature
+// ================================================================
+$("#featureModal").on("hidden.bs.modal", function (e) {
+  $(document).on("mouseout", ".feature-row", clearHighlight);
 });

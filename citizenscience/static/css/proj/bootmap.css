@@ -91,7 +91,7 @@ input[type="radio"], input[type="checkbox"] {
   padding-bottom: 3px;
 }
 
-#features {
+#featuresPanel {
   margin: 0px;
   border: none;
   border-radius: 0px;
@@ -179,7 +179,7 @@ input[type="radio"], input[type="checkbox"] {
   right: 100px;
   z-index:500;
 }
-.typeahead {
+.tt-menu {
   background-color: #FFFFFF;
 }
 .tt-dropdown-menu {
@@ -228,7 +228,7 @@ input[type="radio"], input[type="checkbox"] {
 /* lat/lng coordinates */
 .ui-coordinates {
   position: absolute;
-  bottom:2px;
+  bottom:10px;
   left:50%;
   padding:5px 5px;
   background:rgba(0,0,0,0.5);
@@ -236,6 +236,7 @@ input[type="radio"], input[type="checkbox"] {
   font-size:11px;
   line-height:18px;
   border-radius:2px;
+  z-index: 500;
 }
 
 /* Modal */

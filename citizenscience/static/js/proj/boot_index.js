@@ -1,4 +1,8 @@
-//TODO
+/*
+  data layers settings
+  synchoronized list and search tool
+*/
+
 //Data location
 dataOne = 'gbf_db/data';
 dataTwo = 'nacd_db/data';
@@ -23,23 +27,6 @@ $("#panel-btn").click(function() {
   return false;
 });
 
-// ================================================================
-$(document).on("click", ".feature-row", function(e) {
-  $(document).off("mouseout", ".feature-row", clearHighlight);
-  sidebarClick(parseInt($(this).attr("id"), 10));
-});
-$(document).on("mouseover", ".feature-row", function(e) {
-  highlight.clearLayers().addLayer(L.circleMarker([$(this).attr("lat"), $(this).attr("lng")], highlightStyle));
-});
-$(document).on("mouseout", ".feature-row", clearHighlight);
-
-// ================================================================
-// Modal - Feature
-// ================================================================
-$("#featureModal").on("hidden.bs.modal", function (e) {
-  $(document).on("mouseout", ".feature-row", clearHighlight);
-});
-
 // ====================================================
 // Main loader
 // ====================================================
@@ -50,83 +37,55 @@ d3.queue()
       //console.log(gbfData);
       //console.log(nacdData);
 
-      GBF.addData(gbfData);
-      NACD.addData(nacdData);
-      //FLAQ.addData(flaqData);
+      GBF.addData(gbfData); //GBF from boot_gbf.js
+      map.addLayer(gbfLayer); //gbfLayer from boot_gbf.js - grouped layer
 
-      map.addLayer(gbfLayer);
-      map.addLayer(nacdLayer);
-      //map.addLayer(flaqLayer);
+      NACD.addData(nacdData); //NACD from boot_nacd.js
+      map.addLayer(nacdLayer); //nacdLayer from boot_nacd.js
 
       sizeLayerControl();
 
-      /* Fit map to boroughs bounds */
-      featureList = new List("features", {
-        valueNames: ["feature-sitedesc","feature-siteid","feature-date"]
-      });
-      featureList.sort("feature-date", {order:"desc"});
-
-      //console.log(gbfSearch);
-      // Search Form
+      // Typeahead Search Form
       //------------------------------
+      $("#searchbox").val(""); // clear input form first
+
       var gbfBH = new Bloodhound({
         name: "GBF",
-        datumTokenizer: function (d) {
-          return Bloodhound.tokenizers.whitespace(d.sitedesc);
-        },
-        queryTokenizer: function (d) {
-          Bloodhound.tokenizers.whitespace(d.sitedesc);
-        },
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('sitedesc'),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
         local: gbfSearch,
-        identify: function (obj) {
-          return obj.sitedesc
-        },
+        identify: function(obj) { return obj.sitedesc; },
         limit: 10
       });
       gbfBH.initialize();
 
       var nacdBH = new Bloodhound({
         name: "NACD",
-        datumTokenizer: function (d) {
-          return Bloodhound.tokenizers.whitespace(d.site);
-        },
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('site'),
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         local: nacdSearch,
+        identify: function(obj) { return obj.site; },
         limit: 10
       });
       nacdBH.initialize();
-      /*
-      var flaqBH = new Bloodhound({
-        name: "FLAQ",
-        datumTokenizer: function (d) {
-          return Bloodhound.tokenizers.whitespace(d.name);
-        },
-        queryTokenizer: Bloodhound.tokenizers.whitespace,
-        local: flaqSearch,
-        limit: 10
-      });
-      flaqBH.initialize();
-      */
+
       /* instantiate the typeahead UI */
       $("#searchbox").typeahead({
-        minLength: 1,
-        highlight: true,
-        hint: false
+        minLength: 2,
+        highlight: true
       }, {
         name: "GBF",
-        displayKey: "sitedesc",
         source: gbfBH,
         templates: {
-          header: "<h4 class='typeahead-header'><img src='static/images/map_green.png' width='22' height='22'>&nbsp;Galveston B. F.</h4>",
-          suggestion: Handlebars.compile("{{sitedesc}}" + "<br/>&nbsp;<small>" + "{{date}}" + "</small>")
+          header: '<h4 class="typeahead-header"><img src="static/images/map_green.png" width="22" height="22">&nbsp;Galveston Bay Foundation</h4>',
+          suggestion: Handlebars.compile('<div>{{sitedesc}}</div>')
         }
       }, {
         name: "NACD",
-        displayKey: "site",
-        source: nacdBH.ttAdapter(),
+        source: nacdBH,
         templates: {
-          header: "<h4 class='typeahead-header'><img src='static/images/map_pink.png' width='22' height='22'>&nbsp;Nature's A.</h4>",
-          suggestion: Handlebars.compile(["{{site}}<br>&nbsp;<small>{{date}}</small>"].join(""))
+          header: "<h4 class='typeahead-header'><img src='static/images/map_pink.png' width='22' height='22'>&nbsp;Nature's Academy</h4>",
+          suggestion: Handlebars.compile('<div>{{site}}</div>')
         }
       }).on("typeahead:selected", function (obj, datum) {
         if (datum.source === "GBF") {
@@ -164,40 +123,64 @@ d3.queue()
 });
 
 // ================================================================
+// Ancillary Data Layers - Top Corner Layers Group
+// ================================================================
+var nauticalChart = L.esri.dynamicMapLayer({
+  url:"http://seamlessrnc.nauticalcharts.noaa.gov/arcgis/rest/services/RNC/NOAA_RNC/MapServer/",
+  opacity: 0.5
+});
+var platformLyr = L.esri.dynamicMapLayer({
+  url: "http://gcoos3.tamu.edu/arcgis/rest/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/",
+  layers: [0],
+  opacity: 0.8
+});
+var pipelineLyr = L.esri.dynamicMapLayer({
+  url: "http://gcoos3.tamu.edu/arcgis/rest/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/",
+  layers: [1],
+  opacity: 0.8
+});
+var riverstreamLyr = L.esri.dynamicMapLayer({
+  url: "http://earthobs1.arcgis.com/arcgis/rest/services/Live_Stream_Gauges/MapServer/",
+  layers: [0]
+});
+
+// ================================================================
 /* grouping ancillayr data layers */
 // ================================================================
 var groupedOverlays = {
-    "River stream": riverstreamLyr,
-    "Platform": platformLyr,
-    "Pipeline": pipelineLyr,
-    "Nautical Chart": nauticalChart,
-    "<img src='static/images/map_green.png' width='28' height='28'>&nbsp;GBF Observations": gbfLayer,
-    "<img src='static/images/map_pink.png' width='28' height='28'>&nbsp;NACD Observations": nacdLayer
+      "River stream": riverstreamLyr,
+      "Platform": platformLyr,
+      "Pipeline": pipelineLyr,
+      "Nautical Chart <br/><hr>": nauticalChart,
+      "<img src='static/images/map_green.png' width='28' height='28'>&nbsp;GBF Observations": gbfLayer,
+      "<img src='static/images/map_pink.png' width='28' height='28'>&nbsp;NACD Observations": nacdLayer
 };
+L.control.layers(baseLayers, groupedOverlays).addTo(map);
+
 
 // ================================================================
 // List in Side Panel
 // ================================================================
 function syncSidebar() {
   /* Empty sidebar features */
-  $("#feature-list tbody").empty();
+  $("#feature-list-sidebar tbody").empty();
   // Loop through gbf layer and add only features which are in the map bounds
   GBF.eachLayer(function (layer) {
     if (map.hasLayer(gbfLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_green.png"></td><td><span class="feature-sitedesc"><small>' + layer.feature.properties.Site_Description + '</small></span><br /><small><span class="feature-date">' + moment(layer.feature.properties.Date_Time, 'MM/DD/YYYY h:mm:ss').format('M/D/YYYY h:mm a') + '</small></span></td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list-sidebar tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_green.png"></td><td><span class="feature-sitedesc"><small>' + layer.feature.properties.Site_Description + '</small></span><br /><small><span class="feature-date">' + moment(layer.feature.properties.Date_Time, 'MM/DD/YYYY h:mm:ss').format('M/D/YYYY h:mm a') + '</small></span></td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
   NACD.eachLayer(function (layer) {
     if (map.hasLayer(nacdLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_pink.png"></td><td><span class="feature-sitedesc"><small>' + layer.feature.properties.Site + '</small></span><br /><small><span class="feature-date">' + moment(new Date(layer.feature.properties.Date_Time).toISOString()).format("M/D/YYYY h:mm a") + '</small></span></td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list-sidebar tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_pink.png"></td><td><span class="feature-sitedesc"><small>' + layer.feature.properties.Site + '</small></span><br /><small><span class="feature-date">' + moment(new Date(layer.feature.properties.Date_Time).toISOString()).format("M/D/YYYY h:mm a") + '</small></span></td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
   /* Update list.js featureList */
-  featureList = new List("features", {
+  featureList = new List("featuresPanel", {
     valueNames: ["feature-sitedesc","feature-date"]
   });
   featureList.sort("feature-date", {
@@ -205,6 +188,9 @@ function syncSidebar() {
   });
 }
 
+// ================================================================
+// click a row to zoom in
+// ================================================================
 function sidebarClick(id) {
   var layer = markerClusters.getLayer(id);
   map.setView([layer.getLatLng().lat, layer.getLatLng().lng], 17);
@@ -217,6 +203,9 @@ function sidebarClick(id) {
 }
 
 // ================================================================
+// Grouping each data and show as clustering icon
+// Synchronize with list in a side bar
+// ================================================================
 map.on("overlayadd", function(e) {
   if (e.layer === gbfLayer) {
     markerClusters.addLayer(GBF);
@@ -226,11 +215,6 @@ map.on("overlayadd", function(e) {
     markerClusters.addLayer(NACD);
     syncSidebar();
   }
-/*  if (e.layer === flaqLayer) {
-    markerClusters.addLayer(FLAQ);
-    syncSidebar();
-  }
-*/
 });
 map.on("overlayremove", function(e) {
   if (e.layer === gbfLayer) {
@@ -241,12 +225,6 @@ map.on("overlayremove", function(e) {
     markerClusters.removeLayer(NACD);
     syncSidebar();
   }
-  /*
-  if (e.layer === flaqLayer) {
-    markerClusters.removeLayer(FLAQ);
-    syncSidebar();
-  }
-  */
 });
 map.on("moveend", function (e) {
   syncSidebar();
@@ -260,7 +238,6 @@ if (document.body.clientWidth <= 767) {
 } else {
   var isCollapsed = false;
 };
-L.control.layers(baseLayers, groupedOverlays).addTo(map);
 
 // ================================================================
 // Typeahead Search box
