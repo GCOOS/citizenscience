@@ -42,8 +42,6 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var baseLayers = {
     "Light": cartodb_light,
     "Dark": cartodb_dark,
-    //"Esri World Imagery": esriImage,
-    //"Ocean": esriOcean,
     "Topography": esriTopo,
     "OpenStreetMap": osm
 };
@@ -51,30 +49,16 @@ var baseLayers = {
 // ================================================================
 // Initial Map Settings
 // ================================================================
-map = L.map("map", {
+map = L.map('map', {
   zoomControl: false,
   scrollWheelZoom: true,
   zoom: 6,
-  dragging: true,
-  tap: false,
   center: [27.0, -88.5],
   attributionControl: true //should be true for goecoding
 });
 L.esri.basemapLayer('Imagery').addTo(map);
 L.esri.basemapLayer('ImageryLabels').addTo(map);
 startLoading();
-
-function setBasemap(basemap) {
-  if (layer) {
-    map.removeLayer(layer);
-  }
-  layer = L.esri.Vector.basemap(basemap);
-  map.addLayer(layer);
-}
-function changeBasemap(basemaps){
-  var basemap = basemaps.value;
-  setBasemap(basemap);
-}
 
 // ================================================================
 // Leaflet Map Base Functions
@@ -119,7 +103,6 @@ var locateControl = L.control.locate({
     timeout: 10000
   }
 }).addTo(map);
-map.on('dragstart', locateControl._stopFollowing, locateControl);
 // ================================================================
 /* Geocoding button (bottom right)*/
 // ================================================================

@@ -15,6 +15,7 @@ app.title = "Citizen Science for the Gulf of Mexico";
 app.html = "http://products.gcoos.org/citizenscience";
 app.desc = "Citizen Science Projects in the Gulf of Mexico";
 
+
 // loading gif
 function startLoading() {
   map.spin(true);

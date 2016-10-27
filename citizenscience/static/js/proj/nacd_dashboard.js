@@ -733,7 +733,7 @@ var overlays = {
     "Individual Markers": markersLayer
 };
 // Initialize the Leaflet map
-var map = L.map('map', {
+map = L.map('map', {
     zoomControl: false,
     scrollWheelZoom: true,
     center: [28.09, -82.78],
@@ -743,15 +743,6 @@ var map = L.map('map', {
 L.control.layers(baseMaps, overlays).addTo(map);
 //map._layersMinZoom=7;
 
-function startLoading() {
-    map.spin(true);
-}
-
-function finishedLoading() {
-    setTimeout(function() {
-        map.spin(false);
-    }, 1000);
-}
 startLoading();
 
 /* Zoom control (bottom right) */
