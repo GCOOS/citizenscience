@@ -1,5 +1,6 @@
-var nacdSearch = [], nacdChart = [], NACD;
-var nacdLayer = L.layerGroup(); //geoJson
+var nacdSearch = [], nacdChart = [];
+var nacdLayer, //geoJson
+    NACD; //geoJson
 
 // ================================================================
 // geoJson layer - Nature's Academy

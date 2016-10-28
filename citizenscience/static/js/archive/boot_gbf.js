@@ -1,16 +1,15 @@
-/* data location */
-gbfData = 'gbf_db/data';
+var gbfSearch = [], gbfChart = [], gbfLayer, GBF;
 
-/* global */
-var gbfSearch = [], gbfChart = [], GBF;
-var gbfLayer = L.layerGroup();
-
+// ================================================================
+// geojson layer - GBF
+// ================================================================
+gbfLayer = L.geoJson(null);
 
 var tintGreenMarker = L.AwesomeMarkers.icon({
    icon: 'tint',
    markerColor: 'green'
  });
-
+ 
 GBF = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
@@ -288,11 +287,6 @@ GBF = L.geoJson(null, {
       });
     }
   }
-});
-
-d3.json(gbfData, function(error, data) {
-  if (error) return console.warn(error);
-  console.log(data.features);
 });
 
 // ================================================================

@@ -13,18 +13,18 @@ function sizeLayerControl() {
   $(".leaflet-control-layers").css("max-height", $("#map").height() - 50);
 }
 
+// Create a new group to which we can (later) add or remove our markers
+var markersLayer = L.layerGroup();
+
 // ================================================================
 // Basemap Layers
 // ================================================================
-//TODO (4) Edit initial basemap if necessary
-/*
 var esriOcean = L.layerGroup([
   L.esri.basemapLayer("Oceans"), L.esri.basemapLayer("OceansLabels")
 ]);
 var esriImage = L.layerGroup([
   L.esri.basemapLayer("Imagery"), L.esri.basemapLayer("ImageryLabels")
 ]);
-*/
 var esriTopo = L.esri.basemapLayer("Topographic");
 var cartodb_light = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
 attribution: 'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a> | Points data from <a href="http://galvbay.org">galvbay.org</a>',
@@ -39,12 +39,58 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 });
 
 /* grouping basemap layers */
-var baseLayers = {
+var basemapLayers = {
     "Light": cartodb_light,
     "Dark": cartodb_dark,
+    "Ocean": esriOcean,
+    "Imagery": esriImage,
     "Topography": esriTopo,
     "OpenStreetMap": osm
 };
+
+// ================================================================
+// Ancillary Data Layers - Top Corner Layers Group
+// ================================================================
+var nauticalChart = L.esri.dynamicMapLayer({
+  url:"http://seamlessrnc.nauticalcharts.noaa.gov/arcgis/rest/services/RNC/NOAA_RNC/MapServer/",
+  opacity: 0.5
+});
+var platformLyr = L.esri.dynamicMapLayer({
+  url: "http://gcoos3.tamu.edu/arcgis/rest/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/",
+  layers: [0],
+  opacity: 0.8
+});
+var pipelineLyr = L.esri.dynamicMapLayer({
+  url: "http://gcoos3.tamu.edu/arcgis/rest/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/",
+  layers: [1],
+  opacity: 0.8
+});
+var riverstreamLyr = L.esri.dynamicMapLayer({
+  url: "http://earthobs1.arcgis.com/arcgis/rest/services/Live_Stream_Gauges/MapServer/",
+  layers: [0]
+});
+
+// ================================================================
+/* grouping ancillayr data layers */
+// ================================================================
+var groupedOverlays = {
+      //"River stream": riverstreamLyr,
+      "Platform": platformLyr,
+      "Pipeline": pipelineLyr,
+      "Nautical Chart <br/><hr>": nauticalChart,
+      "<img src='static/images/map_green.png' width='28' height='28'>&nbsp;GBF Observations": gbfLayer,
+      "<img src='static/images/map_pink.png' width='28' height='28'>&nbsp;NACD Observations": nacdLayer
+};
+
+// ================================================================
+// Single marker cluster layer to hold all clusters
+// ================================================================
+var markerClusters = new L.MarkerClusterGroup({
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  zoomToBoundsOnClick: true,
+  disableClusteringAtZoom: 13
+});
 
 // ================================================================
 // Initial Map Settings
@@ -54,10 +100,10 @@ map = L.map('map', {
   scrollWheelZoom: true,
   zoom: 6,
   center: [27.0, -88.5],
-  attributionControl: true //should be true for goecoding
+  attributionControl: true, //should be true for goecoding
+  layers:[esriImage, markerClusters]
 });
-L.esri.basemapLayer('Imagery').addTo(map);
-L.esri.basemapLayer('ImageryLabels').addTo(map);
+L.control.layers(basemapLayers, groupedOverlays).addTo(map);
 startLoading();
 
 // ================================================================
@@ -169,7 +215,6 @@ var measureControl = L.control.measure({
 // ================================================================
 $('.leaflet-top.leaflet-left').hide();
 
-
 // ================================================================
 /* Attribution control (bottom right. Order:bottom to top) */
 // ================================================================
@@ -273,17 +318,6 @@ function onDragEnd() {
 }
 
 // ================================================================
-// Single marker cluster layer to hold all clusters
-// ================================================================
-var markerClusters = new L.MarkerClusterGroup({
-  spiderfyOnMaxZoom: true,
-  showCoverageOnHover: false,
-  zoomToBoundsOnClick: true,
-  disableClusteringAtZoom: 13
-});
-map.addLayer(markerClusters);
-
-// ================================================================
 // Map Tools Settings
 // ================================================================
 /* Print */
@@ -328,6 +362,7 @@ map.on('mousemove', function(e){
   //console.log('checking');
   window[e.type].innerHTML = e.latlng.toString();
 });
+
 
 // ================================================================
 // Layer Controls - Highlight for geoJson data

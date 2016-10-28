@@ -32,6 +32,8 @@ d3.queue()
   .defer(d3.json, dataOne)
   .defer(d3.json, dataTwo)
   .await(function (error, gbfData, nacdData) {
+      //console.log(gbfData);
+      //console.log(nacdData);
 
       GBF.addData(gbfData); //GBF from boot_gbf.js
       map.addLayer(gbfLayer); //gbfLayer from boot_gbf.js - grouped layer
@@ -117,6 +119,41 @@ d3.queue()
 
   finishedLoading();
 });
+
+// ================================================================
+// Ancillary Data Layers - Top Corner Layers Group
+// ================================================================
+var nauticalChart = L.esri.dynamicMapLayer({
+  url:"http://seamlessrnc.nauticalcharts.noaa.gov/arcgis/rest/services/RNC/NOAA_RNC/MapServer/",
+  opacity: 0.5
+});
+var platformLyr = L.esri.dynamicMapLayer({
+  url: "http://gcoos3.tamu.edu/arcgis/rest/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/",
+  layers: [0],
+  opacity: 0.8
+});
+var pipelineLyr = L.esri.dynamicMapLayer({
+  url: "http://gcoos3.tamu.edu/arcgis/rest/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/",
+  layers: [1],
+  opacity: 0.8
+});
+var riverstreamLyr = L.esri.dynamicMapLayer({
+  url: "http://earthobs1.arcgis.com/arcgis/rest/services/Live_Stream_Gauges/MapServer/",
+  layers: [0]
+});
+
+// ================================================================
+/* grouping ancillayr data layers */
+// ================================================================
+var groupedOverlays = {
+      "River stream": riverstreamLyr,
+      "Platform": platformLyr,
+      "Pipeline": pipelineLyr,
+      "Nautical Chart <br/><hr>": nauticalChart,
+      "<img src='static/images/map_green.png' width='28' height='28'>&nbsp;GBF Observations": gbfLayer,
+      "<img src='static/images/map_pink.png' width='28' height='28'>&nbsp;NACD Observations": nacdLayer
+};
+L.control.layers(baseLayers, groupedOverlays).addTo(map);
 
 
 // ================================================================
