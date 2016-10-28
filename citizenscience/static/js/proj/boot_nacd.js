@@ -1,15 +1,13 @@
-var nacdSearch = [], nacdChart = [], NACD;
-var nacdLayer = L.layerGroup(); //geoJson
-
-// ================================================================
-// geoJson layer - Nature's Academy
-// ================================================================
-nacdLayer = L.geoJson(null);
+var nacdSearch = [], nacdChart = [];
 var tintPinkMarker = L.AwesomeMarkers.icon({
    icon: 'tint',
    markerColor: 'pink'
  });
-NACD = L.geoJson(null, {
+
+// ================================================================
+// geoJson layer - Nature's Academy
+// ================================================================
+var NACD = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: tintPinkMarker,

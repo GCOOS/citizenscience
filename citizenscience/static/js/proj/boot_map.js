@@ -4,6 +4,11 @@
  file uploading button, latlng info, highlight settings.
 */
 
+// Create a new group to which we can (later) add or remove our markers
+var gbfLayer = L.geoJson(null);
+var nacdLayer = L.geoJson(null);
+
+// ================================================================
 /* Layer Size */
 // ================================================================
 $(window).resize(function() {
@@ -12,9 +17,6 @@ $(window).resize(function() {
 function sizeLayerControl() {
   $(".leaflet-control-layers").css("max-height", $("#map").height() - 50);
 }
-
-// Create a new group to which we can (later) add or remove our markers
-var markersLayer = L.layerGroup();
 
 // ================================================================
 // Basemap Layers
@@ -65,16 +67,15 @@ var pipelineLyr = L.esri.dynamicMapLayer({
   layers: [1],
   opacity: 0.8
 });
-var riverstreamLyr = L.esri.dynamicMapLayer({
-  url: "http://earthobs1.arcgis.com/arcgis/rest/services/Live_Stream_Gauges/MapServer/",
-  layers: [0]
+var riverstreamLyr = L.esri.featureLayer({
+  url: "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_Rivers_and_Streams/FeatureServer/0"
 });
 
 // ================================================================
 /* grouping ancillayr data layers */
 // ================================================================
 var groupedOverlays = {
-      //"River stream": riverstreamLyr,
+      "River stream": riverstreamLyr,
       "Platform": platformLyr,
       "Pipeline": pipelineLyr,
       "Nautical Chart <br/><hr>": nauticalChart,
@@ -101,7 +102,7 @@ map = L.map('map', {
   zoom: 6,
   center: [27.0, -88.5],
   attributionControl: true, //should be true for goecoding
-  layers:[esriImage, markerClusters]
+  layers:[cartodb_light, markerClusters]
 });
 L.control.layers(basemapLayers, groupedOverlays).addTo(map);
 startLoading();
@@ -321,6 +322,7 @@ function onDragEnd() {
 // Map Tools Settings
 // ================================================================
 /* Print */
+/*
 $("#print-btn").click(function() {
   $("#map").print({
     stylesheet: "../css/bootmap.css",
@@ -332,28 +334,13 @@ $("#print-btn").click(function() {
   $(".navbar-collapse.in").collapse("hide");
   return false;
 });
+*/
 /* Map Tools - all top left tools */
 $("#tools-btn").click(function() {
   $('.leaflet-top.leaflet-left').toggle();
   return false;
 });
-/* Draw Tools */
-$("#draw-btn").click(function() {
-  $('.leaflet-draw').toggle();
-  return false;
-});
-/* Distance measurement (require Leaflet.Draw) */
-$("#distance-btn").click(function() {
-  $('.leaflet-control-draw-measure').toggle();
-  return false;
-});
-// ================================================================
-/* Upload tool */
-// ================================================================
-$("#upload-btn").click(function() {
-  $('.leaflet-control-filelayer').toggle();
-  return false;
-});
+
 // ================================================================
 // Lat Long
 // ================================================================
@@ -362,7 +349,6 @@ map.on('mousemove', function(e){
   //console.log('checking');
   window[e.type].innerHTML = e.latlng.toString();
 });
-
 
 // ================================================================
 // Layer Controls - Highlight for geoJson data

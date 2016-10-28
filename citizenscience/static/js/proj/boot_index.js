@@ -32,88 +32,85 @@ d3.queue()
   .defer(d3.json, dataOne)
   .defer(d3.json, dataTwo)
   .await(function (error, gbfData, nacdData) {
+    GBF.addData(gbfData); //GBF from boot_gbf.js
+    map.addLayer(gbfLayer);
+    NACD.addData(nacdData); //NACD from boot_nacd.js
+    map.addLayer(nacdLayer);
 
-      GBF.addData(gbfData); //GBF from boot_gbf.js
-      map.addLayer(gbfLayer); //gbfLayer from boot_gbf.js - grouped layer
+    sizeLayerControl();
 
-      NACD.addData(nacdData); //NACD from boot_nacd.js
-      map.addLayer(nacdLayer); //nacdLayer from boot_nacd.js
+    // Typeahead Search Form
+    //------------------------------
+    $("#searchbox").val(""); // clear input form first
 
-      sizeLayerControl();
+    var gbfBH = new Bloodhound({
+      name: "GBF",
+      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('sitedesc'),
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      local: gbfSearch,
+      identify: function(obj) { return obj.sitedesc; },
+      limit: 10
+    });
+    gbfBH.initialize();
 
-      // Typeahead Search Form
-      //------------------------------
-      $("#searchbox").val(""); // clear input form first
+    var nacdBH = new Bloodhound({
+      name: "NACD",
+      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('site'),
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      local: nacdSearch,
+      identify: function(obj) { return obj.site; },
+      limit: 10
+    });
+    nacdBH.initialize();
 
-      var gbfBH = new Bloodhound({
-        name: "GBF",
-        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('sitedesc'),
-        queryTokenizer: Bloodhound.tokenizers.whitespace,
-        local: gbfSearch,
-        identify: function(obj) { return obj.sitedesc; },
-        limit: 10
-      });
-      gbfBH.initialize();
-
-      var nacdBH = new Bloodhound({
-        name: "NACD",
-        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('site'),
-        queryTokenizer: Bloodhound.tokenizers.whitespace,
-        local: nacdSearch,
-        identify: function(obj) { return obj.site; },
-        limit: 10
-      });
-      nacdBH.initialize();
-
-      /* instantiate the typeahead UI */
-      $("#searchbox").typeahead({
-        minLength: 2,
-        highlight: true
-      }, {
-        name: "GBF",
-        source: gbfBH,
-        templates: {
-          header: '<h4 class="typeahead-header"><img src="static/images/map_green.png" width="22" height="22">&nbsp;Galveston Bay Foundation</h4>',
-          suggestion: Handlebars.compile('<div>{{sitedesc}}</div>')
+    $("#searchbox").typeahead({
+      minLength: 2,
+      highlight: true
+    }, {
+      name: "GBF",
+      source: gbfBH,
+      templates: {
+        header: '<h4 class="typeahead-header"><img src="static/images/map_green.png" width="22" height="22">&nbsp;Galveston Bay Foundation</h4>',
+        suggestion: Handlebars.compile('<div>{{sitedesc}}</div>')
+      }
+    }, {
+      name: "NACD",
+      source: nacdBH,
+      templates: {
+        header: "<h4 class='typeahead-header'><img src='static/images/map_pink.png' width='22' height='22'>&nbsp;Nature's Academy</h4>",
+        suggestion: Handlebars.compile('<div>{{site}}</div>')
+      }
+    }).on("typeahead:selected", function (obj, datum) {
+      if (datum.source === "GBF") {
+        if (!map.hasLayer(gbfLayer)) {
+          map.addLayer(gbfLayer);
         }
-      }, {
-        name: "NACD",
-        source: nacdBH,
-        templates: {
-          header: "<h4 class='typeahead-header'><img src='static/images/map_pink.png' width='22' height='22'>&nbsp;Nature's Academy</h4>",
-          suggestion: Handlebars.compile('<div>{{site}}</div>')
+        map.setView([datum.lat, datum.lng], 17);
+        if (map._layers[datum.id]) {
+          map._layers[datum.id].fire("click");
         }
-      }).on("typeahead:selected", function (obj, datum) {
-        if (datum.source === "GBF") {
-          if (!map.hasLayer(gbfLayer)) {
-            map.addLayer(gbfLayer);
-          }
-          map.setView([datum.lat, datum.lng], 17);
-          if (map._layers[datum.id]) {
-            map._layers[datum.id].fire("click");
-          }
+      }
+      if (datum.source === "NACD") {
+        if (!map.hasLayer(nacdLayer)) {
+          map.addLayer(nacdLayer);
         }
-        if (datum.source === "NACD") {
-          if (!map.hasLayer(nacdLayer)) {
-            map.addLayer(nacdLayer);
-          }
-          map.setView([datum.lat, datum.lng], 17);
-          if (map._layers[datum.id]) {
-            map._layers[datum.id].fire("click");
-          }
+        map.setView([datum.lat, datum.lng], 17);
+        if (map._layers[datum.id]) {
+          map._layers[datum.id].fire("click");
         }
-        if ($(".navbar-collapse").height() > 50) {
-          $(".navbar-collapse").collapse("hide");
-        }
-      }).on("typeahead:opened", function () {
-        $(".navbar-collapse.in").css("max-height", $(document).height() - $(".navbar-header").height());
-        $(".navbar-collapse.in").css("height", $(document).height() - $(".navbar-header").height());
-      }).on("typeahead:closed", function () {
-        $(".navbar-collapse.in").css("max-height", "");
-        $(".navbar-collapse.in").css("height", "");
-      });
-      $(".twitter-typeahead").css("position", "static");
-      $(".twitter-typeahead").css("display", "block");
+      }
+      if ($(".navbar-collapse").height() > 50) {
+        $(".navbar-collapse").collapse("hide");
+      }
+    }).on("typeahead:opened", function () {
+      $(".navbar-collapse.in").css("max-height", $(document).height() - $(".navbar-header").height());
+      $(".navbar-collapse.in").css("height", $(document).height() - $(".navbar-header").height());
+    }).on("typeahead:closed", function () {
+      $(".navbar-collapse.in").css("max-height", "");
+      $(".navbar-collapse.in").css("height", "");
+    });
+    $(".twitter-typeahead").css("position", "static");
+    $(".twitter-typeahead").css("display", "block");
 
   finishedLoading();
 });
@@ -123,9 +120,6 @@ d3.queue()
 // List in Side Panel
 // ================================================================
 function syncSidebar() {
-  /* Empty sidebar features */
-  //$("#feature-list-sidebar").val("");
-
   // Loop through gbf layer and add only features which are in the map bounds
   GBF.eachLayer(function (layer) {
     if (map.hasLayer(gbfLayer)) {

@@ -2,16 +2,16 @@
 gbfData = 'gbf_db/data';
 
 /* global */
-var gbfSearch = [], gbfChart = [], GBF;
-var gbfLayer = L.layerGroup();
-
+var gbfSearch = [], gbfChart = [];
+// popup window content variables
+var content, flow, algae, wcolor, clarity, surface, conditions, odor, weather, tide;
 
 var tintGreenMarker = L.AwesomeMarkers.icon({
    icon: 'tint',
    markerColor: 'green'
  });
 
-GBF = L.geoJson(null, {
+var GBF = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: tintGreenMarker,
@@ -288,11 +288,6 @@ GBF = L.geoJson(null, {
       });
     }
   }
-});
-
-d3.json(gbfData, function(error, data) {
-  if (error) return console.warn(error);
-  console.log(data.features);
 });
 
 // ================================================================

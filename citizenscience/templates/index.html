@@ -155,6 +155,7 @@
                                                             <tr>
                                     </thead>
                                     <tbody class="list"></tbody>
+                                    <tfoot class="ListPagination"> </tfoot>
                                 </table>
                             </div>
                         </div>
@@ -304,8 +305,8 @@
 <script src="{{ url_for('static', filename='bower_components/zeroclipboard/dist/ZeroClipboard.min.js') }}"></script>
 
 <!-- custom js -->
+<script src="{{ url_for('static', filename='js/proj/boot_map.js') }}"></script>
 <script src="{{ url_for('static', filename='js/proj/boot_gbf.js') }}"></script>
 <script src="{{ url_for('static', filename='js/proj/boot_nacd.js') }}"></script>
-<script src="{{ url_for('static', filename='js/proj/boot_map.js') }}"></script>
 <script src="{{ url_for('static', filename='js/proj/boot_index.js') }}"></script>
 {% endblock %}
