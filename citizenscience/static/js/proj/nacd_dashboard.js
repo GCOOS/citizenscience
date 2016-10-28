@@ -1,9 +1,16 @@
 //TODO
-//data location
-//mongodb
+//data location - mongodb
 nacdData = 'nacd_db/data';
-//local
-//nacdData = 'static/data/nacd_2015_09_03.geojson';
+
+// NACD related custom variables
+var tintPinkMarker = L.AwesomeMarkers.icon({
+   icon: 'tint',
+   markerColor: 'pink'
+ });
+// chart
+var nacdChart = [];
+// A common color for all of the bar and row charts
+var commonChartBarColor = '#a1d99b';
 
 //--------------------------------------------------
 // Initialize our dc.js charts, passing the DOM Id in which we want the chart rendered as an argument
@@ -22,17 +29,12 @@ var airtempChart = dc.rowChart("#airtemp-chart"),
     salinityChart = dc.rowChart("#salinity-chart"),
     nitratesChart = dc.rowChart("#nitrates-chart");
 
-// A common color for all of the bar and row charts
-var commonChartBarColor = '#a1d99b';
-
-var nacdChart = [];
-
 // This is where we will hold our crossfilter data
 var xdata = null,
     all = null,
     locations = null,
     siteDescDim = null;
-//monitorNumDim = null;
+
 d3.queue()
     //  .defer(d3.json, 'static/data/nacd_2015_09_03.geojson')
     .defer(d3.json, nacdData)
@@ -108,7 +110,9 @@ function makeDashboard(error, data) {
                 "</table></div>" +
                 "</div>";
 
-            var mark = L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]]).bindPopup(content, {
+            var mark = L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]],{
+                icon: tintPinkMarker
+            }).bindPopup(content, {
                 minWidth: 350
             });
             markersLayer.addLayer(mark);
@@ -809,9 +813,11 @@ var updateMap = function(locs) {
                 "</table></div>" +
                 "</div>";
 
-            var mark = L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]]).bindPopup(content, {
-                minWidth: 350
-            });
+                var mark = L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]],{
+                    icon: tintPinkMarker
+                }).bindPopup(content, {
+                    minWidth: 350
+                });
 
             markersLayer.addLayer(mark);
             clusterLayer.addLayer(mark);

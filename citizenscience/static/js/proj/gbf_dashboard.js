@@ -1,9 +1,18 @@
 //TODO
-//data location
-//mongodb
+//data location: mongodb
 gbfData = 'gbf_db/data';
-//local
-//gbfData = 'static/data/GBF_20150723.geojson';
+
+// GBF related custom variables
+var tintGreenMarker = L.AwesomeMarkers.icon({
+   icon: 'tint',
+   markerColor: 'green'
+ });
+// popup window content variables
+var content, flow, algae, wcolor, clarity, surface, conditions, odor, weather, tide;
+// chart
+var gbfChart = [];
+// A common color for all of the bar and row charts
+var commonChartBarColor = '#a1d99b';
 
 //--------------------------------------------------
 // Initialize our dc.js charts, passing the DOM Id in which we want the chart rendered as an argument
@@ -22,18 +31,12 @@ var airtempChart = dc.rowChart("#airtemp-chart"),
     salinityChart = dc.rowChart("#salinity-chart"),
     enterocChart = dc.rowChart("#enteroc-chart");
 
-// popup window content variables
-var content, flow, algae, wcolor, clarity, surface, conditions, odor, weather, tide;
-var gbfChart = [];
-
-// A common color for all of the bar and row charts
-var commonChartBarColor = '#a1d99b';
-
 // This is where we will hold our crossfilter data
 var xdata = null,
     all = null,
     locations = null,
     siteDescDim = null;
+
 
 d3.queue()
     .defer(d3.json, gbfData)
@@ -319,7 +322,9 @@ d3.queue()
                     "</table></div>" +
                     "</div>";
 
-                var mark = L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]]).bindPopup(content, {
+                var mark = L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]],{
+                    icon: tintGreenMarker
+                }).bindPopup(content, {
                     minWidth: 350
                 });
                 markersLayer.addLayer(mark);
@@ -1283,7 +1288,9 @@ var updateMap = function(locs) {
                 "</table></div>" +
                 "</div>";
 
-            var mark = L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]]).bindPopup(content, {
+            var mark = L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]],{
+                icon: tintGreenMarker
+            }).bindPopup(content, {
                 minWidth: 350
             });
 
