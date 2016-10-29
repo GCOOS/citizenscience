@@ -1,11 +1,5 @@
-/* data location */
-gbfData = 'gbf_db/data';
-
 /* global */
 var gbfSearch = [], gbfChart = [];
-// popup window content variables
-var content, flow, algae, wcolor, clarity, surface, conditions, odor, weather, tide;
-
 var tintGreenMarker = L.AwesomeMarkers.icon({
    icon: 'tint',
    markerColor: 'green'
@@ -264,7 +258,7 @@ var GBF = L.geoJson(null, {
       $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_green.png"></td><td class="feature-name">' + layer.feature.properties.Name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
 
       gbfSearch.push({
-        name: feature.properties.Name,
+        //name: feature.properties.Name, //do not reveal person's name
         monitorid: feature.properties.Monitor_ID,
         sitedesc: feature.properties.Site_Description,
         date: moment(new Date(sampleDateTime).toISOString()).format("YYYY-MM-DD h:mm a"),

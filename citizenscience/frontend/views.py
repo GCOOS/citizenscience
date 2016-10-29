@@ -23,10 +23,23 @@ MONGODB_PORT = 27017
 DBS_NAME = 'citizenscience'
 
 COLLECTION_GBF = 'gbf'
-GBF_FIELDS = {'_id': 0, 'Group_ID': 1, 'Monitor_ID': 1, 'Site_ID':1, 'Site_Description':1, 'Latitude':1, 'Longitude':1, 'Sample_Date':1, 'Sample_Time':1, 'Sample_Depth_m': 1, 'Air_Temp_degC': 1, 'Water_Temp_degC': 1, 'Avg_DO': 1, 'pH': 1, 'Transparency_m': 1, 'Total_Depth_m': 1, 'Flow': 1, 'Algae': 1, 'Color': 1, 'Clarity': 1, 'Surface': 1, 'Conditions': 1, 'Odor': 1, 'Weather': 1, 'Days_Since_Precip': 1, 'Rain_Accum': 1, 'Expired_Reagent': 1, 'Enterococcus': 1, 'Specific_Gravity': 1, 'SpGr_Temp': 1, 'Salinity': 1, 'Tide': 1, 'Comments': 1, 'Area': 1, 'Correct_Time': 1, 'Date_Time': 1}
+GBF_FIELDS = {'_id': 0,
+'Group_ID': 1, 'Monitor_ID': 1, 'Site_ID':1, 'Site_Description':1,
+'Latitude':1, 'Longitude':1, 'Sample_Date':1, 'Sample_Time':1, 'Sample_Depth_m': 1,
+'Air_Temp_degC': 1, 'Water_Temp_degC': 1, 'Avg_DO': 1, 'pH': 1, 'Transparency_m': 1,
+'Total_Depth_m': 1, 'Flow': 1, 'Algae': 1, 'Color': 1, 'Clarity': 1, 'Surface': 1,
+'Conditions': 1, 'Odor': 1, 'Weather': 1, 'Days_Since_Precip': 1, 'Rain_Accum': 1,
+'Expired_Reagent': 1, 'Enterococcus': 1, 'Specific_Gravity': 1, 'SpGr_Temp': 1,
+'Salinity': 1, 'Tide': 1, 'Comments': 1, 'Area': 1, 'Correct_Time': 1, 'Date_Time': 1}
 
 COLLECTION_NACD = 'nacd'
-NACD_FIELDS = {'_id': 0, 'No': 1, 'Site_ID':1, 'Site': 1, 'Latitude':1, 'Longitude':1, 'Sample_Date':1, 'Sample_Time':1, 'Monitor_ID': 1, 'Participants': 1, 'Land_Use': 1, 'AirTemp_C': 1, 'Wind_Speed_mph': 1, 'Wind_Direction': 1,  'Tide_stage': 1, 'Weather': 1, 'WaterTemp_C': 1, 'Salinity_ppt': 1, 'Turbidity_NTU': 1, 'pH': 1, 'DissolvedOxygen_ppm': 1, 'Nitrates_ppm': 1, 'Litter_kg': 1, 'Most_Abundant_Litter': 1, 'Most_Abundant_Species': 1, 'Species_Found': 1, 'Date_Time': 1}
+NACD_FIELDS = {'_id': 0,
+'No': 1, 'Site_ID':1, 'Site': 1, 'Latitude':1, 'Longitude':1, 'Sample_Date':1,
+'Sample_Time':1, 'Monitor_ID': 1, 'Participants': 1, 'Land_Use': 1, 'AirTemp_C': 1,
+'Wind_Speed_mph': 1, 'Wind_Direction': 1,  'Tide_stage': 1, 'Weather': 1,
+'WaterTemp_C': 1, 'Salinity_ppt': 1, 'Turbidity_NTU': 1, 'pH': 1, 'DissolvedOxygen_ppm': 1,
+'Nitrates_ppm': 1, 'Litter_kg': 1, 'Most_Abundant_Litter': 1, 'Most_Abundant_Species': 1,
+'Species_Found': 1, 'Date_Time': 1}
 
 
 def get_db():

@@ -1,3 +1,4 @@
+/* global */
 var nacdSearch = [], nacdChart = [];
 var tintPinkMarker = L.AwesomeMarkers.icon({
    icon: 'tint',
@@ -68,7 +69,10 @@ var NACD = L.geoJson(null, {
         }
       });
 
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_pink.png"></td><td class="feature-name">' + layer.feature.properties.Site + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      //console.log(feature);
+      //console.log(layer);
+
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(feature) + '" lat="' + feature.geometry.coordinates[1] + '" lng="' + feature.geometry.coordinates[0] + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_pink.png"></td><td class="feature-name">' + feature.properties.Site + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
 
       //console.log(sampleDateTime);
       nacdSearch.push({

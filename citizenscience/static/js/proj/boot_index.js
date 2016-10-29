@@ -7,6 +7,9 @@
 dataOne = 'gbf_db/data';
 dataTwo = 'nacd_db/data';
 
+/* global */
+var featureList;
+
 // ================================================================
 /* Navigator and Side bar */
 // ================================================================
@@ -27,17 +30,24 @@ $("#panel-btn").click(function() {
 
 // ====================================================
 // Main loader
+// Mapping and typeahead search are quiet fast, but
+// list.js requires more time to load.
 // ====================================================
 d3.queue()
   .defer(d3.json, dataOne)
   .defer(d3.json, dataTwo)
   .await(function (error, gbfData, nacdData) {
+
     GBF.addData(gbfData); //GBF from boot_gbf.js
-    map.addLayer(gbfLayer);
+    map.addLayer(gbfLayer); //GBF flag on
     NACD.addData(nacdData); //NACD from boot_nacd.js
-    map.addLayer(nacdLayer);
+    map.addLayer(nacdLayer); //NACD flag on
 
     sizeLayerControl();
+
+    /* Fit map to boroughs bounds */
+    featureList = new List("features-list", {valueNames: ["feature-sitedesc","feature-siteid","feature-date"]});
+    featureList.sort("feature-date", {order:"desc"});
 
     // Typeahead Search Form
     //------------------------------
@@ -81,6 +91,8 @@ d3.queue()
         suggestion: Handlebars.compile('<div>{{site}}</div>')
       }
     }).on("typeahead:selected", function (obj, datum) {
+      //console.log(obj);
+      //console.log(datum);
       if (datum.source === "GBF") {
         if (!map.hasLayer(gbfLayer)) {
           map.addLayer(gbfLayer);
@@ -120,11 +132,15 @@ d3.queue()
 // List in Side Panel
 // ================================================================
 function syncSidebar() {
+  /* Empty sidebar features */
+  $("#feature-list-sidebar tbody").empty();
+
   // Loop through gbf layer and add only features which are in the map bounds
   GBF.eachLayer(function (layer) {
+    //console.log(layer);
     if (map.hasLayer(gbfLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list-sidebar tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_green.png"></td><td><span class="feature-sitedesc"><small>' + layer.feature.properties.Site_Description + '</small></span><br /><small><span class="feature-date">' + moment(layer.feature.properties.Date_Time, 'MM/DD/YYYY h:mm:ss').format('M/D/YYYY h:mm a') + '</small></span></td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list-sidebar tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="18" height="18" src="static/images/map_green.png"></td><td><span class="feature-sitedesc"><small>' + layer.feature.properties.Site_Description + '</small></span><br /><small><span class="feature-date">' + moment(new Date(layer.feature.properties.Date_Time).toISOString()).format('M/D/YYYY h:mm a') + '</small></span></td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });

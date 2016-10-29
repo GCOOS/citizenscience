@@ -4,7 +4,8 @@
  file uploading button, latlng info, highlight settings.
 */
 
-// Create a new group to which we can (later) add or remove our markers
+// Create a new 'flag' to turn layer on/off
+// Shouldn't appear on a map, thus use GeoJSON.
 var gbfLayer = L.geoJson(null);
 var nacdLayer = L.geoJson(null);
 
@@ -102,7 +103,7 @@ map = L.map('map', {
   zoom: 6,
   center: [27.0, -88.5],
   attributionControl: true, //should be true for goecoding
-  layers:[cartodb_light, markerClusters]
+  layers:[esriImage, markerClusters]
 });
 L.control.layers(basemapLayers, groupedOverlays).addTo(map);
 startLoading();
