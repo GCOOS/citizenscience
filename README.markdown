@@ -11,11 +11,12 @@ http://gulfcitizenscience.org
 
  - [jQuery](http://jquery.com/)
  - [Twitter Bootstrap](https://github.com/twitter/bootstrap)
- - [Leaflet]
- - [list.js]
- - [typeahead.js]
- - [highcharts]
- - [datatables]
+ - [Leaflet](http://leafletjs.com)
+ - [esri-leaflet](https://esri.github.io/esri-leaflet/)
+ - [list.js](http://listjs.com)
+ - [typeahead.js](https://twitter.github.io/typeahead.js/)
+ - [highcharts](http://www.highcharts.com)
+ - [datatables](https://datatables.net/)
 
 
 ### Flask Extensions
@@ -35,9 +36,11 @@ http://gulfcitizenscience.org
  - Python / pip / Fabric
  - Apache + mod\_wsgi
  - MongoDB
+ - node.js
+ - bower
 
 
- ## Setup:
+Setup
 
    1. >> virtualenv csenv
    2. >> source csenv/bin/activate
@@ -100,6 +103,15 @@ vhost
         │   ├── humans.txt
         │   ├── images
         │   ├── js
+                ├── proj             ** customize this folder's files
+                    ├── boot_map.js
+                    ├── boot_gbf.js
+                    ├── boot_nacd.js
+                    ├── boot_index.js
+                    ├── gbf_dashboard.js
+                    ├── nacd_dashboard.js
+                ├── plugins.js
+                └── main.js
         │   ├── node_modules  
         │   ├── package.json           
         │   └── robots.txt
@@ -112,7 +124,9 @@ vhost
             │   └── user.html
             ├── macros               Jinja2 macros
             ├── mails                Mail templates
-            ├── projects               This project's files
+            ├── projects             This project's files
+                ├── gbf_dashboard.html   ** customize this file
+                ├── nacd_dashboard.html  ** customize this file
             └── user
 
 
