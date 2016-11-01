@@ -103,7 +103,7 @@ vhost
         │   ├── humans.txt
         │   ├── images
         │   ├── js
-                ├── proj
+                ├── proj             ** customize this folder's files
                     ├── boot_map.js
                     ├── boot_gbf.js
                     ├── boot_nacd.js
@@ -124,9 +124,9 @@ vhost
             │   └── user.html
             ├── macros               Jinja2 macros
             ├── mails                Mail templates
-            ├── projects               This project's files
-                ├── gbf_dashboard.html  
-                ├── nacd_dashboard.html   
+            ├── projects             This project's files
+                ├── gbf_dashboard.html   ** customize this file
+                ├── nacd_dashboard.html  ** customize this file
             └── user
 
 
