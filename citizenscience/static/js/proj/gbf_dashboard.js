@@ -1,16 +1,18 @@
 //TODO
 //data location: mongodb
-gbfData = 'gbf_db/data';
+var geoData = 'gbf_db/data';
+var exportDataTitle = "Galveston Bay Foundation Data";
+// popup window content variables
+var content, flow, algae, wcolor, clarity, surface, conditions, odor, weather, tide;
 
-// GBF related custom variables
+
+// marker for this data
 var tintGreenMarker = L.AwesomeMarkers.icon({
    icon: 'tint',
    markerColor: 'green'
  });
-// popup window content variables
-var content, flow, algae, wcolor, clarity, surface, conditions, odor, weather, tide;
 // chart
-var gbfChart = [];
+var dataChart = [];
 // A common color for all of the bar and row charts
 var commonChartBarColor = '#a1d99b';
 
@@ -39,7 +41,7 @@ var xdata = null,
 
 
 d3.queue()
-    .defer(d3.json, gbfData)
+    .defer(d3.json, geoData)
     .await(function(error, data) {
         console.log("loading search list");
         //console.log(data.features);
@@ -280,7 +282,7 @@ d3.queue()
 
                 content = "<b>" + d.properties.Date_Time + "</b>&nbsp;&nbsp;Monitor ID: " + d.properties.Monitor_ID + ", " +
                     //d.properties.Name + "<br />" +
-                    "TST Site ID: " + d.properties.Site_ID + "&nbsp;&nbsp; Site: " + d.properties.Site_Description + "&nbsp;&nbsp;&nbsp;<a href='#' onclick='createGBFChart(" + d.properties.Site_ID + ");' class='siteSummary'>Site Summary</a>" + "<br />" +
+                    "TST Site ID: " + d.properties.Site_ID + "&nbsp;&nbsp; Site: " + d.properties.Site_Description + "&nbsp;&nbsp;&nbsp;<a href='#' onclick='createDataChart(" + d.properties.Site_ID + ");' class='siteSummary'>Site Summary</a>" + "<br />" +
                     "<ul class='nav nav-tabs' role='tablist'>" +
                     "<li role='presentation' class='active'><a href='#gbf_one' role='tab' data-toggle='tab'>Common Data</a></li>" +
                     "<li role='presentation'><a href='#gbf_two' role='tab' data-toggle='tab'>Data</a></li>" +
@@ -331,7 +333,7 @@ d3.queue()
                 clusterLayer.addLayer(mark);
 
                 //console.log(d.properties);
-                gbfChart.push({
+                dataChart.push({
                     datetime: moment(new Date(d.properties.Date_Time).toISOString()).valueOf(),
                     siteid: parseInt(d.properties.Site_ID),
                     airtemp: parseFloat(d.properties.Air_Temp_degC),
@@ -910,7 +912,7 @@ d3.queue()
             }, {
                 extend: 'csvHtml5',
                 text: 'Export as CSV',
-                title: 'Galveston Bay Foundation Data',
+                title: exportDataTitle ,
                 exportOptions: {
                     columns: ':visible',
                     modifier: {
@@ -920,7 +922,7 @@ d3.queue()
             }, {
                 extend: 'excelHtml5',
                 text: 'Save as XLSX',
-                title: 'Galveston Bay Foundation Data',
+                title: exportDataTitle ,
                 exportOptions: {
                     columns: ':visible',
                     modifier: {
@@ -930,7 +932,7 @@ d3.queue()
             }, {
                 extend: 'pdfHtml5',
                 text: "Export as PDF",
-                title: 'Galveston Bay Foundation Data',
+                title: exportDataTitle ,
                 orientation: 'landscape',
                 download: 'open',
                 exportOptions: {
@@ -978,66 +980,9 @@ d3.queue()
         finishedLoading();
     });
 
-
 //--------------------------------------------------
-// Map Settings
+//TODO Copy and past content section from the above
 //--------------------------------------------------
-// Create a new group to which we can (later) add or remove our markers
-var markersLayer = new L.LayerGroup();
-// Create a new cluster group to which we can (later) add or remove our markers
-var clusterLayer = new L.MarkerClusterGroup();
-// Set up the base map
-var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> | Points data from <a href="http://galvbay.org">galvbay.org</a>',
-    maxZoom: 18
-});
-var cartodb_light = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a> | Points data from <a href="http://galvbay.org">galvbay.org</a>',
-    maxZoom: 18
-});
-var cartodb_dark = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a> | Points data from <a href="http://galvbay.org">galvbay.org</a>',
-    maxZoom: 18
-});
-var baseMaps = {
-    "Light": cartodb_light,
-    "Dark": cartodb_dark,
-    "OSM Default": osm
-};
-// Overlayed layers
-var overlays = {
-    "Clustered Markers": clusterLayer,
-    "Individual Markers": markersLayer
-};
-// Initialize the Leaflet map
-map = L.map('map', {
-    zoomControl: false,
-    scrollWheelZoom: true,
-    center: [29.35, -95.25],
-    zoom: 9,
-    layers: [cartodb_light, clusterLayer]
-});
-L.control.layers(baseMaps, overlays).addTo(map);
-map._layersMinZoom = 8;
-
-startLoading();
-
-/* Zoom control (bottom right) */
-// ================================================================
-var zoomControl = L.control.zoom({
-    position: "bottomright"
-}).addTo(map);
-/* Home button - back to default extent (bottom right)*/
-// ================================================================
-L.control.defaultExtent({
-    position: "bottomright"
-}).addTo(map);
-
-// Called when dc.js is filtered (typically from user click interaction)
-var onFilt = function(chart, filter) {
-    updateMap(locations.top(Infinity));
-};
-
 // Updates the displayed map markers to reflect the crossfilter dimension passed in
 var updateMap = function(locs) {
     // clear the existing markers from the map
@@ -1246,7 +1191,7 @@ var updateMap = function(locs) {
 
             content = "<b>" + d.properties.Date_Time + "</b>&nbsp;&nbsp;Monitor ID: " + d.properties.Monitor_ID + ", " +
                 //d.properties.Name + "<br />" +
-                "TST Site ID: " + d.properties.Site_ID + "&nbsp;&nbsp; Site: " + d.properties.Site_Description + "&nbsp;&nbsp;&nbsp;<a href='#' onclick='createGBFChart(" + d.properties.Site_ID + ");' class='siteSummary'>Site Summary</a>" + "<br />" +
+                "TST Site ID: " + d.properties.Site_ID + "&nbsp;&nbsp; Site: " + d.properties.Site_Description + "&nbsp;&nbsp;&nbsp;<a href='#' onclick='createDataChart(" + d.properties.Site_ID + ");' class='siteSummary'>Site Summary</a>" + "<br />" +
                 "<ul class='nav nav-tabs' role='tablist'>" +
                 "<li role='presentation' class='active'><a href='#gbf_one' role='tab' data-toggle='tab'>Common Data</a></li>" +
                 "<li role='presentation'><a href='#gbf_two' role='tab' data-toggle='tab'>Data</a></li>" +
@@ -1300,13 +1245,74 @@ var updateMap = function(locs) {
     });
 }
 
+//--------------------------------------------------
+// Map Settings
+//--------------------------------------------------
+// Create a new group to which we can (later) add or remove our markers
+var markersLayer = new L.LayerGroup();
+// Create a new cluster group to which we can (later) add or remove our markers
+var clusterLayer = new L.MarkerClusterGroup();
+// Set up the base map
+var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> | Points data from <a href="http://galvbay.org">galvbay.org</a>',
+    maxZoom: 18
+});
+var cartodb_light = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a> | Points data from <a href="http://galvbay.org">galvbay.org</a>',
+    maxZoom: 18
+});
+var cartodb_dark = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a> | Points data from <a href="http://galvbay.org">galvbay.org</a>',
+    maxZoom: 18
+});
+var baseMaps = {
+    "Light": cartodb_light,
+    "Dark": cartodb_dark,
+    "OSM Default": osm
+};
+// Overlayed layers
+var overlays = {
+    "Clustered Markers": clusterLayer,
+    "Individual Markers": markersLayer
+};
+// Initialize the Leaflet map
+map = L.map('map', {
+    zoomControl: false,
+    scrollWheelZoom: true,
+    center: [29.35, -95.25],
+    zoom: 9,
+    layers: [cartodb_light, clusterLayer]
+});
+L.control.layers(baseMaps, overlays).addTo(map);
+map._layersMinZoom = 8;
+
+startLoading();
+
+/* Zoom control (bottom right) */
 // ================================================================
-// GBF Summary Chart function
+var zoomControl = L.control.zoom({
+    position: "bottomright"
+}).addTo(map);
+/* Home button - back to default extent (bottom right)*/
 // ================================================================
-function createGBFChart(siteid) {
+L.control.defaultExtent({
+    position: "bottomright"
+}).addTo(map);
+
+// Called when dc.js is filtered (typically from user click interaction)
+var onFilt = function(chart, filter) {
+    updateMap(locations.top(Infinity));
+};
+
+
+//TODO
+// ================================================================
+// Summary Chart function
+// ================================================================
+function createDataChart(siteid) {
     console.log("Site ID:", siteid);
 
-    gbfChart.sort();
+    dataChart.sort();
 
     var arrayAirTemp = [],
         arrayWTemp = [],
@@ -1319,7 +1325,7 @@ function createGBFChart(siteid) {
     // Chart Title
     $("#siteinfo-title").html("Site ID: <b>" + siteid + "</b>");
 
-    var filtered = $(gbfChart).filter(function(i, n) {
+    var filtered = $(dataChart).filter(function(i, n) {
         return n.siteid === siteid;
     });
     var pageTitle = "Site: " + filtered[0].sitedesc;

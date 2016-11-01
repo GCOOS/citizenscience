@@ -14,7 +14,6 @@ var GBF = L.geoJson(null, {
     });
   },
   onEachFeature: function (feature, layer) {
-    //console.log(feature.properties);
     if (feature.properties) {
       //convert numbers to meaningful description
       switch (isNaN(feature.properties.Flow) || parseInt(feature.properties.Flow)) {

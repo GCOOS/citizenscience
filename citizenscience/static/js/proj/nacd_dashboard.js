@@ -1,14 +1,18 @@
 //TODO
+//--------------------------------------------------
 //data location - mongodb
-nacdData = 'nacd_db/data';
+//--------------------------------------------------
+var geoData = 'nacd_db/data';
+var exportDataTitle  = "Nature's Academy Data";
 
-// NACD related custom variables
+
+// marker for this data
 var tintPinkMarker = L.AwesomeMarkers.icon({
    icon: 'tint',
    markerColor: 'pink'
  });
 // chart
-var nacdChart = [];
+var dataChart = [];
 // A common color for all of the bar and row charts
 var commonChartBarColor = '#a1d99b';
 
@@ -35,16 +39,22 @@ var xdata = null,
     locations = null,
     siteDescDim = null;
 
+//--------------------------------------------------
+// loading data
+//--------------------------------------------------
 d3.queue()
-    //  .defer(d3.json, 'static/data/nacd_2015_09_03.geojson')
-    .defer(d3.json, nacdData)
+    .defer(d3.json, geoData)
     .await(makeDashboard);
 
 function makeDashboard(error, data) {
-    console.log("loading search list");
+    console.log("loading data");
     //console.log(data);
 
     var dateFormat = d3.time.format("%m/%d/%Y %H:%M:%S");
+
+    //--------------------------------------------------
+    //TODO each institution's data are different
+    //--------------------------------------------------
     data.features.forEach(function(d, i) {
         if (d.geometry.coordinates[1] !== null && d.geometry.coordinates[1] !== 'undefined' && d.geometry.coordinates[1] !== "") {
             d.no = d.properties.No;
@@ -77,7 +87,7 @@ function makeDashboard(error, data) {
 
             content = "<b>" + d.date_f + "</b>&nbsp;&nbsp;Monitor ID: " + d.monitorid +
                 //", " + d.monitor +
-                " (Participants:" + d.participants + ")<br />" + "&nbsp;&nbsp; Site: " + d.siteDesc + "&nbsp;&nbsp;&nbsp;<a href='#' onclick='createNACDChart(" + d.properties.Site_ID + ");' class='siteSummary'>Site Summary</a>" + "<br />" +
+                " (Participants:" + d.participants + ")<br />" + "&nbsp;&nbsp; Site: " + d.siteDesc + "&nbsp;&nbsp;&nbsp;<a href='#' onclick='createDataChart(" + d.properties.Site_ID + ");' class='siteSummary'>Site Summary</a>" + "<br />" +
                 "<ul class='nav nav-tabs' role='tablist'>" +
                 "<li role='presentation' class='active'><a href='#nacd_one' role='tab' data-toggle='tab'>Common Data</a></li>" +
                 "<li role='presentation'><a href='#nacd_two' role='tab' data-toggle='tab'>Weather</a></li>" +
@@ -118,7 +128,7 @@ function makeDashboard(error, data) {
             markersLayer.addLayer(mark);
             clusterLayer.addLayer(mark);
 
-            nacdChart.push({
+            dataChart.push({
                 datetime: moment(new Date(d.date_e).toISOString()).valueOf(),
                 siteid: parseInt(d.properties.Site_ID),
                 airtemp: parseFloat(d.properties.AirTemp_C),
@@ -134,9 +144,9 @@ function makeDashboard(error, data) {
         } else {
             console.log("passed " + d.properties.Date_Time + " Row " + i);
         }
-
     });
 
+    //--------------------------------------------------
     // Construct the data dimension
     //--------------------------------------------------
     xdata = crossfilter(data.features);
@@ -157,9 +167,6 @@ function makeDashboard(error, data) {
     var siteDescCount = siteDescDim.group().reduceCount(function(d) {
         return d.siteDesc;
     });
-
-    //monitorNumDim = xdata.dimension(function (d) { return d.monitorid; });
-    //var monitorIdCount = monitorNumDim.group().reduceCount(function(d){ return d.monitorid; });
 
     var dayOfWeekNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     var dayOfWeekEnteredDim = xdata.dimension(function(d) {
@@ -279,8 +286,6 @@ function makeDashboard(error, data) {
         }
     });
 
-
-
     //--------------------------------------------------
     // Start constructing the charts and setting each chart's options
     //--------------------------------------------------
@@ -304,7 +309,6 @@ function makeDashboard(error, data) {
         .xAxis().ticks(4);
     dayEnteredChart.on("filtered", onFilt);
 
-
     monthlyChart.width($('#monthly-chart').innerWidth())
         .height(250)
         .margins({
@@ -324,7 +328,6 @@ function makeDashboard(error, data) {
         .elasticX(true)
         .xAxis().ticks(4);
     monthlyChart.on("filtered", onFilt);
-
 
     yearlyChart.width($('#yearly-chart').innerWidth())
         .height(200)
@@ -354,7 +357,6 @@ function makeDashboard(error, data) {
         })
         .elasticX(true)
         .on("filtered", onFilt);
-
 
     timelineChart.width($('#timeline-chart').innerWidth())
         .height(60)
@@ -477,7 +479,9 @@ function makeDashboard(error, data) {
         .on("filtered", onFilt);
     nitratesChart.xAxis().ticks(5);
 
-    //console.log(data.features)
+    //--------------------------------------------------
+    //TODO change this section based on data variables
+    //--------------------------------------------------
     var datatable = $('#dc-data-table').dataTable({
         data: data.features,
         columns: [{
@@ -637,7 +641,7 @@ function makeDashboard(error, data) {
         }, {
             extend: 'csvHtml5',
             text: 'Export as CSV',
-            title: 'Galveston Bay Foundation Data',
+            title: exportDataTitle ,
             exportOptions: {
                 columns: ':visible',
                 modifier: {
@@ -647,7 +651,7 @@ function makeDashboard(error, data) {
         }, {
             extend: 'excelHtml5',
             text: 'Save as XLSX',
-            title: 'Galveston Bay Foundation Data',
+            title: exportDataTitle ,
             exportOptions: {
                 columns: ':visible',
                 modifier: {
@@ -657,7 +661,7 @@ function makeDashboard(error, data) {
         }, {
             extend: 'pdfHtml5',
             text: "Export as PDF",
-            title: 'Galveston Bay Foundation Data',
+            title: exportDataTitle ,
             orientation: 'landscape',
             download: 'open',
             exportOptions: {
@@ -704,6 +708,69 @@ function makeDashboard(error, data) {
     };
     finishedLoading();
 }
+
+//--------------------------------------------------
+//TODO Copy and past content section from the above
+//--------------------------------------------------
+// Updates the displayed map markers to reflect the crossfilter dimension passed in
+var updateMap = function(locs) {
+    // clear the existing markers from the map
+    markersLayer.clearLayers();
+    clusterLayer.clearLayers();
+
+    $("#active_entry").html("<b>" + locs.length + "</b>");
+
+    locs.forEach(function(d, i) {
+        if (d.geometry.coordinates[1] !== null && d.geometry.coordinates[1] !== 'undefined') {
+            // add a Leaflet marker for the lat lng and insert the application's stated bacteria in popup
+            d.ll = L.latLng(d.geometry.coordinates[1], d.geometry.coordinates[0]);
+
+            content = "<b>" + d.date_f + "</b>&nbsp;&nbsp;Monitor ID: " + d.monitorid +
+                //", " + d.monitor +
+                " (Participants:" + d.participants + ")<br />" + "&nbsp;&nbsp; Site: " + d.siteDesc + "&nbsp;&nbsp;&nbsp;<a href='#' onclick='createDataChart(" + d.properties.Site_ID + ");' class='siteSummary'>Site Summary</a>" + "<br />" +
+                "<ul class='nav nav-tabs' role='tablist'>" +
+                "<li role='presentation' class='active'><a href='#nacd_one' role='tab' data-toggle='tab'>Common Data</a></li>" +
+                "<li role='presentation'><a href='#nacd_two' role='tab' data-toggle='tab'>Weather</a></li>" +
+                "<li role='presentation'><a href='#nacd_three' role='tab' data-toggle='tab'>Others</a></li>" +
+                "</ul>" +
+                "<div class='tab-content'>" +
+                "<div role='tabpanel' class='tab-pane active' id='nacd_one'>" +
+                "<table class='table table-striped'>" +
+                "<tr><td>Air Temperature (&deg;C)</td><td>" + d.airtemp + "</td></tr>" +
+                "<tr><td>Water Temperature (&deg;C)</td><td>" + d.wtemp + "</td></tr>" +
+                "<tr><td>Dissolved Oxygen (ppm)</td><td>" + d.avgdo + "</td></tr>" +
+                "<tr><td>pH</td><td>" + d.ph + "</td></tr>" +
+                "<tr><td>Salinity (ppt)</td><td>" + d.salinity + "</td></tr>" +
+                "</table></div>" +
+                "<div role='tabpanel' class='tab-pane' id='nacd_two'>" +
+                "<table class='table table-striped'>" +
+                "<tr><td>Weather</td><td>" + d.weather + "</td></tr>" +
+                "<tr><td>Land Use</td><td>" + d.landuse + "</td></tr>" +
+                "<tr><td>Wind Speed (mph)</td><td>" + d.windspeed + "</td></tr>" +
+                "<tr><td>Wind Direction</td><td>" + d.winddir + "</td></tr>" +
+                "</table></div>" +
+                "<div role='tabpanel' class='tab-pane' id='nacd_three'>" +
+                "<table class='table table-striped'>" +
+                "<tr><td>Turbidity (NTU)</td><td>" + d.turbidity + "</td></tr>" +
+                "<tr><td>Nitrate (ppm)</td><td>" + d.nitrates + "</td></tr>" +
+                "<tr><td>Litter(kg)</td><td>" + d.litter + "</td></tr>" +
+                "<tr><td>Most Abundant Litter</td><td>" + d.abdlitter + "</td></tr>" +
+                "<tr><td>Species</td><td>" + d.species + "</td></tr>" +
+                "<tr><td>Most abundant species</td><td>" + d.abdspecies + "</td></tr>" +
+                "</table></div>" +
+                "</div>";
+
+                var mark = L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]],{
+                    icon: tintPinkMarker
+                }).bindPopup(content, {
+                    minWidth: 350
+                });
+
+            markersLayer.addLayer(mark);
+            clusterLayer.addLayer(mark);
+        }
+    });
+};
 
 
 //--------------------------------------------------
@@ -765,70 +832,11 @@ var onFilt = function(chart, filter) {
     updateMap(locations.top(Infinity));
 };
 
-// Updates the displayed map markers to reflect the crossfilter dimension passed in
-var updateMap = function(locs) {
-    // clear the existing markers from the map
-    markersLayer.clearLayers();
-    clusterLayer.clearLayers();
-
-    $("#active_entry").html("<b>" + locs.length + "</b>");
-
-    locs.forEach(function(d, i) {
-        if (d.geometry.coordinates[1] !== null && d.geometry.coordinates[1] !== 'undefined') {
-            // add a Leaflet marker for the lat lng and insert the application's stated bacteria in popup
-            d.ll = L.latLng(d.geometry.coordinates[1], d.geometry.coordinates[0]);
-
-            content = "<b>" + d.date_f + "</b>&nbsp;&nbsp;Monitor ID: " + d.monitorid +
-                //", " + d.monitor +
-                " (Participants:" + d.participants + ")<br />" + "&nbsp;&nbsp; Site: " + d.siteDesc + "&nbsp;&nbsp;&nbsp;<a href='#' onclick='createNACDChart(" + d.properties.Site_ID + ");' class='siteSummary'>Site Summary</a>" + "<br />" +
-                "<ul class='nav nav-tabs' role='tablist'>" +
-                "<li role='presentation' class='active'><a href='#nacd_one' role='tab' data-toggle='tab'>Common Data</a></li>" +
-                "<li role='presentation'><a href='#nacd_two' role='tab' data-toggle='tab'>Weather</a></li>" +
-                "<li role='presentation'><a href='#nacd_three' role='tab' data-toggle='tab'>Others</a></li>" +
-                "</ul>" +
-                "<div class='tab-content'>" +
-                "<div role='tabpanel' class='tab-pane active' id='nacd_one'>" +
-                "<table class='table table-striped'>" +
-                "<tr><td>Air Temperature (&deg;C)</td><td>" + d.airtemp + "</td></tr>" +
-                "<tr><td>Water Temperature (&deg;C)</td><td>" + d.wtemp + "</td></tr>" +
-                "<tr><td>Dissolved Oxygen (ppm)</td><td>" + d.avgdo + "</td></tr>" +
-                "<tr><td>pH</td><td>" + d.ph + "</td></tr>" +
-                "<tr><td>Salinity (ppt)</td><td>" + d.salinity + "</td></tr>" +
-                "</table></div>" +
-                "<div role='tabpanel' class='tab-pane' id='nacd_two'>" +
-                "<table class='table table-striped'>" +
-                "<tr><td>Weather</td><td>" + d.weather + "</td></tr>" +
-                "<tr><td>Land Use</td><td>" + d.landuse + "</td></tr>" +
-                "<tr><td>Wind Speed (mph)</td><td>" + d.windspeed + "</td></tr>" +
-                "<tr><td>Wind Direction</td><td>" + d.winddir + "</td></tr>" +
-                "</table></div>" +
-                "<div role='tabpanel' class='tab-pane' id='nacd_three'>" +
-                "<table class='table table-striped'>" +
-                "<tr><td>Turbidity (NTU)</td><td>" + d.turbidity + "</td></tr>" +
-                "<tr><td>Nitrate (ppm)</td><td>" + d.nitrates + "</td></tr>" +
-                "<tr><td>Litter(kg)</td><td>" + d.litter + "</td></tr>" +
-                "<tr><td>Most Abundant Litter</td><td>" + d.abdlitter + "</td></tr>" +
-                "<tr><td>Species</td><td>" + d.species + "</td></tr>" +
-                "<tr><td>Most abundant species</td><td>" + d.abdspecies + "</td></tr>" +
-                "</table></div>" +
-                "</div>";
-
-                var mark = L.marker([d.geometry.coordinates[1], d.geometry.coordinates[0]],{
-                    icon: tintPinkMarker
-                }).bindPopup(content, {
-                    minWidth: 350
-                });
-
-            markersLayer.addLayer(mark);
-            clusterLayer.addLayer(mark);
-        }
-    });
-};
-
+//TODO 
 // ================================================================
-// NACD Summary Chart function
+// Summary Chart function
 // ================================================================
-function createNACDChart(siteid) {
+function createDataChart(siteid) {
     console.log("Site ID:", siteid);
 
     var arrayAirTemp = [],
@@ -841,7 +849,7 @@ function createNACDChart(siteid) {
     // Chart Title
     $("#siteinfo-title").html("Site ID: <b>" + siteid + "</b>");
 
-    var filtered = $(nacdChart).filter(function(i, n) {
+    var filtered = $(dataChart).filter(function(i, n) {
         return n.siteid === siteid;
     });
     var pageTitle = "Site: " + filtered[0].sitedesc;

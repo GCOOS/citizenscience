@@ -4,6 +4,7 @@ Here you can see the full list of changes between each release.
 
 ## Version 1.2
 Plugins and libraries are updated
+All javascript and css are from bower_components (and node_modules)
 
 ## Version 1.1
 Fbone is updated in 2016

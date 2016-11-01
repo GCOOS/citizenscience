@@ -6,8 +6,10 @@
 
 // Create a new 'flag' to turn layer on/off
 // Shouldn't appear on a map, thus use GeoJSON.
+//TODO
 var gbfLayer = L.geoJson(null);
 var nacdLayer = L.geoJson(null);
+
 
 // ================================================================
 /* Layer Size */
