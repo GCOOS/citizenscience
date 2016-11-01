@@ -7,10 +7,6 @@ This is Citizen Science based water quality monitoring network program for the G
 http://gulfcitizenscience.org
 
 
-## FEATURES
-
-## COMPONENTS
-
 ### Frontend
 
  - [jQuery](http://jquery.com/)
@@ -40,11 +36,12 @@ http://gulfcitizenscience.org
  - Apache + mod\_wsgi
  - MongoDB
 
- Set up:
+
+ ## Setup:
 
    1. >> virtualenv csenv
    2. >> source csenv/bin/activate
-   3. >> git clone https://github.com/otwn/Citizen-Science-Water-Quality-Viewer.git citizenscience
+   3. >> git clone https://github.com/GCOOS/Citizen-Science-Water-Quality-Viewer.git citizenscience
    4. >> cd citizenscience
    5. >> pip install -r requirements.txt
    6. >> cd citizenscience/static
