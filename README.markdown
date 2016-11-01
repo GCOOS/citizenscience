@@ -103,6 +103,15 @@ vhost
         │   ├── humans.txt
         │   ├── images
         │   ├── js
+                ├── proj
+                    ├── boot_map.js
+                    ├── boot_gbf.js
+                    ├── boot_nacd.js
+                    ├── boot_index.js
+                    ├── gbf_dashboard.js
+                    ├── nacd_dashboard.js
+                ├── plugins.js
+                └── main.js
         │   ├── node_modules  
         │   ├── package.json           
         │   └── robots.txt
@@ -116,6 +125,8 @@ vhost
             ├── macros               Jinja2 macros
             ├── mails                Mail templates
             ├── projects               This project's files
+                ├── gbf_dashboard.html  
+                ├── nacd_dashboard.html   
             └── user
 
 
