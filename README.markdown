@@ -36,6 +36,8 @@ http://gulfcitizenscience.org
  - Python / pip / Fabric
  - Apache + mod\_wsgi
  - MongoDB
+ - node.js
+ - bower
 
 
 Setup
