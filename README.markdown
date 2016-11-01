@@ -11,11 +11,12 @@ http://gulfcitizenscience.org
 
  - [jQuery](http://jquery.com/)
  - [Twitter Bootstrap](https://github.com/twitter/bootstrap)
- - [Leaflet]
- - [list.js]
- - [typeahead.js]
- - [highcharts]
- - [datatables]
+ - [Leaflet](http://leafletjs.com)
+ - [esri-leaflet](https://esri.github.io/esri-leaflet/)
+ - [list.js](http://listjs.com)
+ - [typeahead.js](https://twitter.github.io/typeahead.js/)
+ - [highcharts](http://www.highcharts.com)
+ - [datatables](https://datatables.net/)
 
 
 ### Flask Extensions
@@ -37,7 +38,7 @@ http://gulfcitizenscience.org
  - MongoDB
 
 
- ## Setup:
+## Setup:
 
    1. >> virtualenv csenv
    2. >> source csenv/bin/activate
