@@ -9,7 +9,7 @@
 //TODO
 var gbfLayer = L.geoJson(null),
     nacdLayer = L.geoJson(null);
-var darkskykey = "fc1527cde610f13ea1ac9deb8a3c5c4c";
+var darkskykey = "";
 
 // ================================================================
 /* Layer Size */
