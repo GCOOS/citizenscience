@@ -9,7 +9,7 @@
 //TODO
 var gbfLayer = L.geoJson(null);
 var nacdLayer = L.geoJson(null);
-
+var darkskykey = "dark sky api key";
 
 // ================================================================
 /* Layer Size */
@@ -279,20 +279,10 @@ function onDragEnd() {
   var address;
   $.ajax({
     // forecast.io based on gcoos3@gmail.com
-    url: "https://api.forecast.io/forecast/fc1527cde610f13ea1ac9deb8a3c5c4c/" + m.lat + "," + m.lng,
+    url: "https://api.darksky.net/forecast/" + darkskykey + "/" + m.lat + "," + m.lng,
     dataType: "jsonp",
     success: function(pjson) { //prased json data
       //console.log(pjson);
-      /*L.esri.Geocoding.reverseGeocode().latlng(m).run(function(error, result) {
-        if (result) {
-          address = result.address.Match_addr;
-        } else {
-          address = "Cannot find";
-        }
-        $('#reverseAddress').html(address);
-      });
-      $("#latlng_div").append("Latitude: <b>" + m.lat.toFixed(5) + "</b>&deg;<br />Longitude: <b>" + m.lng.toFixed(5) + "</b>&deg;<br /><br />" + "Address: " + "<div id='reverseAddress'></div>");
-      */
       $("#weather_div").append("<iframe id='forecast_embed' type='text/html' frameborder='0' height='245' width='100%'' src='http://forecast.io/embed/#lat=" + m.lat + "&lon=" + m.lng + "&name=" + "Lat:" + m.lat.toFixed(2) + "&deg; Long:" + m.lng.toFixed(2) + "&deg;'> </iframe>");
     },
     error: function(thrownError) {
