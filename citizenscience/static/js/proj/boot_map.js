@@ -7,15 +7,9 @@
 // Create a new 'flag' to turn layer on/off
 // Shouldn't appear on a map, thus use GeoJSON.
 //TODO
-<<<<<<< HEAD
-var gbfLayer = L.geoJson(null);
-var nacdLayer = L.geoJson(null);
-var darkskykey = "dark sky api key";
-=======
 var gbfLayer = L.geoJson(null),
     nacdLayer = L.geoJson(null);
 var darkskykey = "";
->>>>>>> master
 
 // ================================================================
 /* Layer Size */
@@ -284,18 +278,11 @@ function onDragEnd() {
   //console.log('Latitude: ' + m.lat + ' Longitude: ' + m.lng);
   var address;
   $.ajax({
-<<<<<<< HEAD
     // Dark Sky API
     url: "https://api.darksky.net/forecast/" + darkskykey + "/" + m.lat + "," + m.lng,
     dataType: "jsonp",
     success: function(pjson) { //prased json data
       //console.log(pjson);
-=======
-    // forecast.io
-    url: "https://api.darksky.net/forecast/" + darkskykey + "/" + m.lat + "," + m.lng,
-    dataType: "jsonp",
-    success: function(pjson) { //prased json data
->>>>>>> master
       $("#weather_div").append("<iframe id='forecast_embed' type='text/html' frameborder='0' height='245' width='100%'' src='http://forecast.io/embed/#lat=" + m.lat + "&lon=" + m.lng + "&name=" + "Lat:" + m.lat.toFixed(2) + "&deg; Long:" + m.lng.toFixed(2) + "&deg;'> </iframe>");
     },
     error: function(thrownError) {
