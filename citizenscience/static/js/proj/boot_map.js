@@ -278,7 +278,7 @@ function onDragEnd() {
   //console.log('Latitude: ' + m.lat + ' Longitude: ' + m.lng);
   var address;
   $.ajax({
-    // forecast.io based on gcoos3@gmail.com
+    // Dark Sky API
     url: "https://api.darksky.net/forecast/" + darkskykey + "/" + m.lat + "," + m.lng,
     dataType: "jsonp",
     success: function(pjson) { //prased json data
